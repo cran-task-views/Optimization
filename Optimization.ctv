@@ -6,7 +6,7 @@
 <version>2008-04-25</version>
 
 <info> 
-  <p> This CRAN Task View contains a list of packages which offer
+  <p>This CRAN task view contains a list of packages which offer
   facilities for solving optimization problems. 
 <!--
   Typically every regression in statistcs has to somehow solve an
@@ -19,12 +19,12 @@
   Packages are
   categorized in three sections: <a
   href="#GeneralPurposeSolvers">General Purpose Continuous
-  Solvers</a> (or in general "Function Minimization"), <a
+  Solvers</a>, <a
   href="#MathematicalProgrammingSolvers">Mathematical 
   Programming Solvers</a> and <a href="#SpecificApplications">Specific
   Applications in Optimization</a>.</p> 
  
-  <p> Many packages provide functionality for more than one
+  <p>Many packages provide functionality for more than one
   of the subjects listed at the end of this task view. E.g., mixed
   integer linear programming solvers typically offer standard linear
   programming 
@@ -35,15 +35,14 @@
   found at the end of this task view under <a
   href="#ClassificationBySubject">Classification According to Subject</a>.</p> 
 
-  <p> If you think that some package is missing from the list, please
-  let me know.
-  </p>
+  <p>If you think that some package is missing from the list, please
+  let me know.</p>
   
   <h2><a name="GeneralPurposeSolvers">General Purpose Continuous
   Solvers</a></h2>
   
   <ul>
-    <li>Package <pkg priority="core">stats</pkg> offers several
+    <li>Package stats offers several
     optimization routines. 
     First, function <code>optim()</code> provides an implementation of
     the Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, 
@@ -61,25 +60,25 @@
     barrier algorithm. [RGA, QN] 
     </li>
     
-    <li> <pkg>clue</pkg> contains the function <code>sumt()</code> for
-    solving constrained optimization problems via the Sequential
-    Unconstrained Minimization Technique (SUMT). 
+    <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
+    solving constrained optimization problems via the sequential
+    unconstrained minimization technique (SUMT). 
 
     </li>
 
     <li>Package <pkg>gsl</pkg> provides BFGS, conjugate gradient,
     steepest descent, and Nelder-Mead algorithms. It uses a "line
     search" approach via the function <code>multimin()</code>. It is
-    based on the Gnu Scientific Library (GSL). [RGA, QN] 
+    based on the GNU Scientific Library (GSL). [RGA, QN] 
     </li>
 
     <li>In package <pkg>trust</pkg>, a routine with the same name offers
     local optimization based on the "trust region" approach.
     </li>
     
-    <li><code>subplex()</code> in package <pkg>subplex</pkg> realizes
-     unconstrained function optimization based on a subspace
-     searching simplex method.
+    <li><pkg>subplex</pkg> provides unconstrained function
+    optimization based on a subspace searching simplex method.
+    </li>
      <!--
 	 (a bit similar to Nelder-Mead)
      -->
@@ -93,9 +92,9 @@
     multi-dimensional function optimization.</li>
 
     <li>Package <pkg>rgenoud</pkg> offers
-    <code>genoud()</code>, a routine which solves quite difficult function 
-    minimization/maximization problems by combining evolutionary
-    algorithms with  
+    <code>genoud()</code>, a routine which is capable of solving
+    complex function minimization/maximization problems by combining
+    evolutionary algorithms with  
     a derivative-based (quasi-Newtonian) approach.</li>
 
     <li>Package <pkg>DEoptim</pkg> provides the routine
@@ -106,7 +105,6 @@
     -->
     </li>
 
-    </li>
   </ul>
 
 
@@ -116,8 +114,9 @@
   This section provides an overview of open source as well as commercial 
   optimizers. Which type of mathematical programming problem can be solved
   by a certain package or function can be seen from the abbreviations in 
-  square brackets. For a classification by subject see the list at the
-  end of this task view.
+  square brackets. For a <a
+  href="#ClassificationBySubject">classification by subject</a> see
+  the list at the end of this task view.
 
   <ul>
     <li>In the <pkg>boot</pkg> package there is a routine called 
@@ -134,19 +133,21 @@
     with linear equality and inequality constraints. [QP]</li>
 
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
-    solving quadratic programming problems. [IPM, QP]
+    solving quadratic programming problems using interior point
+    methods. [IPM, QP] 
     </li>
     
-    <li> <pkg>BB</pkg> contains the function <code>spg</code> providing a
+    <li><pkg>BB</pkg> contains the function <code>spg()</code> providing a
     spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
-    argument as well as simple constraints. 
+    argument as well as basic constraints. 
     </li>
 
-    <li>In package <pkg>fportfolio</pkg> from Rmetrics
+    <li>In package <pkg>fPortfolio</pkg> from Rmetrics
     <code>donlp2()</code>, a wrapper for the DONLP2
     solver, offers the minimization of smooth nonlinear functions and
-    constraints.  
+    constraints. DONLP2 can be used freely for any kind of research
+    purposes, otherwise it requires licensung.
     Package <a href="http://arumat.net/Rdonlp2/"> Rdonlp2</a> can be
     downloaded separately. [GO, NLP]
     </li>
@@ -163,33 +164,37 @@
     <li>Package <forge>stoprog</forge> is a package for scenario
     generation procedures used in 
     multi-stage stochastic programming. It is currently under
-    development on R-Forge. [SP] 
+    development on <a
+    href="http://R-Forge.R-project.org">R-Forge</a>. [SP]
     </li>
   </ul>
    
   <h3>Interfaces to Open Source Optimizers</h3> 
 
   <ul>
-    <li>Package <pkg>lpSolve</pkg> contains the routine <code>lp()</code>)  
+    <li>Package <pkg>lpSolve</pkg> contains the routine <code>lp()</code>
     to solve LPs and MILPs by calling the freely available solver
-    lp_solve. This solver is based on the 
+    <a href="http://lpsolve.sourceforge.net">lp_solve</a>. This solver
+    is based on the  
     revised simplex method and a branch-and-bound (B&amp;B) approach. It
     supports semi-continuous variables and Special Ordered Sets
     (SOS). Furthermore <code>lp.assign()</code> and
-    <code>lp.transport()</code> are aimed to solve assignment problems and
-    transportation problems respectively. Eventually a fairly new
+    <code>lp.transport()</code> are aimed at solving assignment problems and
+    transportation problems, respectively. Eventually a fairly new
     package <forge>lp_solve</forge> is currently under development on
-    R-Forge. [LP, IP, MILP, SPLP]</li>
+    <a href="http://R-Forge.R-project.org">R-Forge</a>. [BP, IP, LP, MILP,
+    SPLP]</li> 
   
     <li>Package <pkg>glpk</pkg> as well as package <pkg>Rglpk</pkg>
     provide an interface to  
-    the GNU Linear Programming Kit (GLPK). Whereas the former solely
+    the <a href="http://www.gnu.org/software/glpk/">GNU Linear
+    Programming Kit</a> (GLPK). Whereas the former 
     provides high level access to  
     low level routines the latter offers a high level routine
     <code>Rglpk_solve_LP()</code> to solve  
     MILPS using GLPK. 
     Both packages offer the possibility to use models formulated in the
-    MPS format. [LP, IP, MILP, IPM]</li> 
+    MPS format. [BP, IP, IPM, LP, MILP]</li> 
     <!--
 	GNU LP or MathProg, can be loaded.
 	<code>Rglpk_solve_LP()</code> solves linear and mixed-integer programs 
@@ -199,18 +204,24 @@
     
     <li><pkg>Rsymphony</pkg> provides the routine
     <code>Rsymphony_solve_LP()</code> which  
-    interfaces the COIN-OR SYMPHONY solver for mixed integer linear
+    interfaces the SYMPHONY solver for mixed integer linear
     programs. SYMPHONY applies LP  
-    relaxation with a branch-and-cut approach. [LP, IP, MILP]</li>
+    relaxation with a branch-and-cut approach. It is part of the
+    <a href="http://www.coin-or.org/">Computational
+    Infrastructure for Operations Research</a> 
+    (COIN-OR) project which is an initiative to spur the
+    development of open-source software for the operations research
+    community. [LP, IP, MILP]</li>
     <!--  
 	 Model equations and inequalities are formulated as matrices. 
     -->
 
-    <li><forge>Rbonmin</forge> and <forge>Rlago</forge> are interfaces
+    <li>Packages Rbonmin and Rlago provide interfaces
     to the corresponding mixed integer nonlinear optimizers part of
-    the COIN-OR project. They
-    are currently being developed on R-Forge and will be made
-    available as soon as possible. [NLP]
+    the <a href="http://www.coin-or.org/">COIN-OR</a> project. They
+    are currently being developed on <a
+    href="http://R-Forge.R-project.org">R-Forge</a> in project
+    <forge>RINO</forge>. [NLP]
     </li>
    
   </ul>
@@ -222,11 +233,12 @@
   
   <ul>
     <li>Package <pkg>Rcplex</pkg> provides an interface to the CPLEX solver 
-    package from ILOG. It provides dual/primal simplex optimizers as well as 
+    package from <a href="http://www.ilog.com/">ILOG</a>. It provides dual/primal simplex optimizers as well as 
     a barrier optimizer for solving large scale linear 
     and quadratic programs. Furthermore, it offers a mixed integer optimizer
     to solve difficult mixed integer programs. Note that CPLEX is
-    <b>not free</b> and you have to get a license from ILOG. [LP, IP,
+    <b>not free</b> and you have to get a license from <a
+    href="http://www.ilog.com/">ILOG</a>. [LP, IP,
     BP, QP, MILP, MIQP, IPM]</li>
   </ul>
   
@@ -249,16 +261,18 @@
     <li> In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
     the user to solve the linear  
     sum assignment problem (LSAP) using an efficient C implementation of
-    the Hungarian algorithm (function <code>solve_LSAP()</code>). [SPLP]
+    the Hungarian algorithm. [SPLP]
     </li>
 
-    <li>Package <pkg>TSP</pkg> provides a basic infrastructure for
+    <li>Package <pkg>TSP</pkg> provides basic infrastructure for
     handling and solving the  
     traveling salesperson problem (TSP). The main routine
     <code>solve_TSP()</code> solves the TSP  
-    through several heuristics. In addition, it provides an interface to
-    Concorde, one of the best  
-    exact TSP solvers currently available. [SPLP]
+    through several heuristics. In addition, it provides an interface
+    to the
+    <a href="http://www.tsp.gatech.edu/concorde/index.html">Concorde TSP
+    Solver</a>, which has to be
+    downloaded separately.  [SPLP] 
     </li>
       
     <li> Package <pkg>optmatch</pkg> provides routines for solving
@@ -306,28 +320,28 @@
     <ul>
       <li>LP (Linear programming, 90C05): <pkg>boot</pkg>,
       <pkg>glpk</pkg>, <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
-      <pkg>lpSolve</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg>,
-      <pkg>Rcplex</pkg>, <pkg>quantreg</pkg> </li>
+      <pkg>lpSolve</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
+      <pkg>Rsymphony</pkg>, <pkg>quantreg</pkg> </li>
 <!--
       <li>LSP (Large-scale problems, 90C06):
-      <pkg>Rsymphony</pkg>, <pkg>Rcplex</pkg> </li>
 -->
       <li> GO (Global Optimization): <pkg>fportfolio</pkg>
       (<code>donlp2()</code>)</li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
-      <pkg>optmatch</pkg>, <pkg>TSP</pkg>, <pkg>quantreg</pkg></li>
+      <pkg>optmatch</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
    
-      <li>BP (Boolean programming, 90C09): <pkg>Rcplex</pkg> </li>
+      <li>BP (Boolean programming, 90C09): <pkg>glpk</pkg>,
+      <pkg>lpSolve</pkg>, <pkg>Rcplex</pkg> </li>
 
-      <li>IP (Integer programming, 90C10): <pkg>lpSolve</pkg>,
-      <pkg>glpk</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg>,
-      <pkg>Rcplex</pkg> </li>
+      <li>IP (Integer programming, 90C10): <pkg>glpk</pkg>,
+      <pkg>lpSolve</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
+      <pkg>Rsymphony</pkg></li>
 
       <li>MIP (Mixed integer programming and its variants MILP for LP
-      and MIQP for QP, 90C11): <pkg>lpSolve</pkg>, <pkg>glpk</pkg>,
-      <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg>, <pkg>Rcplex</pkg> </li> 
+      and MIQP for QP, 90C11):  <pkg>glpk</pkg>, <pkg>lpSolve</pkg>,
+      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg></li>
 
       <li>SP (Stochastic programming, 90C15): <forge>stoprog</forge>
       </li> 
@@ -363,17 +377,15 @@
 	  <li>Programming in abstract spaces, 90C48</li> 
 	  <li>Extreme-point and pivoting methods, 90C49</li>
       -->
-      <li>IPM (Interior-point methods, 90C51): <pkg>glpk</pkg>,
-      <pkg>Rcplex</pkg>, <pkg>quantreg</pkg>
+      <li>IPM (Interior-point methods, 90C51): <pkg>kernlab</pkg>,
+      <pkg>glpk</pkg>, <pkg>quantreg</pkg>, <pkg>Rcplex</pkg>
       </li>
       
-      <li>RGA (Methods of reduced gradient type, 90C52):
-      <pkg priority="core">stats</pkg> (<code>optim()</code>),
-      <pkg>gsl</pkg></li>
+      <li>RGA (Methods of reduced gradient type, 90C52): stats
+      (<code>optim()</code>), <pkg>gsl</pkg></li>
 
-      <li>QN (Methods of quasi-Newton type, 90C53):
-      <pkg priority="core">stats</pkg> (<code>optim()</code>),
-      <pkg>gsl</pkg></li>
+      <li>QN (Methods of quasi-Newton type, 90C53): stats
+      (<code>optim()</code>), <pkg>gsl</pkg></li>
       <!-- 
 	   <li>Methods of successive quadratic programming type, 90C55</li>
 	   <li>Derivative-free methods, 90C56</li>
@@ -387,41 +399,38 @@
 	   <li>None of the above, but in this section, 90C99</li>
       -->
     </ul>
-
 </info>
 
 <packagelist>
-  <pkg priority="core">stats</pkg>
-  <pkg>gsl</pkg>
-  <pkg>trust</pkg>
-  <pkg>subplex</pkg>
-  <pkg>kernlab</pkg>
+  <pkg>BB</pkg>
   <pkg>boot</pkg>
-  <pkg>linprog</pkg>
-  <pkg>quadprog</pkg>
-  <pkg>lpSolve</pkg>
-  <pkg>glpk</pkg>
-  <pkg>Rglpk</pkg>
-  <pkg>Rsymphony</pkg>
-  <pkg>Rcplex</pkg>
-  <pkg>fportfolio</pkg>
+  <pkg>clue</pkg>
   <pkg>DEoptim</pkg>
+  <pkg>desirability</pkg>
+  <pkg>fportfolio</pkg>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
-  <pkg>rgenoud</pkg>
-  <pkg>igraph</pkg>
-  <pkg>TSP</pkg>
-  <pkg>clue</pkg>
+  <pkg priority="core">glpk</pkg>
   <pkg>goalprog</pkg>
-  <pkg>optmatch</pkg>
-  <pkg>desirability</pkg>
-  <pkg>quantreg</pkg>
+  <pkg>gsl</pkg>
+  <pkg>igraph</pkg>
+  <pkg>kernlab</pkg>
   <pkg>limSolve</pkg>
-  <pkg>BB</pkg>
+  <pkg>linprog</pkg>
+  <pkg priority="core">lpSolve</pkg>
+  <pkg>optmatch</pkg>
+  <pkg>quadprog</pkg>
+  <pkg>quantreg</pkg>
+  <pkg>Rcplex</pkg>
+  <pkg>rgenoud</pkg>
+  <pkg>Rglpk</pkg>
+  <pkg priority="core">Rsymphony</pkg>
+  <pkg>subplex</pkg>
+  <pkg>trust</pkg>
+  <pkg priority="core">TSP</pkg>
 </packagelist>
 
 <links>
-  <view>Finance</view>
   <a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">NEOS
   Wiki</a>
   <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for
