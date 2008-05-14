@@ -3,26 +3,21 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming Using R</topic>
 <maintainer email="Stefan.Theussl@wu-wien.ac.at">Stefan Theussl</maintainer>
-<version>2008-04-25</version>
+<version>2008-05-14</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
   facilities for solving optimization problems. 
-<!--
-  Typically every regression in statistcs has to somehow solve an
-  optimization problem. But these methods are not in the focus of this
-  task view. For these methods I refer to the views
-  <view>Multivariate</view>, <view>Robust</view> or
-  <view>SocialSciences</view>. The aim of  
-  this task view is to give an overview of optimizers ...
--->
-  Packages are
-  categorized in three sections: <a
-  href="#GeneralPurposeSolvers">General Purpose Continuous
-  Solvers</a>, <a
-  href="#MathematicalProgrammingSolvers">Mathematical 
+  Although every regression model in statistcs solves an optimization
+  problem they are not part of this view. If you are looking for regression
+  methods please consult one of these views: <view>Multivariate</view>,
+  <view>Robust</view> or <view>SocialSciences</view>.
+  The focus of this task view is on <a
+  href="#GeneralPurposeSolvers">General Purpose Continuous 
+  Solvers</a>, <a href="#MathematicalProgrammingSolvers">Mathematical 
   Programming Solvers</a> and <a href="#SpecificApplications">Specific
-  Applications in Optimization</a>.</p> 
+  Applications in Optimization</a>. Packages are categorized in these
+  three sections.</p> 
  
   <p>Many packages provide functionality for more than one
   of the subjects listed at the end of this task view. E.g., mixed
@@ -33,7 +28,8 @@
   of the optimizer (i.e., the problems which can be solved). The
   full names of the abbreviations given in square brackets can be
   found at the end of this task view under <a
-  href="#ClassificationBySubject">Classification According to Subject</a>.</p> 
+  href="#ClassificationBySubject">Classification According to
+  Subject</a>.</p> 
 
   <p>If you think that some package is missing from the list, please
   let me know.</p>
@@ -42,22 +38,29 @@
   Solvers</a></h2>
   
   <ul>
-    <li>Package stats offers several
-    optimization routines. 
+    <li>Package stats offers several general purpose optimization
+    routines.
     First, function <code>optim()</code> provides an implementation of
     the Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, 
     bounded BFGS, conjugate gradient, Nelder-Mead, and simulated
     annealing (SANN) optimization
     methods. It utilizes gradients, if provided, for faster
-    convergence.
-    Then there is <code>optimize()</code> which searches an interval
-    for a minimum or maximum of a 
-    one-dimensional function and <code>nlminb()</code> offering
-    unconstrained and constrained  
-    optimization using PORT routines.
-    Eventually, <code>constrOptim()</code> is a routine for minimizing a
-    function subject to linear inequality constraints using an adaptive
-    barrier algorithm. [RGA, QN] 
+    convergence. Typically it is used for unconstrained optimization
+    but includes an option for box-constrained
+    optimization. 
+
+    Additionally, for minimizing a function subject to
+    linear inequality constraints stats contains the routine
+    <code>constrOptim()</code>.
+
+    For one-dimensional unconstrained function optimization there is
+    <code>optimize()</code> which searches an interval 
+    for a minimum or maximum. 
+
+    Then there is <code>nlm</code> which is used for solving nonlinear
+    unconstrained minimization problems. Eventually,
+    <code>nlminb()</code> offers unconstrained and constrained  
+    optimization using PORT routines. [RGA, QN] 
     </li>
     
     <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
@@ -79,6 +82,7 @@
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.
     </li>
+
      <!--
 	 (a bit similar to Nelder-Mead)
      -->
@@ -97,8 +101,8 @@
     evolutionary algorithms with  
     a derivative-based (quasi-Newtonian) approach.</li>
 
-    <li>Package <pkg>DEoptim</pkg> provides the routine
-    <code>DEoptim()</code> which realizes differential evolution optimization. 
+    <li>Package <pkg>DEoptim</pkg> provides a global optimizer based
+    on the differential evolution algorithm.
     <!--
 	see the <a href="http://www.icsi.berkeley.edu/~storn/code.html">
 	Differential Evolution home page</a>.
@@ -158,8 +162,11 @@
 	href="http://arumat.net/Rdonlp2/"> separately</a>. 
     -->
     <li><pkg>limSolve</pkg> offers to solve linear or quadratic
-    optimization functions [LP, QP].
+    optimization functions. [LP, QP]
     </li>
+
+    <li><pkg>LowRankQP</pkg> primal/dual interior point method solving
+    quadratic programming problems [IPM, QP]</li>
 
     <li>Package <forge>stoprog</forge> is a package for scenario
     generation procedures used in 
@@ -181,7 +188,8 @@
     (SOS). Furthermore <code>lp.assign()</code> and
     <code>lp.transport()</code> are aimed at solving assignment problems and
     transportation problems, respectively. Eventually a fairly new
-    package <forge>lp_solve</forge> is currently under development on
+    package lp_solve (project <forge>lpsolve</forge>) is currently
+    under development on 
     <a href="http://R-Forge.R-project.org">R-Forge</a>. [BP, IP, LP, MILP,
     SPLP]</li> 
   
@@ -210,7 +218,7 @@
     <a href="http://www.coin-or.org/">Computational
     Infrastructure for Operations Research</a> 
     (COIN-OR) project which is an initiative to spur the
-    development of open-source software for the operations research
+    development of open source software for the operations research
     community. [LP, IP, MILP]</li>
     <!--  
 	 Model equations and inequalities are formulated as matrices. 
@@ -221,7 +229,7 @@
     the <a href="http://www.coin-or.org/">COIN-OR</a> project. They
     are currently being developed on <a
     href="http://R-Forge.R-project.org">R-Forge</a> in project
-    <forge>RINO</forge>. [NLP]
+    <forge>rino</forge>. [NLP]
     </li>
    
   </ul>
@@ -305,8 +313,30 @@
     shortest paths, maximal network flows, minimum 
     spanning trees, etc. [GRAPH]</li>
 
+    <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
+    which is the front-end to a series of heuristic routines for optimizing
+    some bivariate graph statistic. [GRAPH]</li>
+
   </ul>
 
+<!--
+Not listed yet:
+<li><pkg>Bhat</pkg> provides the Davidon-Fletcher-Powell optimization
+algorithm in function <code>dfp()</code>. Furthermore the
+Newton-Raphson algorithm is implemented in function <code>newton()</code>.
+</li>
+<li><pkg>RFreak</pkg>R interface to a modified version of the Free
+Evolutionary Algorithm Kit <a
+href="http://sourceforge.net/projects/freak427/">FrEAK</a>.</li>
+<li><pkg>RankAggreg</pkg> performs aggregation of ordered lists based
+on the ranks using three different algorithms (cross-entropy Monte
+Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>  
+<li><pkg>powell</pkg> contains an algorithm for unconstrained
+optimization by quadratic approximation (UObyQA).</li>
+<li>Package <forge>rootSolve</forge> includes
+routines to find the root of nonlinear functions and to perform
+steady-state and equilibrium analysis of ordinary differential equations.</li>
+-->
   
   <h2><a name="ClassificationBySubject">Classification According to
   Subject</a></h2>
@@ -323,7 +353,7 @@
       <pkg>lpSolve</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
       <pkg>Rsymphony</pkg>, <pkg>quantreg</pkg> </li>
 <!--
-      <li>LSP (Large-scale problems, 90C06):
+      <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
       <li> GO (Global Optimization): <pkg>fportfolio</pkg>
       (<code>donlp2()</code>)</li>
@@ -347,7 +377,7 @@
       </li> 
 
       <li>QP (Quadratic programming, 90C20): <pkg>kernlab</pkg>,
-      <pkg>limSolve</pkg>, <pkg>quadprog</pkg>, 
+      <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, <pkg>quadprog</pkg>, 
       <pkg>Rcplex</pkg></li>
       <!-- 
 	   <li>Semidefinite programming, 90C22</li>
@@ -368,7 +398,7 @@
 	  <li>Semi-infinite programming, 90C34</li>
       -->
       <li>GRAPH (Programming involving graphs or networks, 90C35):
-      <pkg>igraph</pkg> </li> 
+      <pkg>igraph</pkg>, <pkg>sna</pkg> </li> 
       <!--	
 	  <li>Dynamic programming, 90C39</li>
 	  <li>Markov and semi-Markov decision processes, 90C40</li> 
@@ -378,7 +408,8 @@
 	  <li>Extreme-point and pivoting methods, 90C49</li>
       -->
       <li>IPM (Interior-point methods, 90C51): <pkg>kernlab</pkg>,
-      <pkg>glpk</pkg>, <pkg>quantreg</pkg>, <pkg>Rcplex</pkg>
+      <pkg>glpk</pkg>, <pkg>LowRankQP</pkg>, <pkg>quantreg</pkg>,
+      <pkg>Rcplex</pkg>
       </li>
       
       <li>RGA (Methods of reduced gradient type, 90C52): stats
@@ -417,6 +448,7 @@
   <pkg>kernlab</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
+  <pkg>LowRankQP</pkg>
   <pkg priority="core">lpSolve</pkg>
   <pkg>optmatch</pkg>
   <pkg>quadprog</pkg>
@@ -425,6 +457,7 @@
   <pkg>rgenoud</pkg>
   <pkg>Rglpk</pkg>
   <pkg priority="core">Rsymphony</pkg>
+  <pkg>sna</pkg>
   <pkg>subplex</pkg>
   <pkg>trust</pkg>
   <pkg priority="core">TSP</pkg>
