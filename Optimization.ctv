@@ -343,7 +343,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
-      <li> GO (Global Optimization): <pkg>fportfolio</pkg>
+      <li> GO (Global Optimization): <pkg>fPortfolio</pkg>
       (<code>donlp2()</code>)</li>
 
       <li>SPLP (Special problems of linear programming like transportation,
@@ -376,7 +376,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <li>MOP (Multi-objective and goal programming, 90C29):
       <pkg>goalprog</pkg> </li>
  
-      <li>NLP (Nonlinear programming, 90C30): <pkg>fportfolio</pkg>
+      <li>NLP (Nonlinear programming, 90C30): <pkg>fPortfolio</pkg>
       (<code>donlp2()</code>) 
       </li> 
       <!--
@@ -426,7 +426,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>clue</pkg>
   <pkg>DEoptim</pkg>
   <pkg>desirability</pkg>
-  <pkg>fportfolio</pkg>
+  <pkg>fPortfolio</pkg>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
   <pkg priority="core">glpk</pkg>
