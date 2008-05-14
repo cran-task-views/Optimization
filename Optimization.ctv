@@ -1,7 +1,7 @@
 <CRANTaskView>
 
 <name>Optimization</name>
-<topic>Optimization and Mathematical Programming Using R</topic>
+<topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu-wien.ac.at">Stefan Theussl</maintainer>
 <version>2008-05-14</version>
 
@@ -10,8 +10,8 @@
   facilities for solving optimization problems. 
   Although every regression model in statistcs solves an optimization
   problem they are not part of this view. If you are looking for regression
-  methods please consult one of these views: <view>Multivariate</view>,
-  <view>Robust</view> or <view>SocialSciences</view>.
+  methods, the following views will contain useful starting points:
+  <view>Multivariate</view>, <view>SocialSciences</view>, <view>Robust</view> among others.
   The focus of this task view is on <a
   href="#GeneralPurposeSolvers">General Purpose Continuous 
   Solvers</a>, <a href="#MathematicalProgrammingSolvers">Mathematical 
@@ -83,10 +83,6 @@
     optimization based on a subspace searching simplex method.
     </li>
 
-     <!--
-	 (a bit similar to Nelder-Mead)
-     -->
-
     <li>In package <pkg>gafit</pkg> <code>gafit()</code> uses a
     genetic algorithm approach to find  
     the minimum of a one-dimensional function.</li>
@@ -124,7 +120,7 @@
 
   <ul>
     <li>In the <pkg>boot</pkg> package there is a routine called 
-    <code>simplex()</code> which realizes the two-phase tableau SIMPLEX 
+    <code>simplex()</code> which realizes the two-phase tableau simplex
     method for (relatively small) linear programming problems. [LP]</li>
 
     <li>Package <pkg>linprog</pkg> solves linear programming problems using 
@@ -155,12 +151,7 @@
     Package <a href="http://arumat.net/Rdonlp2/"> Rdonlp2</a> can be
     downloaded separately. [GO, NLP]
     </li>
-    <!--
-	It may be appropriate for
-	small to medium-sized problems.
-	[DONLP2 has to be downloaded and installed <a
-	href="http://arumat.net/Rdonlp2/"> separately</a>. 
-    -->
+
     <li><pkg>limSolve</pkg> offers to solve linear or quadratic
     optimization functions. [LP, QP]
     </li>
@@ -172,7 +163,7 @@
     generation procedures used in 
     multi-stage stochastic programming. It is currently under
     development on <a
-    href="http://R-Forge.R-project.org">R-Forge</a>. [SP]
+    href="http://R-Forge.R-project.org/">R-Forge</a>. [SP]
     </li>
   </ul>
    
@@ -190,7 +181,7 @@
     transportation problems, respectively. Eventually a fairly new
     package lp_solve (project <forge>lpsolve</forge>) is currently
     under development on 
-    <a href="http://R-Forge.R-project.org">R-Forge</a>. [BP, IP, LP, MILP,
+    <a href="http://R-Forge.R-project.org/">R-Forge</a>. [BP, IP, LP, MILP,
     SPLP]</li> 
   
     <li>Package <pkg>glpk</pkg> as well as package <pkg>Rglpk</pkg>
@@ -220,15 +211,12 @@
     (COIN-OR) project which is an initiative to spur the
     development of open source software for the operations research
     community. [LP, IP, MILP]</li>
-    <!--  
-	 Model equations and inequalities are formulated as matrices. 
-    -->
 
     <li>Packages Rbonmin and Rlago provide interfaces
     to the corresponding mixed integer nonlinear optimizers part of
     the <a href="http://www.coin-or.org/">COIN-OR</a> project. They
     are currently being developed on <a
-    href="http://R-Forge.R-project.org">R-Forge</a> in project
+    href="http://R-Forge.R-project.org/">R-Forge</a> in project
     <forge>rino</forge>. [NLP]
     </li>
    
@@ -464,16 +452,10 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 </packagelist>
 
 <links>
-  <a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">NEOS
-  Wiki</a>
-  <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for
-  Optimization Software</a>
+  <a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">NEOS Wiki</a>
+  <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for Optimization Software</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
   <a href="http://www.ams.org/msc/90Cxx.html">Mathematics Subject Classification - Mathematical programming</a>
 </links>
 
 </CRANTaskView>
-
-
-
-
