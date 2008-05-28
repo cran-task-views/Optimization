@@ -143,13 +143,10 @@
     argument as well as basic constraints. 
     </li>
 
-    <li>In package <pkg>fPortfolio</pkg> from Rmetrics
-    <code>donlp2()</code>, a wrapper for the DONLP2
+    <li>In package <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a>function<code>donlp2()</code>, a wrapper for the DONLP2
     solver, offers the minimization of smooth nonlinear functions and
     constraints. DONLP2 can be used freely for any kind of research
-    purposes, otherwise it requires licensung.
-    Package <a href="http://arumat.net/Rdonlp2/"> Rdonlp2</a> can be
-    downloaded separately. [GO, NLP]
+    purposes, otherwise it requires licensing. [GO, NLP]
     </li>
 
     <li><pkg>limSolve</pkg> offers to solve linear or quadratic
@@ -343,8 +340,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
-      <li> GO (Global Optimization): <pkg>fPortfolio</pkg>
-      (<code>donlp2()</code>)</li>
+      <li> GO (Global Optimization): <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a></li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
@@ -376,8 +372,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <li>MOP (Multi-objective and goal programming, 90C29):
       <pkg>goalprog</pkg> </li>
  
-      <li>NLP (Nonlinear programming, 90C30): <pkg>fPortfolio</pkg>
-      (<code>donlp2()</code>) 
+      <li>NLP (Nonlinear programming, 90C30): <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a> 
       </li> 
       <!--
 	  <li>Sensitivity, stability, parametric optimization, 90C31</li> 
@@ -426,7 +421,6 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>clue</pkg>
   <pkg>DEoptim</pkg>
   <pkg>desirability</pkg>
-  <pkg>fPortfolio</pkg>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
   <pkg priority="core">glpk</pkg>
