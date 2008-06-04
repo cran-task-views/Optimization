@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu-wien.ac.at">Stefan Theussl</maintainer>
-<version>2008-05-14</version>
+<version>2008-06-03</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -65,8 +65,7 @@
     
     <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
     solving constrained optimization problems via the sequential
-    unconstrained minimization technique (SUMT). 
-
+    unconstrained minimization technique (SUMT).
     </li>
 
     <li>Package <pkg>gsl</pkg> provides BFGS, conjugate gradient,
@@ -74,15 +73,21 @@
     search" approach via the function <code>multimin()</code>. It is
     based on the GNU Scientific Library (GSL). [RGA, QN] 
     </li>
+    
+    <li>Package <pkg>maxLik</pkg> provides a general purpose
+    Newton-Raphson optimizer <code>maxNR()</code> as well as wrapper
+    to methods, implemented in <code>optim()</code>. It supports fitting a
+    submodel by specifying constant parameters.
+    </li>
+
+    <li><pkg>subplex</pkg> provides unconstrained function
+    optimization based on a subspace searching simplex method.
+    </li>
 
     <li>In package <pkg>trust</pkg>, a routine with the same name offers
     local optimization based on the "trust region" approach.
     </li>
     
-    <li><pkg>subplex</pkg> provides unconstrained function
-    optimization based on a subspace searching simplex method.
-    </li>
-
     <li>In package <pkg>gafit</pkg> <code>gafit()</code> uses a
     genetic algorithm approach to find  
     the minimum of a one-dimensional function.</li>
@@ -235,8 +240,6 @@
     BP, QP, MILP, MIQP, IPM]</li>
   </ul>
   
-
-
   <!--
       Matching: Multivariate and Propensity Score Matching with Balance Optimization
       
@@ -257,6 +260,48 @@
     the Hungarian algorithm. [SPLP]
     </li>
 
+    <li>Package <pkg>goalprog</pkg> provides some functions for
+    lexicographic linear goal  
+    programming and optimization. Goal programming is a branch of
+    multi-objective, multi-criteria decision analysis. [MOP]</li>
+
+    <li><pkg>igraph</pkg>, a package for graph and network analysis,
+    uses the very fast igraph C library. It can be used to calculate
+    shortest paths, maximal network flows, minimum 
+    spanning trees, etc. [GRAPH]</li>
+    
+    <li> <pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number of
+    maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson 
+    among others.  It includes summary and print methods which 
+    extract the standard errors based on the Hessian matrix and allows easy
+    swapping of maximization algorithms.
+    </li>
+  
+    <li>Package <pkg>quantreg</pkg> contains variations of simplex and
+    of interior point routines (<code>nlrq()</code>,
+    <code>crq()</code>). It provides an interface to L1 regression 
+    in the R code of function <code>rq()</code>. [SPLP, LP, IPM]</li>
+
+      
+    <li> Package <pkg>optmatch</pkg> provides routines for solving
+    matching problems by translating 
+    them into minimum-cost flow problems, which are in turn solved
+    optimally by the RELAX-IV codes  
+    of Bertsekas and Tseng (free for research). [SPLP]
+    </li>
+    
+    <!--
+	The <pkg>desirability</pkg> package contains S3 classes for
+	multivariate optimization using 
+	the desirability function approach of Harrington (1965) using
+	functional forms described 
+	by Derringer and Suich (1980).
+    -->
+
+    <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
+    which is the front-end to a series of heuristic routines for optimizing
+    some bivariate graph statistic. [GRAPH]</li>
+
     <li>Package <pkg>TSP</pkg> provides basic infrastructure for
     handling and solving the  
     traveling salesperson problem (TSP). The main routine
@@ -267,40 +312,6 @@
     Solver</a>, which has to be
     downloaded separately.  [SPLP] 
     </li>
-      
-    <li> Package <pkg>optmatch</pkg> provides routines for solving
-    matching problems by translating 
-    them into minimum-cost flow problems, which are in turn solved
-    optimally by the RELAX-IV codes  
-    of Bertsekas and Tseng (free for research). [SPLP]
-    </li>
-    
-    <li>Package <pkg>goalprog</pkg> provides some functions for
-    lexicographic linear goal  
-    programming and optimization. Goal programming is a branch of
-    multi-objective, multi-criteria decision analysis. [MOP]</li>
-        
-    <li>Package <pkg>quantreg</pkg> contains variations of simplex and
-    of interior point routines (<code>nlrq()</code>,
-    <code>crq()</code>). It provides an interface to L1 regression 
-    in the R code of function <code>rq()</code>. [SPLP, LP, IPM]</li>
-    
-    <!--
-	The <pkg>desirability</pkg> package contains S3 classes for
-	multivariate optimization using 
-	the desirability function approach of Harrington (1965) using
-	functional forms described 
-	by Derringer and Suich (1980).
-    -->
-
-    <li><pkg>igraph</pkg>, a package for graph and network analysis,
-    uses the very fast igraph C library. It can be used to calculate
-    shortest paths, maximal network flows, minimum 
-    spanning trees, etc. [GRAPH]</li>
-
-    <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
-    which is the front-end to a series of heuristic routines for optimizing
-    some bivariate graph statistic. [GRAPH]</li>
 
   </ul>
 
@@ -432,6 +443,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>linprog</pkg>
   <pkg>LowRankQP</pkg>
   <pkg priority="core">lpSolve</pkg>
+  <pkg>maxLik</pkg>
   <pkg>optmatch</pkg>
   <pkg>quadprog</pkg>
   <pkg>quantreg</pkg>
