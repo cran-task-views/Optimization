@@ -124,10 +124,6 @@
   the list at the end of this task view.
 
   <ul>
-    <li>In the <pkg>boot</pkg> package there is a routine called 
-    <code>simplex()</code> which realizes the two-phase tableau simplex
-    method for (relatively small) linear programming problems. [LP]</li>
-
     <li>Package <pkg>linprog</pkg> solves linear programming problems using 
     the function <code>solveLP()</code> (the solver is based on 
     <pkg>lpSolve</pkg>) and can read model files in MPS
@@ -137,29 +133,38 @@
     quadratic programming problems  
     with linear equality and inequality constraints. [QP]</li>
 
-    <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
-    solving quadratic programming problems using interior point
-    methods. [IPM, QP] 
-    </li>
-    
     <li><pkg>BB</pkg> contains the function <code>spg()</code> providing a
     spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
     argument as well as basic constraints. 
     </li>
 
-    <li>In package <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a>function<code>donlp2()</code>, a wrapper for the DONLP2
-    solver, offers the minimization of smooth nonlinear functions and
-    constraints. DONLP2 can be used freely for any kind of research
-    purposes, otherwise it requires licensing. [GO, NLP]
-    </li>
+    <li>In the <pkg>boot</pkg> package there is a routine called 
+    <code>simplex()</code> which realizes the two-phase tableau simplex
+    method for (relatively small) linear programming problems. [LP]</li>
 
+    <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
+    solving quadratic programming problems using interior point
+    methods. [IPM, QP] 
+    </li>
+    
     <li><pkg>limSolve</pkg> offers to solve linear or quadratic
     optimization functions. [LP, QP]
     </li>
 
     <li><pkg>LowRankQP</pkg> primal/dual interior point method solving
     quadratic programming problems [IPM, QP]</li>
+
+    <li>Package <pkg>rcdd</pkg> offers the function <code>lpcdd()</code> 
+    for solving linear programs with exact arithmetic using the 
+    <a href="http://gmplib.org">GNU Multiple Precision (GMP)
+    </a> library. [LP]</li>
+
+    <li>In package <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a>function<code>donlp2()</code>, a wrapper for the DONLP2
+    solver, offers the minimization of smooth nonlinear functions and
+    constraints. DONLP2 can be used freely for any kind of research
+    purposes, otherwise it requires licensing. [GO, NLP]
+    </li>
 
     <li>Package <forge>stoprog</forge> is a package for scenario
     generation procedures used in 
@@ -346,8 +351,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
     <ul>
       <li>LP (Linear programming, 90C05): <pkg>boot</pkg>,
       <pkg>glpk</pkg>, <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
-      <pkg>lpSolve</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
-      <pkg>Rsymphony</pkg>, <pkg>quantreg</pkg> </li>
+      <pkg>lpSolve</pkg>, <pkg>rcdd</pkg>, <pkg>Rcplex</pkg>, 
+      <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg>, <pkg>quantreg</pkg> </li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
@@ -447,6 +452,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>optmatch</pkg>
   <pkg>quadprog</pkg>
   <pkg>quantreg</pkg>
+  <pkg>rcdd</pkg>
   <pkg>Rcplex</pkg>
   <pkg>rgenoud</pkg>
   <pkg>Rglpk</pkg>
