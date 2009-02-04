@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu-wien.ac.at">Stefan Theussl</maintainer>
-<version>2008-06-23</version>
+<version>2009-02-03</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -83,6 +83,10 @@
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.
     </li>
+
+    <li> Package <pkg>ucminf</pkg> implements an algorithm of
+    quasi-Newtonian type for nonlinear unconstrained
+    optimization. [QN]</li>
 
     <li>In package <pkg>trust</pkg>, a routine with the same name offers
     local optimization based on the "trust region" approach.
@@ -221,6 +225,12 @@
     development of open source software for the operations research
     community. [LP, IP, MILP]</li>
 
+    <li> The CSDP semidefinite programming library is interfaced by
+    package Rcsdp provided on <a
+    href="http://R-Forge.R-project.org/">R-Forge</a> in
+    project <forge>rcsdp</forge>. [SDP]</li>
+
+<!--
     <li>Packages Rbonmin and Rlago provide interfaces
     to the corresponding mixed integer nonlinear optimizers part of
     the <a href="http://www.coin-or.org/">COIN-OR</a> project. They
@@ -228,7 +238,7 @@
     href="http://R-Forge.R-project.org/">R-Forge</a> in project
     <forge>rino</forge>. [NLP]
     </li>
-   
+ -->
   </ul>
   
   <h3>Interfaces to Commercial Optimizers</h3>
@@ -272,13 +282,18 @@
     programming and optimization. Goal programming is a branch of
     multi-objective, multi-criteria decision analysis. [MOP]</li>
 
+    <li>Multi-criteria optimization problems can be solved using
+    package <pkg>mco</pkg> which implements genetic
+    algorithms. [MOP]</li>
+
     <li><pkg>igraph</pkg>, a package for graph and network analysis,
     uses the very fast igraph C library. It can be used to calculate
     shortest paths, maximal network flows, minimum 
     spanning trees, etc. [GRAPH]</li>
     
-    <li> <pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number of
-    maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson 
+    <li> <pkg>maxLik</pkg> adds a likelihood-specific layer on top of
+    a number of maximization routines like Brendt-Hall-Hall-Hausman
+    (BHHH) and Newton-Raphson  
     among others.  It includes summary and print methods which 
     extract the standard errors based on the Hessian matrix and allows easy
     swapping of maximization algorithms.
@@ -383,14 +398,15 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <li>QP (Quadratic programming, 90C20): <pkg>kernlab</pkg>,
       <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, <pkg>quadprog</pkg>, 
       <pkg>Rcplex</pkg></li>
-      <!-- 
-	   <li>Semidefinite programming, 90C22</li>
+     
+      <li>SDP (Semidefinite programming, 90C22): <forge>rcsdp</forge></li>
+ <!-- 
 	   <li>Convex programming, 90C25</li> 
 	   <li>Nonconvex programming, 90C26</li> 
 	   <li>Combinatorial optimization, 90C27</li> 
       -->
       <li>MOP (Multi-objective and goal programming, 90C29):
-      <pkg>goalprog</pkg> </li>
+      <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
  
       <li>NLP (Nonlinear programming, 90C30): <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a> 
       </li> 
@@ -419,7 +435,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       (<code>optim()</code>), <pkg>gsl</pkg></li>
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
-      (<code>optim()</code>), <pkg>gsl</pkg></li>
+      (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>ucminf</pkg></li>
       <!-- 
 	   <li>Methods of successive quadratic programming type, 90C55</li>
 	   <li>Derivative-free methods, 90C56</li>
@@ -443,7 +459,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>desirability</pkg>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
-  <pkg priority="core">glpk</pkg>
+  <pkg>glpk</pkg>
   <pkg>goalprog</pkg>
   <pkg>gsl</pkg>
   <pkg>igraph</pkg>
@@ -454,18 +470,20 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg priority="core">lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
   <pkg>maxLik</pkg>
+  <pkg>mco</pkg>
   <pkg>optmatch</pkg>
-  <pkg>quadprog</pkg>
+  <pkg priority="core">quadprog</pkg>
   <pkg>quantreg</pkg>
   <pkg>rcdd</pkg>
   <pkg>Rcplex</pkg>
   <pkg>rgenoud</pkg>
-  <pkg>Rglpk</pkg>
+  <pkg priority="core">Rglpk</pkg>
   <pkg priority="core">Rsymphony</pkg>
   <pkg>sna</pkg>
   <pkg>subplex</pkg>
   <pkg>trust</pkg>
   <pkg priority="core">TSP</pkg>
+  <pkg>ucminf</pkg>
 </packagelist>
 
 <links>
