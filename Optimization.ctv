@@ -170,7 +170,7 @@
     purposes, otherwise it requires licensing. [GO, NLP]
     </li>
 
-    <li>Package <forge>stoprog</forge> is a package for scenario
+    <li>Package <rforge>stoprog</rforge> is a package for scenario
     generation procedures used in 
     multi-stage stochastic programming. It is currently under
     development on <a
@@ -192,7 +192,7 @@
     and transportation problems, respectively. Additionally, there is the 
     package <pkg>lpSolveAPI</pkg> which provides an R interface to the 
     low level API routines of lp_solve (see also project 
-    <forge>lpsolve</forge> on 
+    <rforge>lpsolve</rforge> on 
     <a href="http://R-Forge.R-project.org/">R-Forge</a>). 
     <pkg>lpSolveAPI</pkg> supports reading linear programs from files in lp 
     and MPS format. [BP, IP, LP, MILP, SPLP]</li> 
@@ -228,7 +228,7 @@
     <li> The CSDP semidefinite programming library is interfaced by
     package Rcsdp provided on <a
     href="http://R-Forge.R-project.org/">R-Forge</a> in
-    project <forge>rcsdp</forge>. [SDP]</li>
+    project <rforge>rcsdp</rforge>. [SDP]</li>
 
 <!--
     <li>Packages Rbonmin and Rlago provide interfaces
@@ -236,7 +236,7 @@
     the <a href="http://www.coin-or.org/">COIN-OR</a> project. They
     are currently being developed on <a
     href="http://R-Forge.R-project.org/">R-Forge</a> in project
-    <forge>rino</forge>. [NLP]
+    <rforge>rino</rforge>. [NLP]
     </li>
  -->
   </ul>
@@ -351,7 +351,7 @@ on the ranks using three different algorithms (cross-entropy Monte
 Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>  
 <li><pkg>powell</pkg> contains an algorithm for unconstrained
 optimization by quadratic approximation (UObyQA).</li>
-<li>Package <forge>rootSolve</forge> includes
+<li>Package <rforge>rootSolve</rforge> includes
 routines to find the root of nonlinear functions and to perform
 steady-state and equilibrium analysis of ordinary differential equations.</li>
 -->
@@ -392,14 +392,14 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>lpSolveAPI</pkg>,
       <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg></li>
 
-      <li>SP (Stochastic programming, 90C15): <forge>stoprog</forge>
+      <li>SP (Stochastic programming, 90C15): <rforge>stoprog</rforge>
       </li> 
 
       <li>QP (Quadratic programming, 90C20): <pkg>kernlab</pkg>,
       <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, <pkg>quadprog</pkg>, 
       <pkg>Rcplex</pkg></li>
      
-      <li>SDP (Semidefinite programming, 90C22): <forge>rcsdp</forge></li>
+      <li>SDP (Semidefinite programming, 90C22): <rforge>rcsdp</rforge></li>
  <!-- 
 	   <li>Convex programming, 90C25</li> 
 	   <li>Nonconvex programming, 90C26</li> 
