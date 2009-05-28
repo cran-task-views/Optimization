@@ -2,8 +2,8 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="Stefan.Theussl@wu-wien.ac.at">Stefan Theussl</maintainer>
-<version>2009-02-03</version>
+<maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
+<version>2009-05-28</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -113,6 +113,12 @@
 	Differential Evolution home page</a>.
     -->
     </li>
+    
+    <li>Rsolnp is currently being developed on <a
+    href="http://R-Forge.R-project.org/">R-Forge</a> in project
+    <rforge>rino</rforge>. This package offers general nonlinear
+    optimization using the augmented lagrange multiplier method. [NLP]
+    </li>
 
   </ul>
 
@@ -169,13 +175,16 @@
     constraints. DONLP2 can be used freely for any kind of research
     purposes, otherwise it requires licensing. [GO, NLP]
     </li>
-
+    
+    <!--
     <li>Package <rforge>stoprog</rforge> is a package for scenario
     generation procedures used in 
     multi-stage stochastic programming. It is currently under
     development on <a
     href="http://R-Forge.R-project.org/">R-Forge</a>. [SP]
     </li>
+    -->
+
   </ul>
    
   <h3>Interfaces to Open Source Optimizers</h3> 
@@ -226,19 +235,17 @@
     community. [LP, IP, MILP]</li>
 
     <li> The CSDP semidefinite programming library is interfaced by
-    package Rcsdp provided on <a
-    href="http://R-Forge.R-project.org/">R-Forge</a> in
-    project <rforge>rcsdp</rforge>. [SDP]</li>
+    package <pkg>Rcsdp</pkg>. [SDP]</li>
 
-<!--
-    <li>Packages Rbonmin and Rlago provide interfaces
-    to the corresponding mixed integer nonlinear optimizers part of
-    the <a href="http://www.coin-or.org/">COIN-OR</a> project. They
-    are currently being developed on <a
+<!-- <li>Packages Rbonmin and
+    Rlago provide interfaces to the corresponding mixed integer
+    nonlinear optimizers part of the <a
+    href="http://www.coin-or.org/">COIN-OR</a> project. They are
+    currently being developed on <a
     href="http://R-Forge.R-project.org/">R-Forge</a> in project
-    <rforge>rino</rforge>. [NLP]
-    </li>
- -->
+    <rforge>rino</rforge>. [NLP] </li> 
+--> 
+
   </ul>
   
   <h3>Interfaces to Commercial Optimizers</h3>
@@ -399,7 +406,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, <pkg>quadprog</pkg>, 
       <pkg>Rcplex</pkg></li>
      
-      <li>SDP (Semidefinite programming, 90C22): <rforge>rcsdp</rforge></li>
+      <li>SDP (Semidefinite programming, 90C22): <pkg>Rcsdp</pkg></li>
  <!-- 
 	   <li>Convex programming, 90C25</li> 
 	   <li>Nonconvex programming, 90C26</li> 
@@ -476,6 +483,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>quantreg</pkg>
   <pkg>rcdd</pkg>
   <pkg>Rcplex</pkg>
+  <pkg>Rcsdp</pkg>
   <pkg>rgenoud</pkg>
   <pkg priority="core">Rglpk</pkg>
   <pkg priority="core">Rsymphony</pkg>
