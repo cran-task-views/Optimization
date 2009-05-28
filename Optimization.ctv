@@ -114,12 +114,6 @@
     -->
     </li>
     
-    <li>Rsolnp is currently being developed on <a
-    href="http://R-Forge.R-project.org/">R-Forge</a> in project
-    <rforge>rino</rforge>. This package offers general nonlinear
-    optimization using the augmented lagrange multiplier method. [NLP]
-    </li>
-
   </ul>
 
 
@@ -184,6 +178,12 @@
     href="http://R-Forge.R-project.org/">R-Forge</a>. [SP]
     </li>
     -->
+    
+    <li>Rsolnp is currently being developed on <a
+    href="http://R-Forge.R-project.org/">R-Forge</a> in project
+    <rforge>rino</rforge>. This package offers general nonlinear
+    optimization using the augmented lagrange multiplier method. [NLP]
+    </li>
 
   </ul>
    
