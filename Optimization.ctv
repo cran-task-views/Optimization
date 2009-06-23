@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2009-05-28</version>
+<version>2009-06-23</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -91,6 +91,12 @@
     <li>In package <pkg>trust</pkg>, a routine with the same name offers
     local optimization based on the "trust region" approach.
     </li>
+
+    <li>Package <pkg>nleqslv</pkg> provides a
+    function <code>nleqslv()</code> implementing Newton and Broyden
+    methods with line search and trust region global strategies for
+    solving medium sized system of nonlinear equations.
+    </li>
     
     <li>In package <pkg>gafit</pkg> <code>gafit()</code> uses a
     genetic algorithm approach to find  
@@ -140,7 +146,10 @@
     <li><pkg>BB</pkg> contains the function <code>spg()</code> providing a
     spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
-    argument as well as basic constraints. 
+    argument as well as basic constraints. Furthermore, <pkg>BB</pkg>
+    contains two functions (<code>dfsane()</code>
+    and <code>sane()</code>) for using the spectral gradient method
+    for solving a nonlinear system of equations. 
     </li>
 
     <li>In the <pkg>boot</pkg> package there is a routine called 
@@ -298,14 +307,14 @@
     shortest paths, maximal network flows, minimum 
     spanning trees, etc. [GRAPH]</li>
     
-    <li> <pkg>maxLik</pkg> adds a likelihood-specific layer on top of
+    <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of
     a number of maximization routines like Brendt-Hall-Hall-Hausman
     (BHHH) and Newton-Raphson  
     among others.  It includes summary and print methods which 
     extract the standard errors based on the Hessian matrix and allows easy
     swapping of maximization algorithms.
     </li>
-  
+    
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
     <code>crq()</code>). It provides an interface to L1 regression 
@@ -478,6 +487,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>lpSolveAPI</pkg>
   <pkg>maxLik</pkg>
   <pkg>mco</pkg>
+  <pkg>nleqslv</pkg>
   <pkg>optmatch</pkg>
   <pkg priority="core">quadprog</pkg>
   <pkg>quantreg</pkg>
