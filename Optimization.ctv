@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2009-06-23</version>
+<version>2010-10-18</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -36,7 +36,9 @@
   
   <h2><a name="GeneralPurposeSolvers">General Purpose Continuous
   Solvers</a></h2>
-  
+<!--
+  <h3>Solvers provided by the base R distribution</h3>
+-->
   <ul>
     <li>Package stats offers several general purpose optimization
     routines.
@@ -62,7 +64,11 @@
     <code>nlminb()</code> offers unconstrained and constrained  
     optimization using PORT routines. [RGA, QN] 
     </li>
-    
+<!--
+  </ul>
+  <h3>Packages extending the basic solver spectrum</h3>
+  <ul>
+-->
     <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
     solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).
@@ -79,6 +85,33 @@
     to methods, implemented in <code>optim()</code>. It supports fitting a
     submodel by specifying constant parameters.
     </li>
+
+    <li>Several derivative-free optimization algorithms are provided
+    with package <pkg>minqa</pkg>. E.g., the
+    functions <code>bobyqa()</code>, <code>newuoa()</code>,
+    and <code>uobyqa()</code> allow to minimize a function of many
+    variables by a trust region method that forms quadratic models by
+    interpolation. <code>bobyqa()</code> additionally permits box
+    constraints (bounds) on the parameters. [DF]</li>
+
+    <li>Trying to unify optimization algorithms via a single wrapper
+      function <pkg>optimx</pkg> helps to proper specify the
+      (nonlinear) optimization problem including objective function,
+      gradient function, and scaling. This package supports the
+      (local) optimization of smooth, nonlinear functions with at most
+      box constraints (bounds). <pkg>optimx</pkg> depends not only on
+      packages and/or functions mentioned in this section of this task
+      view but also on two packages implemented by the author(s),
+      namely <pkg>Rcgmin</pkg> and <pkg>Rvmmin</pkg>. Both are "pure
+      R" implementations of conjugate gradient minimization and
+      variable metric nonlinear function minimization algorithms,
+      respectively.</li>
+
+    <li><pkg>Rsolnp</pkg> offers general nonlinear optimization using
+    the augmented lagrange multiplier method. The latest development
+    snapshot of this package can be found in
+    project <rforge>rino</rforge>
+    at <a href="http://R-Forge.R-project.org/">R-Forge</a>.</li>
 
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.
@@ -173,7 +206,8 @@
     <a href="http://gmplib.org">GNU Multiple Precision (GMP)
     </a> library. [LP]</li>
 
-    <li>In package <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a>function<code>donlp2()</code>, a wrapper for the DONLP2
+    <li>In package Rdonlp2 (see the <rforge>rmetrics</rforge> project)
+    function<code>donlp2()</code> , a wrapper for the DONLP2 
     solver, offers the minimization of smooth nonlinear functions and
     constraints. DONLP2 can be used freely for any kind of research
     purposes, otherwise it requires licensing. [GO, NLP]
@@ -188,11 +222,14 @@
     </li>
     -->
     
-    <li>Rsolnp is currently being developed on <a
-    href="http://R-Forge.R-project.org/">R-Forge</a> in project
-    <rforge>rino</rforge>. This package offers general nonlinear
-    optimization using the augmented lagrange multiplier method. [NLP]
+    <li> An interface to Ipopt from
+    the <a href="http://www.coin-or.org/">COIN-OR</a> initiative
+    called ipoptr can be downloaded
+    from <a href="http://www.ucl.ac.uk/~uctpjyy/ipoptr.html">here</a>. Ipopt
+    is an open source solver for large-scale nonlinear continuous
+    optimization. [NLP]
     </li>
+    
 
   </ul>
    
@@ -424,7 +461,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <li>MOP (Multi-objective and goal programming, 90C29):
       <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
  
-      <li>NLP (Nonlinear programming, 90C30): <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a> 
+      <li>NLP (Nonlinear programming,
+      90C30): Rdonlp2, <pkg>Rsolnp</pkg>
       </li> 
       <!--
 	  <li>Sensitivity, stability, parametric optimization, 90C31</li> 
@@ -452,9 +490,9 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
       (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>ucminf</pkg></li>
+      <li>DF (Derivative-free methods, 90C56): <pkg>minqa</pkg></li>
       <!-- 
 	   <li>Methods of successive quadratic programming type, 90C55</li>
-	   <li>Derivative-free methods, 90C56</li>
 	   <li>Polyhedral combinatorics, branch-and-bound,
 	   branch-and-cut, 90C57</li>
 	   <li>Approximation methods and heuristics, 90C59</li>
@@ -487,16 +525,21 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>lpSolveAPI</pkg>
   <pkg>maxLik</pkg>
   <pkg>mco</pkg>
+  <pkg priority="core">minqa</pkg>
   <pkg>nleqslv</pkg>
   <pkg>optmatch</pkg>
+  <pkg priority="core">optimx</pkg>
   <pkg priority="core">quadprog</pkg>
   <pkg>quantreg</pkg>
   <pkg>rcdd</pkg>
+  <pkg>Rcgmin</pkg>
   <pkg>Rcplex</pkg>
   <pkg>Rcsdp</pkg>
+  <pkg priority="core">Rsolnp</pkg>  
   <pkg>rgenoud</pkg>
   <pkg priority="core">Rglpk</pkg>
   <pkg priority="core">Rsymphony</pkg>
+  <pkg>Rvmmin</pkg>
   <pkg>sna</pkg>
   <pkg>subplex</pkg>
   <pkg>trust</pkg>
@@ -506,7 +549,10 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 
 <links>
   <a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">NEOS Wiki</a>
-  <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for Optimization Software</a>
+  <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for
+  Optimization Software</a>
+  <a href="http://rwiki.sciviews.org/doku.php?id=tips:optim-method:unconstr_optim">Overview
+    on unconstrained optimization algorithms and corresponding R packages (functions)</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
   <a href="http://www.ams.org/msc/90Cxx.html">Mathematics Subject Classification - Mathematical programming</a>
 </links>
