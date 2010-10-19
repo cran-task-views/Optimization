@@ -551,8 +551,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">NEOS Wiki</a>
   <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for
   Optimization Software</a>
-  <a href="http://rwiki.sciviews.org/doku.php?id=tips:optim-method:unconstr_optim">Overview
-    on unconstrained optimization algorithms and corresponding R packages (functions)</a>
+  <a href="http://rwiki.sciviews.org/doku.php?id=tips:optimization">Overview
+    on optimization algorithms and corresponding R packages (functions)</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
   <a href="http://www.ams.org/msc/90Cxx.html">Mathematics Subject Classification - Mathematical programming</a>
 </links>
