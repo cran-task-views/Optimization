@@ -69,6 +69,16 @@
   <h3>Packages extending the basic solver spectrum</h3>
   <ul>
 -->
+    <li>Implementations of the augmented lagrange multiplier method
+    for general nonlinear optimization can be found in
+    packages <pkg>alabama</pkg> and <pkg>Rsolnp</pkg>.
+    <!--The latest development
+    snapshot of this package can be found in
+    project <rforge>rino</rforge>
+    at <a href="http://R-Forge.R-project.org/">R-Forge</a>.
+    -->
+    </li>
+
     <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
     solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).
@@ -112,12 +122,6 @@
       variable metric nonlinear function minimization algorithms,
       respectively.</li>
 
-    <li><pkg>Rsolnp</pkg> offers general nonlinear optimization using
-    the augmented lagrange multiplier method. The latest development
-    snapshot of this package can be found in
-    project <rforge>rino</rforge>
-    at <a href="http://R-Forge.R-project.org/">R-Forge</a>.</li>
-
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.
     </li>
@@ -151,7 +155,9 @@
     a derivative-based (quasi-Newtonian) approach.</li>
 
     <li>Package <pkg>DEoptim</pkg> provides a global optimizer based
-    on the differential evolution algorithm.
+    on the differential evolution algorithm. An efficient C++ based
+    implementation of the <code>DEoptim()</code> function is provided
+    with <pkg>RcppDE</pkg>.
     <!--
 	see the <a href="http://www.icsi.berkeley.edu/~storn/code.html">
 	Differential Evolution home page</a>.
@@ -517,6 +523,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 </info>
 
 <packagelist>
+  <pkg>alabama</pkg>
   <pkg>BB</pkg>
   <pkg>boot</pkg>
   <pkg>clue</pkg>
@@ -547,6 +554,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>rcdd</pkg>
   <pkg>Rcgmin</pkg>
   <pkg>Rcplex</pkg>
+<pkg>RcppDE</pkg>
   <pkg>Rcsdp</pkg>
   <pkg priority="core">Rsolnp</pkg>  
   <pkg>rgenoud</pkg>
