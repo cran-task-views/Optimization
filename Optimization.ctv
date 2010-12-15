@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2010-12-14</version>
+<version>2010-12-15</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
