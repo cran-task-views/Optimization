@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2010-12-15</version>
+<version>2010-12-16</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -84,21 +84,26 @@
     unconstrained minimization technique (SUMT).
     </li>
 
+    <li>Package <pkg>cmaes</pkg> implements a global optimization
+    procedure using a covariance matrix adapting evolutionary
+    strategy (CMA-ES).
+    </li>
+
     <li>Package <pkg>gsl</pkg> provides BFGS, conjugate gradient,
     steepest descent, and Nelder-Mead algorithms. It uses a "line
     search" approach via the function <code>multimin()</code>. It is
     based on the GNU Scientific Library (GSL). [RGA, QN] 
     </li>
     
-    <li>Package <pkg>cmaes</pkg> implements a global optimization
-    procedure using a covariance matrix adapting evolutionary
-    strategy (CMA-ES).
-    </li>
-
     <li>Package <pkg>maxLik</pkg> provides a general purpose
     Newton-Raphson optimizer <code>maxNR()</code> as well as wrapper
     to methods, implemented in <code>optim()</code>. It supports fitting a
     submodel by specifying constant parameters.
+    </li>
+
+    <li>An R port of the Scilab neldermead module is packaged
+    in <pkg>neldermead</pkg> offering several direct search
+    optimization algorithms based on the simplex method.
     </li>
 
     <li>Several derivative-free optimization algorithms are provided
@@ -121,6 +126,12 @@
       R" implementations of conjugate gradient minimization and
       variable metric nonlinear function minimization algorithms,
       respectively.</li>
+
+    <li>A particle swarm optimizer is implemented in
+    package <pkg>pso</pkg>. The algorithm follows the standard PSO
+    2007 by Maurice Clerc et al. Additionally a number of ancillary
+    routines are provided for easy testing and graphics.
+    </li>
 
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.
@@ -546,15 +557,17 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>maxLik</pkg>
   <pkg>mco</pkg>
   <pkg priority="core">minqa</pkg>
+  <pkg>neldermead</pkg>
   <pkg>nleqslv</pkg>
   <pkg>optmatch</pkg>
   <pkg priority="core">optimx</pkg>
+  <pkg>pso</pkg>
   <pkg priority="core">quadprog</pkg>
   <pkg>quantreg</pkg>
   <pkg>rcdd</pkg>
   <pkg>Rcgmin</pkg>
   <pkg>Rcplex</pkg>
-<pkg>RcppDE</pkg>
+  <pkg>RcppDE</pkg>
   <pkg>Rcsdp</pkg>
   <pkg priority="core">Rsolnp</pkg>  
   <pkg>rgenoud</pkg>
