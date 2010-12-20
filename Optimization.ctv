@@ -165,6 +165,14 @@
     evolutionary algorithms with  
     a derivative-based (quasi-Newtonian) approach.</li>
 
+    <li>An R implementation of the Self-Organising Migrating Algorithm
+    (SOMA) is available in package <pkg>soma</pkg>. The approach of
+    this stochastic optimization algorithm is similar to that of
+    genetic algorithms and can be applied to any cost-minimization
+    problem with a bounded parameter space, and is robust to local
+    minima.
+    </li>
+
     <li>Package <pkg>DEoptim</pkg> provides a global optimizer based
     on the differential evolution algorithm. An efficient C++ based
     implementation of the <code>DEoptim()</code> function is provided
@@ -575,6 +583,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg priority="core">Rsymphony</pkg>
   <pkg>Rvmmin</pkg>
   <pkg>sna</pkg>
+  <pkg>soma</pkg>
   <pkg>subplex</pkg>
   <pkg>trust</pkg>
   <pkg priority="core">TSP</pkg>
