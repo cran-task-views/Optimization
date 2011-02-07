@@ -107,7 +107,7 @@
     </li>
 
     <li>
-    Project <rforge>nloptr<rforge> hosts an R interface to NLopt, an
+    Project <rforge>nloptr</rforge> hosts an R interface to NLopt, an
     LGPL licensed library for nonlinear optimization providing a
     common interface for a number of different free optimization
     routines. NLopt is callable from C, C++, Fortran, and other
