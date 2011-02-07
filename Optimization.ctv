@@ -106,6 +106,16 @@
     optimization algorithms based on the simplex method.
     </li>
 
+    <li>
+    Project <rforge>nloptr<rforge> hosts an R interface to NLopt, an
+    LGPL licensed library for nonlinear optimization providing a
+    common interface for a number of different free optimization
+    routines. NLopt is callable from C, C++, Fortran, and other
+    languages. It supports algorithms for unconstrained
+    optimization, bound-constrained optimization, and general
+    nonlinear inequality/equality constraints.
+    </li>
+
     <li>Several derivative-free optimization algorithms are provided
     with package <pkg>minqa</pkg>. E.g., the
     functions <code>bobyqa()</code>, <code>newuoa()</code>,
@@ -174,13 +184,11 @@
     </li>
 
     <li>Package <pkg>DEoptim</pkg> provides a global optimizer based
-    on the differential evolution algorithm. An efficient C++ based
-    implementation of the <code>DEoptim()</code> function is provided
-    with <pkg>RcppDE</pkg>.
+    on the differential evolution algorithm. <pkg>RcppDE</pkg>
+    provides a C++ implementation of the <code>DEoptim()</code> function.
     <!--
-	see the <a href="http://www.icsi.berkeley.edu/~storn/code.html">
-	Differential Evolution home page</a>.
-    -->
+    see the <a href="http://www.icsi.berkeley.edu/~storn/code.html">
+    Differential Evolution home page</a>.  --> 
     </li>
     
   </ul>
