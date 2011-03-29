@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2011-02-07</version>
+<version>2011-03-29</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -137,10 +137,12 @@
       variable metric nonlinear function minimization algorithms,
       respectively.</li>
 
-    <li>A particle swarm optimizer is implemented in
-    package <pkg>pso</pkg>. The algorithm follows the standard PSO
-    2007 by Maurice Clerc et al. Additionally a number of ancillary
-    routines are provided for easy testing and graphics.
+    <li>A particle swarm optimizer (PSO) is implemented in package
+    <pkg>pso</pkg>. The algorithm follows the standard PSO 2007 by
+    Maurice Clerc et al. Additionally, a number of ancillary routines
+    are provided for easy testing and graphics. Another (parallelized)
+    implementation of the PSO algorithm can be found in package ppso
+    available from <a href="http://www.rforge.net/ppso/">rforge.net</a>.
     </li>
 
     <li><pkg>subplex</pkg> provides unconstrained function
