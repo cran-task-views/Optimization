@@ -8,7 +8,7 @@
 <info> 
   <p>This CRAN task view contains a list of packages which offer
   facilities for solving optimization problems. 
-  Although every regression model in statistcs solves an optimization
+  Although every regression model in statistics solves an optimization
   problem they are not part of this view. If you are looking for regression
   methods, the following views will contain useful starting points:
   <view>Multivariate</view>, <view>SocialSciences</view>, <view>Robust</view> among others.
@@ -262,13 +262,12 @@
     </li>
     -->
     
-    <li> An interface to Ipopt from
-    the <a href="http://www.coin-or.org/">COIN-OR</a> initiative
-    called ipoptr can be downloaded
-    from <a href="http://www.ucl.ac.uk/~uctpjyy/ipoptr.html">here</a>. Ipopt
-    is an open source solver for large-scale nonlinear continuous
-    optimization. [NLP]
-    </li>
+    <li> An interface to Ipopt from the <a
+    href="http://www.coin-or.org/">COIN-OR</a> initiative called
+    <rforge>ipoptr</rforge> is available from <a
+    href="http://R-Forge.R-project.org/">R-Forge</a>. Ipopt is an open
+    source solver for large-scale nonlinear continuous
+    optimization. [NLP] </li>
     
 
   </ul>
@@ -566,6 +565,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>goalprog</pkg>
   <pkg>gsl</pkg>
   <pkg>igraph</pkg>
+  <rforge>ipoptr</rforge>
   <pkg>kernlab</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
