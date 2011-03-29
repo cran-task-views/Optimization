@@ -565,7 +565,6 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>goalprog</pkg>
   <pkg>gsl</pkg>
   <pkg>igraph</pkg>
-  <rforge>ipoptr</rforge>
   <pkg>kernlab</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
