@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2011-03-29</version>
+<version>2011-04-12</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -253,6 +253,12 @@
     purposes, otherwise it requires licensing. [GO, NLP]
     </li>
     
+    <li> The <a href="http://www.neos-server.org/neos/">NEOS Server
+    for Optimization</a> provides online access to state-of-the-art
+    optimization problem solvers. Package <pkg>rneos</pkg> enables the
+    user to pass optimization problems to NEOS and retrieve results
+    within R.
+    </li>
     <!--
     <li>Package <rforge>stoprog</rforge> is a package for scenario
     generation procedures used in 
@@ -586,9 +592,10 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rcplex</pkg>
   <pkg>RcppDE</pkg>
   <pkg>Rcsdp</pkg>
-  <pkg priority="core">Rsolnp</pkg>  
   <pkg>rgenoud</pkg>
   <pkg priority="core">Rglpk</pkg>
+  <pkg>rneos</pkg>
+  <pkg priority="core">Rsolnp</pkg>  
   <pkg priority="core">Rsymphony</pkg>
   <pkg>Rvmmin</pkg>
   <pkg>sna</pkg>
