@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2011-04-12</version>
+<version>2011-10-12</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -345,14 +345,27 @@
   corresponding libraries have to be installed separately.
   
   <ul>
-    <li>Package <pkg>Rcplex</pkg> provides an interface to the CPLEX solver 
-    package from <a href="http://www.ilog.com/">ILOG</a>. It provides dual/primal simplex optimizers as well as 
-    a barrier optimizer for solving large scale linear 
-    and quadratic programs. Furthermore, it offers a mixed integer optimizer
-    to solve difficult mixed integer programs. Note that CPLEX is
-    <b>not free</b> and you have to get a license from <a
-    href="http://www.ilog.com/">ILOG</a>. [LP, IP,
-    BP, QP, MILP, MIQP, IPM]</li>
+    <li>Package <pkg>Rcplex</pkg> provides an interface to the CPLEX
+    solver package from <a
+    href="http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/">IBM</a>. It
+    provides dual/primal simplex optimizers as well as a barrier
+    optimizer for solving large scale linear and quadratic
+    programs. Furthermore, it offers a mixed integer optimizer to
+    solve difficult mixed integer programs. Note that CPLEX is <b>not
+    free</b> and you have to get a license from <a
+    href="http://www.ibm.com/">IBM</a>. Academics will receive a free licence upon request. [LP, IP, BP, QP, MILP, MIQP,
+    IPM]</li>
+    <li>Package <pkg>rmosek</pkg> offers an interface to the
+    commercial optimizer from <a
+    href="http://www.mosek.com/">MOSEK</a>. It provides dual/primal
+    simplex optimizers as well as a barrier optimizer. In addition to
+    solving LP and QP problems this solver can handle second order
+    cone programming (SOCP) and quadratically constrained programming
+    (QPQC) tasks. Furthermore, it offers a mixed integer optimizer to
+    solve difficult mixed integer programs (MILP, MISOCP, etc.). Note
+    that you have to get a license from <a
+    href="http://www.mosek.com/">MOSEK</a>. Academic licenses are free
+    of charge.  [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
   </ul>
   
   <!--
@@ -391,6 +404,10 @@
     uses the very fast igraph C library. It can be used to calculate
     shortest paths, maximal network flows, minimum 
     spanning trees, etc. [GRAPH]</li>
+
+    <li>Package <pkg>minpack.lm</pkg> provides an interface to the
+    Levenberg-Marquardt nonlinear least-squares algorithm found in
+    MINPACK.</li>
 
     <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of
     a number of maximization routines like Brendt-Hall-Hall-Hausman
@@ -579,6 +596,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>lpSolveAPI</pkg>
   <pkg>maxLik</pkg>
   <pkg>mco</pkg>
+  <pkg>minpack.lm</pkg>
   <pkg priority="core">minqa</pkg>
   <pkg>neldermead</pkg>
   <pkg>nleqslv</pkg>
@@ -594,6 +612,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rcsdp</pkg>
   <pkg>rgenoud</pkg>
   <pkg priority="core">Rglpk</pkg>
+  <pkg>rmosek</pkg>
   <pkg>rneos</pkg>
   <pkg priority="core">Rsolnp</pkg>  
   <pkg priority="core">Rsymphony</pkg>
