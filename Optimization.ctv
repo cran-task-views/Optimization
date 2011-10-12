@@ -54,23 +54,15 @@
     respectively.</li>
 
     <li>The R Optimization Infrastructure (<pkg>ROI</pkg>) package
-    provides a sophisticated framework for handling optimization
-    problems in R. This integrative multi-purpose optimization
-    framework offers an object oriented approach to optimization: The
-    main function <code>ROI_solve()</code> takes three arguments,
-    namely the problem object containing information about the
-    optimization problem which is to be solved (constructed via
-    <code>OP()</code>), the solver to use, and a list of additional
-    control arguments like e.g., solver parameters. Appropriate
-    extractor and replacement functions allow for interacting with
-    <pkg>ROI</pkg> objects intuitively and, where applicable,
-    modifying the optimization problem at hand. This makes
-    optimization very transparent for the R user as the corresponding
-    workflow is completely abstracted from the solver. Furthermore,
-    this approach allows for easy switching between solvers, given
-    that corresponding solver plugins are available, and thus enhances
-    comparability.</li>
-  </ul>
+    provides a framework for handling optimization problems in R. It
+    uses an object oriented approach to define and solve various
+    optimization tasks in R which can be from different problem
+    classes (e.g., linear, quadratic, non-linear programming
+    problems). This makes optimization transparent for the R user as
+    the corresponding workflow is completely abstracted from the
+    underlying solver. Furthermore, this approach allows for easy
+    switching between solvers, given that corresponding solver plugins
+    are available, and thus enhances comparability.</li> </ul>
 
   <h2><a name="GeneralPurposeSolvers">General Purpose Continuous
   Solvers</a></h2>
