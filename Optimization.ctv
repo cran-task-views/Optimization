@@ -13,6 +13,7 @@
   methods, the following views will contain useful starting points:
   <view>Multivariate</view>, <view>SocialSciences</view>, <view>Robust</view> among others.
   The focus of this task view is on <a
+  href="#SolverInfrastructure">Optimization Infrastructure Packages</a>, <a
   href="#GeneralPurposeSolvers">General Purpose Continuous 
   Solvers</a>, <a href="#MathematicalProgrammingSolvers">Mathematical 
   Programming Solvers</a> and <a href="#SpecificApplications">Specific
@@ -33,7 +34,44 @@
 
   <p>If you think that some package is missing from the list, please
   let me know.</p>
-  
+
+  <h2><a name="SolverInfrastructure">Optimization Infrastructure Packages</a></h2>
+<!--
+  <h3>Solvers provided by the base R distribution</h3>
+-->
+  <ul>
+    <li>Trying to unify optimization algorithms via a single wrapper
+    function, <pkg>optimx</pkg> helps to proper specify the
+    (nonlinear) optimization problem including objective function,
+    gradient function, and scaling. This package supports the
+    (local) optimization of smooth, nonlinear functions with at most
+    box constraints (bounds). <pkg>optimx</pkg> depends not only on
+    packages and/or functions mentioned in this section of this task
+    view but also on two packages implemented by the author(s),
+    namely <pkg>Rcgmin</pkg> and <pkg>Rvmmin</pkg>. Both are "pure
+    R" implementations of conjugate gradient minimization and
+    variable metric nonlinear function minimization algorithms,
+    respectively.</li>
+
+    <li>The R Optimization Infrastructure (<pkg>ROI</pkg>) package
+    provides a sophisticated framework for handling optimization
+    problems in R. This integrative multi-purpose optimization
+    framework offers an object oriented approach to optimization: The
+    main function <code>ROI_solve()</code> takes three arguments,
+    namely the problem object containing information about the
+    optimization problem which is to be solved (constructed via
+    <code>OP()</code>), the solver to use, and a list of additional
+    control arguments like e.g., solver parameters. Appropriate
+    extractor and replacement functions allow for interacting with
+    <pkg>ROI</pkg> objects intuitively and, where applicable,
+    modifying the optimization problem at hand. This makes
+    optimization very transparent for the R user as the corresponding
+    workflow is completely abstracted from the solver. Furthermore,
+    this approach allows for easy switching between solvers, given
+    that corresponding solver plugins are available, and thus enhances
+    comparability.</li>
+  </ul>
+
   <h2><a name="GeneralPurposeSolvers">General Purpose Continuous
   Solvers</a></h2>
 <!--
@@ -123,19 +161,6 @@
     variables by a trust region method that forms quadratic models by
     interpolation. <code>bobyqa()</code> additionally permits box
     constraints (bounds) on the parameters. [DF]</li>
-
-    <li>Trying to unify optimization algorithms via a single wrapper
-      function <pkg>optimx</pkg> helps to proper specify the
-      (nonlinear) optimization problem including objective function,
-      gradient function, and scaling. This package supports the
-      (local) optimization of smooth, nonlinear functions with at most
-      box constraints (bounds). <pkg>optimx</pkg> depends not only on
-      packages and/or functions mentioned in this section of this task
-      view but also on two packages implemented by the author(s),
-      namely <pkg>Rcgmin</pkg> and <pkg>Rvmmin</pkg>. Both are "pure
-      R" implementations of conjugate gradient minimization and
-      variable metric nonlinear function minimization algorithms,
-      respectively.</li>
 
     <li>A particle swarm optimizer (PSO) is implemented in package
     <pkg>pso</pkg>. The algorithm follows the standard PSO 2007 by
@@ -614,6 +639,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg priority="core">Rglpk</pkg>
   <pkg>rmosek</pkg>
   <pkg>rneos</pkg>
+  <pkg priority="core">ROI</pkg>
   <pkg priority="core">Rsolnp</pkg>  
   <pkg priority="core">Rsymphony</pkg>
   <pkg>Rvmmin</pkg>
