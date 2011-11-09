@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2011-10-12</version>
+<version>2011-11-09</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -372,7 +372,7 @@
     free</b> and you have to get a license from <a
     href="http://www.ibm.com/">IBM</a>. Academics will receive a free licence upon request. [LP, IP, BP, QP, MILP, MIQP,
     IPM]</li>
-    <li>Package <pkg>rmosek</pkg> offers an interface to the
+    <li>Package <pkg>Rmosek</pkg> offers an interface to the
     commercial optimizer from <a
     href="http://www.mosek.com/">MOSEK</a>. It provides dual/primal
     simplex optimizers as well as a barrier optimizer. In addition to
@@ -629,7 +629,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rcsdp</pkg>
   <pkg>rgenoud</pkg>
   <pkg priority="core">Rglpk</pkg>
-  <pkg>rmosek</pkg>
+  <pkg>Rmosek</pkg>
   <pkg>rneos</pkg>
   <pkg priority="core">ROI</pkg>
   <pkg priority="core">Rsolnp</pkg>  
