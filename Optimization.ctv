@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2011-11-09</version>
+<version>2011-12-20</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -118,6 +118,11 @@
     procedure using a covariance matrix adapting evolutionary
     strategy (CMA-ES).
     </li>
+
+    <li><pkg>GenSA</pkg> is a package providing a function for
+    generalized simulated annealing which can be used to search for a
+    global minimum of a very complex non-linear objective function
+    with a very large number of optima.</li>
 
     <li>Package <pkg>gsl</pkg> provides BFGS, conjugate gradient,
     steepest descent, and Nelder-Mead algorithms. It uses a "line
@@ -601,6 +606,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>desirability</pkg>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
+  <pkg>GenSA</pkg>
   <pkg>glpk</pkg>
   <pkg>goalprog</pkg>
   <pkg>gsl</pkg>
