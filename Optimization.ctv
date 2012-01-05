@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2011-12-20</version>
+<version>2012-01-05</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -119,6 +119,11 @@
     strategy (CMA-ES).
     </li>
 
+    <li>Package <pkg>dfoptim</pkg>, derivative-free optimization
+    procedures, contains quite efficient R implementations of the
+    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
+    bounds-constrained). [DF]</li>
+
     <li><pkg>GenSA</pkg> is a package providing a function for
     generalized simulated annealing which can be used to search for a
     global minimum of a very complex non-linear objective function
@@ -142,13 +147,12 @@
     </li>
 
     <li>
-    Project <rforge>nloptr</rforge> hosts an R interface to NLopt, an
-    LGPL licensed library for nonlinear optimization providing a
-    common interface for a number of different free optimization
-    routines. NLopt is callable from C, C++, Fortran, and other
-    languages. It supports algorithms for unconstrained
-    optimization, bound-constrained optimization, and general
-    nonlinear inequality/equality constraints.
+    Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL
+    licensed library of various nonlinear optimization algorithms. It
+    especially supports global optimization with routines such as
+    DIRECT, StoGo, and others. It includes local derivative-free
+    (COBYLA, Nelder-Mead, Subplex) and gradient-based (e.g., BFGS)
+    methods, and also the augmented Lagrangian approach. [DF, GO, QN]
     </li>
 
     <li>Several derivative-free optimization algorithms are provided
@@ -158,6 +162,10 @@
     variables by a trust region method that forms quadratic models by
     interpolation. <code>bobyqa()</code> additionally permits box
     constraints (bounds) on the parameters. [DF]</li>
+
+    <li>Package <pkg>powell</pkg> optimizes functions using Powell's
+    UObyQA algorithm (Unconstrained Optimization by Quadratic
+    Approximation).</li>
 
     <li>A particle swarm optimizer (PSO) is implemented in package
     <pkg>pso</pkg>. The algorithm follows the standard PSO 2007 by
@@ -192,6 +200,10 @@
     <li>Package <pkg>genalg</pkg> contains
     <code>rbga()</code>, an implementation of a genetic algorithm for 
     multi-dimensional function optimization.</li>
+
+    <li>Machine coded genetic algorithm (MCGA) provided by package
+    <pkg>mcga</pkg> is a tool which solves optimization problems based
+    on byte representation of variables.</li>
 
     <li>Package <pkg>rgenoud</pkg> offers
     <code>genoud()</code>, a routine which is capable of solving
@@ -492,12 +504,11 @@ href="http://sourceforge.net/projects/freak427/">FrEAK</a>.</li>
 <li><pkg>RankAggreg</pkg> performs aggregation of ordered lists based
 on the ranks using three different algorithms (cross-entropy Monte
 Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>  
-<li><pkg>powell</pkg> contains an algorithm for unconstrained
-optimization by quadratic approximation (UObyQA).</li>
 <li>Package <rforge>rootSolve</rforge> includes
 routines to find the root of nonlinear functions and to perform
 steady-state and equilibrium analysis of ordinary differential equations.</li>
 -->
+
   
   <h2><a name="ClassificationBySubject">Classification According to
   Subject</a></h2>
@@ -517,7 +528,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
-      <li> GO (Global Optimization): <a href="http://arumat.net/Rdonlp2/">Rdonlp2</a></li>
+      <li> GO (Global Optimization): <pkg>nloptr</pkg></li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
@@ -543,7 +554,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>Rcplex</pkg></li>
      
       <li>SDP (Semidefinite programming, 90C22): <pkg>Rcsdp</pkg></li>
- <!-- 
+      <!-- 
 	   <li>Convex programming, 90C25</li> 
 	   <li>Nonconvex programming, 90C26</li> 
 	   <li>Combinatorial optimization, 90C27</li> 
@@ -579,8 +590,9 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       (<code>optim()</code>), <pkg>gsl</pkg></li>
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
-      (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>ucminf</pkg></li>
-      <li>DF (Derivative-free methods, 90C56): <pkg>minqa</pkg></li>
+      (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>nloptr</pkg>, <pkg>ucminf</pkg></li>
+      <li>DF (Derivative-free methods, 90C56): <pkg>dfoptim</pkg>,
+      <pkg>minqa</pkg>, <pkg>nloptr</pkg></li>
       <!-- 
 	   <li>Methods of successive quadratic programming type, 90C55</li>
 	   <li>Polyhedral combinatorics, branch-and-bound,
@@ -602,6 +614,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>clue</pkg>
   <pkg>cmaes</pkg>
   <pkg>dclone</pkg>
+  <pkg>dfoptim</pkg>
   <pkg>DEoptim</pkg>
   <pkg>desirability</pkg>
   <pkg>gafit</pkg>
@@ -618,13 +631,16 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg priority="core">lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
   <pkg>maxLik</pkg>
+  <pkg>mcga</pkg>
   <pkg>mco</pkg>
   <pkg>minpack.lm</pkg>
   <pkg priority="core">minqa</pkg>
   <pkg>neldermead</pkg>
   <pkg>nleqslv</pkg>
+  <pkg>nloptr</pkg>
   <pkg>optmatch</pkg>
   <pkg priority="core">optimx</pkg>
+  <pkg>powell</pkg>
   <pkg>pso</pkg>
   <pkg priority="core">quadprog</pkg>
   <pkg>quantreg</pkg>
