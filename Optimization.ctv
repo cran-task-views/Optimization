@@ -331,8 +331,7 @@
     <pkg>lpSolveAPI</pkg> supports reading linear programs from files in lp 
     and MPS format. [BP, IP, LP, MILP, SPLP]</li> 
   
-    <li>Package <pkg>glpk</pkg> as well as package <pkg>Rglpk</pkg>
-    provide an interface to  
+    <li>Package <pkg>Rglpk</pkg> provides an interface to  
     the <a href="http://www.gnu.org/software/glpk/">GNU Linear
     Programming Kit</a> (GLPK). Whereas the former 
     provides high level access to  
@@ -521,7 +520,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   </p> 
     <ul>
       <li>LP (Linear programming, 90C05): <pkg>boot</pkg>,
-      <pkg>glpk</pkg>, <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
+      <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>rcdd</pkg>, 
       <pkg>Rcplex</pkg>, 
       <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg>, <pkg>quantreg</pkg> </li>
@@ -534,15 +533,15 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>, <pkg>optmatch</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
    
-      <li>BP (Boolean programming, 90C09): <pkg>glpk</pkg>, <pkg>Rglpk</pkg>,
+      <li>BP (Boolean programming, 90C09): <pkg>Rglpk</pkg>,
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg> </li>
 
-      <li>IP (Integer programming, 90C10): <pkg>glpk</pkg>,
+      <li>IP (Integer programming, 90C10): 
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
       <pkg>Rsymphony</pkg></li>
 
       <li>MIP (Mixed integer programming and its variants MILP for LP
-      and MIQP for QP, 90C11):  <pkg>glpk</pkg>, <pkg>lpSolve</pkg>,
+      and MIQP for QP, 90C11):  <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>,
       <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg></li>
 
@@ -582,7 +581,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 	  <li>Extreme-point and pivoting methods, 90C49</li>
       -->
       <li>IPM (Interior-point methods, 90C51): <pkg>kernlab</pkg>,
-      <pkg>glpk</pkg>, <pkg>LowRankQP</pkg>, <pkg>quantreg</pkg>,
+      <pkg>LowRankQP</pkg>, <pkg>quantreg</pkg>,
       <pkg>Rcplex</pkg>
       </li>
       
@@ -620,7 +619,6 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
-  <pkg>glpk</pkg>
   <pkg>goalprog</pkg>
   <pkg>gsl</pkg>
   <pkg>igraph</pkg>
