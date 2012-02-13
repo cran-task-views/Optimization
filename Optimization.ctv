@@ -315,6 +315,11 @@
   <h3>Interfaces to Open Source Optimizers</h3> 
 
   <ul> 
+    <li>Package <pkg>clpAPI</pkg> provides high level access from R to
+    low-level API routines of the <a
+    href="https://projects.coin-or.org/Clp">COIN OR Clp</a> solver
+    library. [LP]</li>
+
     <li>Package <pkg>lpSolve</pkg> contains the routine
     <code>lp()</code> to solve LPs and MILPs by calling the freely
     available solver <a
@@ -331,15 +336,15 @@
     <pkg>lpSolveAPI</pkg> supports reading linear programs from files in lp 
     and MPS format. [BP, IP, LP, MILP, SPLP]</li> 
   
-    <li>Package <pkg>Rglpk</pkg> provides an interface to  
-    the <a href="http://www.gnu.org/software/glpk/">GNU Linear
-    Programming Kit</a> (GLPK). Whereas the former 
-    provides high level access to  
-    low level routines the latter offers a high level routine
-    <code>Rglpk_solve_LP()</code> to solve  
-    MILPs using GLPK. 
-    Both packages offer the possibility to use models formulated in the
-    MPS format. [BP, IP, IPM, LP, MILP]</li> 
+
+    <li>Packages <pkg>glpkAPI</pkg> as well as
+    package <pkg>Rglpk</pkg> provide an interface to the <a
+    href="http://www.gnu.org/software/glpk/">GNU Linear Programming
+    Kit</a> (GLPK). Whereas the former provides high level access
+    to low level routines the latter offers a high level routine
+    <code>Rglpk_solve_LP()</code> to solve MILPs using GLPK.  Both
+    packages offer the possibility to use models formulated in the MPS
+    format. [BP, IP, IPM, LP, MILP]</li>
     <!--
 	GNU LP or MathProg, can be loaded.
 	<code>Rglpk_solve_LP()</code> solves linear and mixed-integer programs 
@@ -378,16 +383,16 @@
   corresponding libraries have to be installed separately.
   
   <ul>
-    <li>Package <pkg>Rcplex</pkg> provides an interface to the CPLEX
-    solver package from <a
-    href="http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/">IBM</a>. It
+    <li>Packages <pkg>cplexAPI</pkg> and <pkg>Rcplex</pkg> provide an
+    interface to the CPLEX solver package from <a
+    href="http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/">IBM</a>. CPLEX
     provides dual/primal simplex optimizers as well as a barrier
     optimizer for solving large scale linear and quadratic
     programs. Furthermore, it offers a mixed integer optimizer to
     solve difficult mixed integer programs. Note that CPLEX is <b>not
     free</b> and you have to get a license from <a
-    href="http://www.ibm.com/">IBM</a>. Academics will receive a free licence upon request. [LP, IP, BP, QP, MILP, MIQP,
-    IPM]</li>
+    href="http://www.ibm.com/">IBM</a>. Academics will receive a free
+    licence upon request. [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
     <li>Package <pkg>Rmosek</pkg> offers an interface to the
     commercial optimizer from <a
     href="http://www.mosek.com/">MOSEK</a>. It provides dual/primal
@@ -520,6 +525,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   </p> 
     <ul>
       <li>LP (Linear programming, 90C05): <pkg>boot</pkg>,
+
+      <pkg>clpAPI</pkg>, <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
       <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>rcdd</pkg>, 
       <pkg>Rcplex</pkg>, 
@@ -533,22 +540,22 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>, <pkg>optmatch</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
    
-      <li>BP (Boolean programming, 90C09): <pkg>Rglpk</pkg>,
+      <li>BP (Boolean programming, 90C09): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, <pkg>Rglpk</pkg>,
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg> </li>
 
-      <li>IP (Integer programming, 90C10): 
+      <li>IP (Integer programming, 90C10): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
       <pkg>Rsymphony</pkg></li>
 
       <li>MIP (Mixed integer programming and its variants MILP for LP
-      and MIQP for QP, 90C11):  <pkg>lpSolve</pkg>,
+      and MIQP for QP, 90C11):  <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>,
       <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg></li>
 
       <li>SP (Stochastic programming, 90C15): <rforge>stoprog</rforge>
       </li> 
 
-      <li>QP (Quadratic programming, 90C20): <pkg>kernlab</pkg>,
+      <li>QP (Quadratic programming, 90C20): <pkg>cplexAPI</pkg>, <pkg>kernlab</pkg>,
       <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, <pkg>quadprog</pkg>, 
       <pkg>Rcplex</pkg></li>
      
@@ -580,8 +587,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 	  <li>Programming in abstract spaces, 90C48</li> 
 	  <li>Extreme-point and pivoting methods, 90C49</li>
       -->
-      <li>IPM (Interior-point methods, 90C51): <pkg>kernlab</pkg>,
-      <pkg>LowRankQP</pkg>, <pkg>quantreg</pkg>,
+      <li>IPM (Interior-point methods, 90C51): <pkg>cplexAPI</pkg>, <pkg>kernlab</pkg>,
+      <pkg>glpkAPI</pkg>, <pkg>LowRankQP</pkg>, <pkg>quantreg</pkg>,
       <pkg>Rcplex</pkg>
       </li>
       
@@ -610,8 +617,10 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>alabama</pkg>
   <pkg>BB</pkg>
   <pkg>boot</pkg>
+  <pkg>clpAPI</pkg>
   <pkg>clue</pkg>
   <pkg>cmaes</pkg>
+  <pkg>cplexAPI</pkg>
   <pkg>dclone</pkg>
   <pkg>dfoptim</pkg>
   <pkg>DEoptim</pkg>
@@ -619,6 +628,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
+  <pkg>glpkAPI</pkg>
   <pkg>goalprog</pkg>
   <pkg>gsl</pkg>
   <pkg>igraph</pkg>
