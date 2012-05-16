@@ -2,8 +2,8 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="Stefan.Theussl@wu.ac.at">Stefan Theussl</maintainer>
-<version>2012-05-12</version>
+<maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
+<version>2012-05-16</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
