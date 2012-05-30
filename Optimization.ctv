@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2012-05-16</version>
+<version>2012-05-30</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -538,12 +538,11 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   </p> 
     <ul>
       <li>LP (Linear programming, 90C05): <pkg>boot</pkg>,
-
-      <pkg>clpAPI</pkg>, <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
-      <pkg>limSolve</pkg>, <pkg>linprog</pkg>,
-      <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>rcdd</pkg>, 
-      <pkg>Rcplex</pkg>, 
-      <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg>, <pkg>quantreg</pkg> </li>
+      <pkg>clpAPI</pkg>, <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
+      <pkg>limSolve</pkg>, <pkg>linprog</pkg>, <pkg>lpSolve</pkg>,
+      <pkg>lpSolveAPI</pkg>, <pkg>quantreg</pkg>, <pkg>rcdd</pkg>,
+      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg>
+      </li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
@@ -553,8 +552,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>, <pkg>optmatch</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
    
-      <li>BP (Boolean programming, 90C09): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, <pkg>Rglpk</pkg>,
-      <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg> </li>
+      <li>BP (Boolean programming, 90C09): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
+      <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg></li>
 
       <li>IP (Integer programming, 90C10): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
@@ -565,9 +564,10 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>lpSolveAPI</pkg>,
       <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rsymphony</pkg></li>
 
-      <li>SP (Stochastic programming, 90C15): <rforge>stoprog</rforge>
+<!--
+      <li>SP (Stochastic programming, 90C15): 
       </li> 
-
+-->
       <li>QP (Quadratic programming, 90C20): <pkg>cplexAPI</pkg>, <pkg>kernlab</pkg>,
       <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, <pkg>quadprog</pkg>, 
       <pkg>Rcplex</pkg></li>
