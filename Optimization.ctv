@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2012-05-30</version>
+<version>2012-08-06</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -417,6 +417,11 @@
     that you have to get a license from <a
     href="http://www.mosek.com/">MOSEK</a>. Academic licenses are free
     of charge.  [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
+    <li>Gurobi Optimization ships an R binding with their 5.0 release
+    that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models
+    from within R. See the <a
+    href="http://www.gurobi.com/documentation/5.0/reference-manual/node651#sec:R">R
+    reference manual</a> from the Gurobi documentation for details.</li>
   </ul>
   
   <!--
@@ -697,6 +702,9 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
     on optimization algorithms and corresponding R packages (functions)</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
   <a href="http://www.ams.org/msc/90Cxx.html">Mathematics Subject Classification - Mathematical programming</a>
+<!--
+  <a href="http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/">Comparison of some heuristic optimization methods</a>
+-->
 </links>
 
 </CRANTaskView>
