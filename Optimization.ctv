@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2012-08-06</version>
+<version>2012-08-07</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -702,9 +702,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
     on optimization algorithms and corresponding R packages (functions)</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
   <a href="http://www.ams.org/msc/90Cxx.html">Mathematics Subject Classification - Mathematical programming</a>
-<!--
   <a href="http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/">Comparison of some heuristic optimization methods</a>
--->
 </links>
 
 </CRANTaskView>
