@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2012-08-07</version>
+<version>2012-08-30</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -191,6 +191,12 @@
     <li>In package <pkg>trust</pkg>, a routine with the same name offers
     local optimization based on the "trust region" approach.
     </li>
+
+    <li><pkg>trustOptim</pkg> implements a "trust region" algorithm for
+    unconstrained nonlinear optimization. The algorithm is optimized
+    for objective functions with sparse Hessians. This makes the
+    algorithm highly scalable and efficient, in terms of both time and
+    memory footprint.</li>
 
     <li>Package <pkg>nleqslv</pkg> provides a
     function <code>nleqslv()</code> implementing Newton and Broyden
@@ -690,6 +696,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>soma</pkg>
   <pkg>subplex</pkg>
   <pkg>trust</pkg>
+  <pkg>trustOptim</pkg>
   <pkg priority="core">TSP</pkg>
   <pkg>ucminf</pkg>
 </packagelist>
