@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2012-08-30</version>
+<version>2012-09-03</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -276,6 +276,14 @@
     <code>simplex()</code> which realizes the two-phase tableau simplex
     method for (relatively small) linear programming problems. [LP]</li>
 
+    <li>The <pkg>CLSOCP</pkg> package provides an implementation of a
+    one step smoothing Newton method for the solution of second order
+    cone programming (SOCP) problems.</li>
+    
+    <li>The <pkg>DWD</pkg> package provides the implementation of
+    distance weighted discrimination (DWD) using an interior point
+    method for the solution of SOCP problems.</li>
+
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
     solving quadratic programming problems using interior point
     methods. [IPM, QP] 
@@ -416,13 +424,13 @@
     commercial optimizer from <a
     href="http://www.mosek.com/">MOSEK</a>. It provides dual/primal
     simplex optimizers as well as a barrier optimizer. In addition to
-    solving LP and QP problems this solver can handle second order
-    cone programming (SOCP) and quadratically constrained programming
-    (QPQC) tasks. Furthermore, it offers a mixed integer optimizer to
-    solve difficult mixed integer programs (MILP, MISOCP, etc.). Note
-    that you have to get a license from <a
-    href="http://www.mosek.com/">MOSEK</a>. Academic licenses are free
-    of charge.  [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
+    solving LP and QP problems this solver can handle SOCP and
+    quadratically constrained programming (QPQC) tasks. Furthermore,
+    it offers a mixed integer optimizer to solve difficult mixed
+    integer programs (MILP, MISOCP, etc.). Note that you have to get a
+    license from <a href="http://www.mosek.com/">MOSEK</a>. Academic
+    licenses are free of charge.  [LP, IP, BP, QP, MILP, MIQP,
+    IPM]</li>
     <li>Gurobi Optimization ships an R binding with their 5.0 release
     that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models
     from within R. See the <a
@@ -642,6 +650,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>BB</pkg>
   <pkg>boot</pkg>
   <pkg>clpAPI</pkg>
+  <pkg>CLSOCP</pkg>
   <pkg>clue</pkg>
   <pkg>cmaes</pkg>
   <pkg>cplexAPI</pkg>
@@ -650,6 +659,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>dfoptim</pkg>
   <pkg>DEoptim</pkg>
   <pkg>desirability</pkg>
+  <pkg>DWD</pkg>
   <pkg>gafit</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
