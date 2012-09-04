@@ -552,7 +552,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <p>What follows is an attempt to provide a by-subject overview of
   packages.  The full name of the subject as well as the corresponding
   <a
-  href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&btn=Current">MSC
+  href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">MSC
   2010</a> code (if available) are given in brackets.
   </p> 
     <ul>
@@ -718,7 +718,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <a href="http://rwiki.sciviews.org/doku.php?id=tips:optimization">Overview
     on optimization algorithms and corresponding R packages (functions)</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
-  <a href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&btn=Current">Mathematics Subject Classification - Mathematical programming</a>
+  <a href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">Mathematics Subject Classification - Mathematical programming</a>
   <a href="http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/">Comparison of some heuristic optimization methods</a>
 </links>
 
