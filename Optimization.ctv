@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2012-09-03</version>
+<version>2012-10-30</version>
 
 <info> 
   <p>This CRAN task view contains a list of packages which offer
@@ -204,10 +204,6 @@
     solving medium sized system of nonlinear equations.
     </li>
     
-    <li>In package <pkg>gafit</pkg> <code>gafit()</code> uses a
-    genetic algorithm approach to find  
-    the minimum of a one-dimensional function.</li>
-
     <li>Package <pkg>genalg</pkg> contains
     <code>rbga()</code>, an implementation of a genetic algorithm for 
     multi-dimensional function optimization.</li>
@@ -660,7 +656,6 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>DEoptim</pkg>
   <pkg>desirability</pkg>
   <pkg>DWD</pkg>
-  <pkg>gafit</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
   <pkg>glpkAPI</pkg>
