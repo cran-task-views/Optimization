@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2012-12-12</version>
+<version>2013-02-14</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -176,9 +176,10 @@
     </li>
 
     <li>Package <pkg>hydroPSO</pkg> is a model-independent global
-    optimization tool for optimization of environmental/hydrological
-    models, implementing an state-of-the-art particle swarm
-    optimization (PSO) algorithm.</li>
+    optimization tool for real-world models, implementing the latest
+    Standard Particle Swarm Optimization algorithm
+    (SPSO-2011). <pkg>hydroPSO</pkg> is parallel-capable, and includes
+    several fine-tuning options and post-processing functions.</li>
 
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.
