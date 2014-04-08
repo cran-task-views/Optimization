@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2013-02-14</version>
+<version>2014-04-08</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -124,10 +124,19 @@
     Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
     bounds-constrained). [DF]</li>
 
+    <li><pkg>GA</pkg> provides functions for optimization using
+    genetic algorithms in both, the continuous and discrete case,
+    whether constrained or not. This package allows to run
+    corresponding optimization tasks in parallel.</li>
+
     <li><pkg>GenSA</pkg> is a package providing a function for
     generalized simulated annealing which can be used to search for a
     global minimum of a very complex non-linear objective function
     with a very large number of optima.</li>
+
+    <li><pkg>GrassmannOptim</pkg> is a package for Grassmann manifold
+    optimization. The implementation uses gradient-based algorithms
+    and embeds a stochastic gradient method for global search.</li>
 
     <li>Package <pkg>gsl</pkg> provides BFGS, conjugate gradient,
     steepest descent, and Nelder-Mead algorithms. It uses a "line
@@ -162,6 +171,13 @@
     variables by a trust region method that forms quadratic models by
     interpolation. <code>bobyqa()</code> additionally permits box
     constraints (bounds) on the parameters. [DF]</li>
+
+    <li>The <pkg>NMOF</pkg> package provides implementations of
+    differential evolution, particle swarm optimization, local search
+    and threshold accepting (a variant of simulated annealing).  The
+    latter two methods also work for discrete optimization models, as
+    does the implementation of a genetic algorithm that is included in
+    the package.</li>
 
     <li>Package <pkg>powell</pkg> optimizes functions using Powell's
     UObyQA algorithm (Unconstrained Optimization by Quadratic
@@ -234,6 +250,12 @@
     see the <a href="http://www.icsi.berkeley.edu/~storn/code.html">
     Differential Evolution home page</a>.  -->
     </li>
+
+    <li>Package <pkg>DEoptimR</pkg> provides an implementation of the
+    jDE variant of the differential evolution stochastic algorithm for
+    global optimization of nonlinear programming problems. It allows
+    to handle constraints in a flexible manner.</li>
+
     <li>Package <pkg>Rmalschains</pkg> implements an algorithm family
     for continuous optimization called memetic algorithms with local
     search chains (MA-LS-Chains).</li>
@@ -661,12 +683,15 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>dclone</pkg>
   <pkg>dfoptim</pkg>
   <pkg>DEoptim</pkg>
+  <pkg>DEoptimR</pkg>
   <pkg>desirability</pkg>
   <pkg>DWD</pkg>
+  <pkg>GA</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
   <pkg>glpkAPI</pkg>
   <pkg>goalprog</pkg>
+  <pkg>GrassmannOptim</pkg>
   <pkg>gsl</pkg>
   <pkg>hydroPSO</pkg>
   <pkg>igraph</pkg>
@@ -684,6 +709,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>neldermead</pkg>
   <pkg>nleqslv</pkg>
   <pkg>nloptr</pkg>
+  <pkg>NMOF</pkg>
   <pkg>optmatch</pkg>
   <pkg priority="core">optimx</pkg>
   <pkg>powell</pkg>
