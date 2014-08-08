@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2014-04-08</version>
+<version>2014-08-08</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -515,13 +515,6 @@
     package <pkg>mco</pkg> which implements genetic
     algorithms. [MOP]</li>
 
-    <li> Package <pkg>optmatch</pkg> provides routines for solving
-    matching problems by translating
-    them into minimum-cost flow problems, which are in turn solved
-    optimally by the RELAX-IV codes
-    of Bertsekas and Tseng (free for research). [SPLP]
-    </li>
-
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
     <code>crq()</code>). It provides an interface to L1 regression
@@ -593,7 +586,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
-      <pkg>lpSolveAPI</pkg>, <pkg>optmatch</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
+      <pkg>lpSolveAPI</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
 
       <li>BP (Boolean programming, 90C09): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg></li>
@@ -710,7 +703,6 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>nleqslv</pkg>
   <pkg>nloptr</pkg>
   <pkg>NMOF</pkg>
-  <pkg>optmatch</pkg>
   <pkg priority="core">optimx</pkg>
   <pkg>powell</pkg>
   <pkg>pso</pkg>
