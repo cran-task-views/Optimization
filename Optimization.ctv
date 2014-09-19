@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2014-08-08</version>
+<version>2014-09-19</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -298,10 +298,6 @@
     <li>The <pkg>CLSOCP</pkg> package provides an implementation of a
     one step smoothing Newton method for the solution of second order
     cone programming (SOCP) problems.</li>
-
-    <li>The <pkg>DWD</pkg> package provides the implementation of
-    distance weighted discrimination (DWD) using an interior point
-    method for the solution of SOCP problems.</li>
 
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
     solving quadratic programming problems using interior point
@@ -678,7 +674,6 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>DEoptim</pkg>
   <pkg>DEoptimR</pkg>
   <pkg>desirability</pkg>
-  <pkg>DWD</pkg>
   <pkg>GA</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
