@@ -3,7 +3,7 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2014-09-19</version>
+<version>2014-11-08</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -18,7 +18,7 @@
   Solvers</a>, <a href="#MathematicalProgrammingSolvers">Mathematical
   Programming Solvers</a> and <a href="#SpecificApplications">Specific
   Applications in Optimization</a>. Packages are categorized in these
-  three sections.</p>
+  four sections.</p>
 
   <p>Many packages provide functionality for more than one
   of the subjects listed at the end of this task view. E.g., mixed
@@ -109,6 +109,11 @@
     -->
     </li>
 
+    <li>Package <pkg>blowtorch</pkg> offers routines for building and
+    solving constrained optimization problems via stochastic gradient
+    descent.
+    </li>
+
     <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
     solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).
@@ -143,6 +148,14 @@
     search" approach via the function <code>multimin()</code>. It is
     based on the GNU Scientific Library (GSL). [RGA, QN]
     </li>
+    
+    <li>Two optimization algorithms are implemented in package
+    <pkg>lbfgs</pkg>: Limited-memory Broyden-Fletcher-Goldfarb-Shann
+    (L-BFGS) and Orthant-Wise Limited-memory Quasi-Newton
+    (OWL-QN). The latter allows for objectives with a
+    non-differentiable penalty.  [QN]
+    </li>
+    
 
     <li>Package <pkg>maxLik</pkg> provides a general purpose
     Newton-Raphson optimizer <code>maxNR()</code> as well as wrapper
@@ -494,6 +507,16 @@
     shortest paths, maximal network flows, minimum
     spanning trees, etc. [GRAPH]</li>
 
+    <li><pkg>irace</pkg> contains an optimization algorithm for
+    optimizing the parameters of other optimization algorithms. This
+    problem is called "(offline) algorithm
+    configuration". [GO]</li>
+
+    <li>Besides functionality for solving general isotone regression
+    problems, package <pkg>isotone</pkg> provides a framework of active
+    set methods for isotone optimization problems with arbitrary order
+    restrictions.</li>
+
     <li>Package <pkg>minpack.lm</pkg> provides an interface to the
     Levenberg-Marquardt nonlinear least-squares algorithm found in
     MINPACK.</li>
@@ -510,6 +533,10 @@
     <li>Multi-criteria optimization problems can be solved using
     package <pkg>mco</pkg> which implements genetic
     algorithms. [MOP]</li>
+
+    <li>Package <pkg>optR</pkg> allows for building linear
+    and non-linear models by defining them in linear system. The
+    linear system is solved using numeric computation approach.</li>
 
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
@@ -578,7 +605,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
-      <li> GO (Global Optimization): <pkg>nloptr</pkg></li>
+      <li> GO (Global Optimization): <pkg>nloptr</pkg>, <pkg>irace</pkg></li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
@@ -641,14 +668,16 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       (<code>optim()</code>), <pkg>gsl</pkg></li>
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
-      (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>nloptr</pkg>, <pkg>ucminf</pkg></li>
+      (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>lbfgs</pkg>, <pkg>nloptr</pkg>, <pkg>ucminf</pkg></li>
       <li>DF (Derivative-free methods, 90C56): <pkg>dfoptim</pkg>,
       <pkg>minqa</pkg>, <pkg>nloptr</pkg></li>
       <!--
 	   <li>Methods of successive quadratic programming type, 90C55</li>
 	   <li>Polyhedral combinatorics, branch-and-bound,
 	   branch-and-cut, 90C57</li>
-	   <li>Approximation methods and heuristics, 90C59</li>
+      -->
+      <li>HEUR (Approximation methods and heuristics, 90C59): <pkg>irace</pkg></li>
+      <!--
 	   <li>Abstract computational complexity for mathematical
 	   programming problems, 90C60</li>
 	   <li>LFuzzy programming, 90C70</li>
@@ -662,6 +691,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>adagio</pkg>
   <pkg>alabama</pkg>
   <pkg>BB</pkg>
+  <pkg>blowtorch</pkg>
   <pkg>boot</pkg>
   <pkg>clpAPI</pkg>
   <pkg>CLSOCP</pkg>
@@ -683,7 +713,10 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>gsl</pkg>
   <pkg>hydroPSO</pkg>
   <pkg>igraph</pkg>
+  <pkg>irace</pkg>
+  <pkg>isotone</pkg>
   <pkg>kernlab</pkg>
+  <pkg>lbfgs</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
   <pkg>LowRankQP</pkg>
@@ -699,6 +732,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>nloptr</pkg>
   <pkg>NMOF</pkg>
   <pkg priority="core">optimx</pkg>
+  <pkg>optR</pkg>
   <pkg>powell</pkg>
   <pkg>pso</pkg>
   <pkg priority="core">quadprog</pkg>
@@ -727,6 +761,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 </packagelist>
 
 <links>
+  <a href="http://www.jstatsoft.org/v60">Journal of Statistical
+  Software Special Volume on Optimization, Editor: Ravi Varadhan</a>
   <a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">NEOS Wiki</a>
   <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for
   Optimization Software</a>
