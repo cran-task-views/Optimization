@@ -744,9 +744,6 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>nloptr</pkg>
   <pkg>NMOF</pkg>
   <pkg priority="core">optimx</pkg>
-<!--
-  <pkg>optR</pkg>
--->
   <pkg>powell</pkg>
   <pkg>pso</pkg>
   <pkg priority="core">quadprog</pkg>
