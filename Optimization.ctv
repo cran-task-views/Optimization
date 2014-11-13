@@ -2,8 +2,9 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="Stefan.Theussl@R-Project.org">Stefan Theussl</maintainer>
-<version>2014-11-08</version>
+<maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
+W. Borchers</maintainer>
+<version>2014-11-13</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -210,9 +211,12 @@
     (SPSO-2011). <pkg>hydroPSO</pkg> is parallel-capable, and includes
     several fine-tuning options and post-processing functions.</li>
 
+    <li><pkg>RCEIM</pkg> implements a stochastic
+    heuristic method for performing multidimensional function
+    optimization.</li>
+
     <li><pkg>subplex</pkg> provides unconstrained function
-    optimization based on a subspace searching simplex method.
-    </li>
+    optimization based on a subspace searching simplex method.</li>
 
     <li> Package <pkg>ucminf</pkg> implements an algorithm of
     quasi-Newtonian type for nonlinear unconstrained
@@ -497,6 +501,10 @@
     procedures for complex models using data cloning and Bayesian
     Markov chain Monte Carlo methods.</li>
 
+    <li> Objective functions for benchmarking the performance of
+    global optimization algorithms can be found in package
+    <pkg>globalOptTests</pkg>.</li>
+
     <li>Package <pkg>goalprog</pkg> provides some functions for
     lexicographic linear goal
     programming and optimization. Goal programming is a branch of
@@ -534,9 +542,12 @@
     package <pkg>mco</pkg> which implements genetic
     algorithms. [MOP]</li>
 
+<!-- NOTE: excluded from this task view since it is already mentioned
+     in the NumericalMathematics TV which fits better.
     <li>Package <pkg>optR</pkg> allows for building linear
     and non-linear models by defining them in linear system. The
     linear system is solved using numeric computation approach.</li>
+-->
 
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
@@ -707,6 +718,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>GA</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
+  <pkg>globalOptTests</pkg>
   <pkg>glpkAPI</pkg>
   <pkg>goalprog</pkg>
   <pkg>GrassmannOptim</pkg>
@@ -732,12 +744,15 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>nloptr</pkg>
   <pkg>NMOF</pkg>
   <pkg priority="core">optimx</pkg>
+<!--
   <pkg>optR</pkg>
+-->
   <pkg>powell</pkg>
   <pkg>pso</pkg>
   <pkg priority="core">quadprog</pkg>
   <pkg>quantreg</pkg>
   <pkg>rcdd</pkg>
+  <pkg>RCEIM</pkg>
   <pkg>Rcgmin</pkg>
   <pkg>Rcplex</pkg>
   <pkg>RcppDE</pkg>
