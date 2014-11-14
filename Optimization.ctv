@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
 W. Borchers</maintainer>
-<version>2014-11-13</version>
+<version>2014-11-14</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
