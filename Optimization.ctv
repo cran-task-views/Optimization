@@ -773,16 +773,14 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 </packagelist>
 
 <links>
-  <a href="http://www.jstatsoft.org/v60">Journal of Statistical
-  Software Special Volume on Optimization, Editor: Ravi Varadhan</a>
-  <a href="http://wiki.mcs.anl.gov/NEOS/index.php/NEOS_Wiki">NEOS Wiki</a>
-  <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for
-  Optimization Software</a>
-  <a href="http://rwiki.sciviews.org/doku.php?id=tips:optimization">Overview
-    on optimization algorithms and corresponding R packages (functions)</a>
-  <a href="http://www.coin-or.org/">COIN-OR Project</a>
-  <a href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">Mathematics Subject Classification - Mathematical programming</a>
+  <a href="http://www.jstatsoft.org/v60">Journal of Statistical Software Special Volume on Optimization (Editor: Ravi Varadhan)</a>
+  <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html">Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)</a>
+  <a href="http://www.springer.com/mathematics/book/978-3-319-08262-2">Modern Optimization With R -- Paulo Cortez (Springer UseR Series)</a>
   <a href="http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/">Comparison of some heuristic optimization methods</a>
+  <a href="http://www.coin-or.org/">COIN-OR Project</a>
+  <a href="http://www.neos-guide.org/Optimization-Guide">NEOS Optimization Guide</a>
+  <a href="http://plato.asu.edu/sub/pns.html">Decision Tree for Optimization Software</a>
+  <a href="http://www.ams.org/mathscinet/msc/msc2010.html?t=90Cxx&amp;btn=Current">Mathematics Subject Classification - Mathematical programming</a>
 </links>
 
 </CRANTaskView>
