@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
 W. Borchers</maintainer>
-<version>2014-11-14</version>
+<version>2014-12-18</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -549,6 +549,13 @@ W. Borchers</maintainer>
     linear system is solved using numeric computation approach.</li>
 -->
 
+    <li> Package <pkg>optmatch</pkg> provides routines for solving
+    matching problems by translating
+    them into minimum-cost flow problems, which are in turn solved
+    optimally by the RELAX-IV codes
+    of Bertsekas and Tseng (free for research). [SPLP]
+    </li>
+
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
     <code>crq()</code>). It provides an interface to L1 regression
@@ -620,7 +627,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
-      <pkg>lpSolveAPI</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
+      <pkg>lpSolveAPI</pkg>, <pkg>optmatch</pkg>, <pkg>quantreg</pkg>, <pkg>TSP</pkg></li>
 
       <li>BP (Boolean programming, 90C09): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg></li>
@@ -743,6 +750,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>nleqslv</pkg>
   <pkg>nloptr</pkg>
   <pkg>NMOF</pkg>
+  <pkg>optmatch</pkg>
   <pkg priority="core">optimx</pkg>
   <pkg>powell</pkg>
   <pkg>pso</pkg>
