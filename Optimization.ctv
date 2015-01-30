@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
 W. Borchers</maintainer>
-<version>2014-12-18</version>
+<version>2015-01-30</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -468,6 +468,10 @@ W. Borchers</maintainer>
     from within R. See the <a
     href="http://www.gurobi.com/documentation/5.0/reference-manual/node651#sec:R">R
     reference manual</a> from the Gurobi documentation for details.</li>
+    <li>The <pkg>localsolver</pkg> package provides an interface to the hybrid
+    mathematical programming software LocalSolver from Innovation 24.
+    LocalSolver is a commercial product, academic licenses are available on
+    request. [LP, MIP, QP, NLP, HEUR]</li>
   </ul>
 
   <!--
@@ -489,10 +493,8 @@ W. Borchers</maintainer>
     tasks.</li>
 
     <li> In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
-    the user to solve the linear
-    sum assignment problem (LSAP) using an efficient C implementation of
-    the Hungarian algorithm. [SPLP]
-    </li>
+    the user to solve the linear sum assignment problem (LSAP) using an
+    efficient C implementation of the Hungarian algorithm. [SPLP]</li>
 
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
@@ -504,6 +506,11 @@ W. Borchers</maintainer>
     <li> Objective functions for benchmarking the performance of
     global optimization algorithms can be found in package
     <pkg>globalOptTests</pkg>.</li>
+
+    <li><pkg>cec2013</pkg> and <pkg>cec2005benchmark</pkg> contain many test
+    functions for global optimization from the 2005 and 2013 special sessions
+    on real-parameter optimization at the IEEE CEC congresses on evolutionary
+    computation.</li>
 
     <li>Package <pkg>goalprog</pkg> provides some functions for
     lexicographic linear goal
@@ -711,6 +718,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>BB</pkg>
   <pkg>blowtorch</pkg>
   <pkg>boot</pkg>
+  <pkg>cec2005benchmark</pkg>
+  <pkg>cec2013</pkg>
   <pkg>clpAPI</pkg>
   <pkg>CLSOCP</pkg>
   <pkg>clue</pkg>
@@ -738,6 +747,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>lbfgs</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
+  <pkg>localsolver</pkg>
   <pkg>LowRankQP</pkg>
   <pkg priority="core">lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
