@@ -568,13 +568,11 @@ W. Borchers</maintainer>
     <code>crq()</code>). It provides an interface to L1 regression
     in the R code of function <code>rq()</code>. [SPLP, LP, IPM]</li>
 
-    <!--
-	The <pkg>desirability</pkg> package contains S3 classes for
-	multivariate optimization using
-	the desirability function approach of Harrington (1965) using
-	functional forms described
-	by Derringer and Suich (1980).
-    -->
+    <li>The <pkg>desirability</pkg> package contains S3 classes for
+    multivariate optimization using
+    the desirability function approach of Harrington (1965) using
+    functional forms described
+    by Derringer and Suich (1980).</li>
 
     <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
     which is the front-end to a series of heuristic routines for optimizing
