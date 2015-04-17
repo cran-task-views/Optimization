@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
 W. Borchers</maintainer>
-<version>2015-01-30</version>
+<version>2015-04-15</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -186,6 +186,11 @@ W. Borchers</maintainer>
     interpolation. <code>bobyqa()</code> additionally permits box
     constraints (bounds) on the parameters. [DF]</li>
 
+    <li>Package <pkg>minpack.lm</pkg> provides a function
+    <code>nls.lm()</code> for solving nonlinear least-squares problems 
+    by a modification of the Levenberg-Marquardt algorithm, as found
+    in MINPACK.</li>
+
     <li>The <pkg>NMOF</pkg> package provides implementations of
     differential evolution, particle swarm optimization, local search
     and threshold accepting (a variant of simulated annealing).  The
@@ -316,6 +321,10 @@ W. Borchers</maintainer>
     one step smoothing Newton method for the solution of second order
     cone programming (SOCP) problems.</li>
 
+    <li><pkg>cccp</pkg> contains routines for solving cone constrained
+    convex problems by means of interior-point methods (partially ported
+    from Python's CVXOPT).</li>
+
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
     solving quadratic programming problems using interior point
     methods. [IPM, QP]
@@ -361,7 +370,6 @@ W. Borchers</maintainer>
     href="http://R-Forge.R-project.org/">R-Forge</a>. Ipopt is an open
     source solver for large-scale nonlinear continuous
     optimization. [NLP] </li>
-
 
   </ul>
 
@@ -492,9 +500,15 @@ W. Borchers</maintainer>
     multiple knapsack problems and solves subset sum and assignment
     tasks.</li>
 
-    <li> In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
+    <li>In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
     the user to solve the linear sum assignment problem (LSAP) using an
     efficient C implementation of the Hungarian algorithm. [SPLP]</li>
+
+    <li>The <pkg>CEoptim</pkg> package provides an optimization solver,
+    based on the Cross-Entropy method, for continuous and combinatorial
+    optimization problems. It can be used to solve multi-extremal problems,
+    accepts linear constraints,and handles discrete and continuous variables.
+    [COP]</li>
 
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
@@ -527,14 +541,15 @@ W. Borchers</maintainer>
     problem is called "(offline) algorithm
     configuration". [GO]</li>
 
+    <li><pkg>matchingMarkets</pkg> implements algorithms for three discrete
+    optimization problems: the house allocation problem, the stable roommates
+    problem and the college admissions problem (which is solved using the
+    Gale-Shapley algorithm).</li>
+
     <li>Besides functionality for solving general isotone regression
     problems, package <pkg>isotone</pkg> provides a framework of active
     set methods for isotone optimization problems with arbitrary order
     restrictions.</li>
-
-    <li>Package <pkg>minpack.lm</pkg> provides an interface to the
-    Levenberg-Marquardt nonlinear least-squares algorithm found in
-    MINPACK.</li>
 
     <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a
     number of maximization routines like Brendt-Hall-Hall-Hausman
@@ -549,19 +564,10 @@ W. Borchers</maintainer>
     package <pkg>mco</pkg> which implements genetic
     algorithms. [MOP]</li>
 
-<!-- NOTE: excluded from this task view since it is already mentioned
-     in the NumericalMathematics TV which fits better.
-    <li>Package <pkg>optR</pkg> allows for building linear
-    and non-linear models by defining them in linear system. The
-    linear system is solved using numeric computation approach.</li>
--->
-
     <li> Package <pkg>optmatch</pkg> provides routines for solving
-    matching problems by translating
-    them into minimum-cost flow problems, which are in turn solved
-    optimally by the RELAX-IV codes
-    of Bertsekas and Tseng (free for research). [SPLP]
-    </li>
+    matching problems by translating them into minimum-cost flow problems,
+    which are in turn solved optimally by the RELAX-IV codes of
+    Bertsekas and Tseng (free for research). [SPLP]</li>
 
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
@@ -569,10 +575,9 @@ W. Borchers</maintainer>
     in the R code of function <code>rq()</code>. [SPLP, LP, IPM]</li>
 
     <li>The <pkg>desirability</pkg> package contains S3 classes for
-    multivariate optimization using
-    the desirability function approach of Harrington (1965) using
-    functional forms described
-    by Derringer and Suich (1980).</li>
+    multivariate optimization using the desirability function approach
+    of Harrington (1965) using functional forms described by
+    Derringer and Suich (1980).</li>
 
     <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
     which is the front-end to a series of heuristic routines for optimizing
@@ -637,9 +642,9 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <li>BP (Boolean programming, 90C09): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg></li>
 
-      <li>IP (Integer programming, 90C10): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>
-      <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rmosek</pkg>,
-      <pkg>Rsymphony</pkg></li>
+      <li>IP (Integer programming, 90C10): <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
+      <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
+      <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg></li>
 
       <li>MIP (Mixed integer programming and its variants MILP for LP
       and MIQP for QP, 90C11):  <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, <pkg>lpSolve</pkg>,
@@ -655,33 +660,33 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>Rcplex</pkg>, <pkg>Rmosek</pkg></li>
 
       <li>SDP (Semidefinite programming, 90C22): <pkg>Rcsdp</pkg></li>
-      <!--
-	   <li>Convex programming, 90C25</li>
-	   <li>Nonconvex programming, 90C26</li>
-	   <li>Combinatorial optimization, 90C27</li>
-      -->
+	  <li>CP (Convex programming, 90C25): <pkg>cccp</pkg></li>
+<!--
+	  <li>Nonconvex programming, 90C26</li>
+-->
+	  <li>COP (Combinatorial optimization, 90C27): <pkg>adagio</pkg>,
+	  <pkg>CEoptim</pkg>, <pkg>TSP</pkg></li>
       <li>MOP (Multi-objective and goal programming, 90C29):
       <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
 
-      <li>NLP (Nonlinear programming,
-      90C30): Rdonlp2, <pkg>Rsolnp</pkg>
-      </li>
-      <!--
+      <li>NLP (Nonlinear programming, 90C30): Rdonlp2, <pkg>Rsolnp</pkg>,
+      <pkg>alabama</pkg></li>
+<!--
 	  <li>Sensitivity, stability, parametric optimization, 90C31</li>
 	  <li>Fractional programming, 90C32</li>
 	  <li>Complementarity problems, 90C33</li>
 	  <li>Semi-infinite programming, 90C34</li>
-      -->
+-->
       <li>GRAPH (Programming involving graphs or networks, 90C35):
       <pkg>igraph</pkg>, <pkg>sna</pkg> </li>
-      <!--
+<!--
 	  <li>Dynamic programming, 90C39</li>
 	  <li>Markov and semi-Markov decision processes, 90C40</li>
 	  <li>Optimality conditions, duality, 90C46</li>
 	  <li>Minimax problems, 90C47</li>
 	  <li>Programming in abstract spaces, 90C48</li>
 	  <li>Extreme-point and pivoting methods, 90C49</li>
-      -->
+-->
       <li>IPM (Interior-point methods, 90C51): <pkg>cplexAPI</pkg>, <pkg>kernlab</pkg>,
       <pkg>glpkAPI</pkg>, <pkg>LowRankQP</pkg>, <pkg>quantreg</pkg>,
       <pkg>Rcplex</pkg>
@@ -691,33 +696,36 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       (<code>optim()</code>), <pkg>gsl</pkg></li>
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
-      (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>lbfgs</pkg>, <pkg>nloptr</pkg>, <pkg>ucminf</pkg></li>
+      (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>lbfgs</pkg>,
+      <pkg>nloptr</pkg>, <pkg>ucminf</pkg></li>
       <li>DF (Derivative-free methods, 90C56): <pkg>dfoptim</pkg>,
       <pkg>minqa</pkg>, <pkg>nloptr</pkg></li>
-      <!--
+<!--
 	   <li>Methods of successive quadratic programming type, 90C55</li>
 	   <li>Polyhedral combinatorics, branch-and-bound,
 	   branch-and-cut, 90C57</li>
-      -->
+-->
       <li>HEUR (Approximation methods and heuristics, 90C59): <pkg>irace</pkg></li>
-      <!--
+<!--
 	   <li>Abstract computational complexity for mathematical
 	   programming problems, 90C60</li>
 	   <li>LFuzzy programming, 90C70</li>
 	   <li>Applications of mathematical programming, 90C90</li>
 	   <li>None of the above, but in this section, 90C99</li>
-      -->
+-->
     </ul>
 </info>
 
 <packagelist>
   <pkg>adagio</pkg>
-  <pkg>alabama</pkg>
+  <pkg priority="core">alabama</pkg>
   <pkg>BB</pkg>
   <pkg>blowtorch</pkg>
   <pkg>boot</pkg>
+  <pkg>cccp</pkg>
   <pkg>cec2005benchmark</pkg>
   <pkg>cec2013</pkg>
+  <pkg>CEoptim</pkg>
   <pkg>clpAPI</pkg>
   <pkg>CLSOCP</pkg>
   <pkg>clue</pkg>
@@ -749,6 +757,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>LowRankQP</pkg>
   <pkg priority="core">lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
+  <pkg>matchingMarkets</pkg>
   <pkg>maxLik</pkg>
   <pkg>mcga</pkg>
   <pkg>mco</pkg>
@@ -775,8 +784,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rmalschains</pkg>
   <pkg>Rmosek</pkg>
   <pkg>rneos</pkg>
-  <pkg priority="core">ROI</pkg>
-  <pkg priority="core">Rsolnp</pkg>
+  <pkg>ROI</pkg>
+  <pkg>Rsolnp</pkg>
   <pkg priority="core">Rsymphony</pkg>
   <pkg>Rvmmin</pkg>
   <pkg>sna</pkg>
