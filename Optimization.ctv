@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
 W. Borchers</maintainer>
-<version>2015-04-15</version>
+<version>2015-06-10</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -541,10 +541,10 @@ W. Borchers</maintainer>
     problem is called "(offline) algorithm
     configuration". [GO]</li>
 
-    <li><pkg>matchingMarkets</pkg> implements algorithms for three discrete
-    optimization problems: the house allocation problem, the stable roommates
-    problem and the college admissions problem (which is solved using the
-    Gale-Shapley algorithm).</li>
+    <li>Packages <pkg>matchingR</pkg> and <pkg>matchingMarkets</pkg> 
+    implement the Gale-Shapley algorithm and provide stable matchings for 
+    the marriage and house allocation problems, and for the college 
+    admissions problem.</li>
 
     <li>Besides functionality for solving general isotone regression
     problems, package <pkg>isotone</pkg> provides a framework of active
@@ -758,6 +758,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg priority="core">lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
   <pkg>matchingMarkets</pkg>
+  <pkg>matchingR</pkg>
   <pkg>maxLik</pkg>
   <pkg>mcga</pkg>
   <pkg>mco</pkg>
