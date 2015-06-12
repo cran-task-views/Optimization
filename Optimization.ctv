@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
 W. Borchers</maintainer>
-<version>2015-06-10</version>
+<version>2015-06-12</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -546,6 +546,10 @@ W. Borchers</maintainer>
     the marriage and house allocation problems, and for the college 
     admissions problem.</li>
 
+    <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
+    subset of a fixed size k from the integers 1:n, such that a user-
+    supplied objective function is minimized at that subset.</li>
+
     <li>Besides functionality for solving general isotone regression
     problems, package <pkg>isotone</pkg> provides a framework of active
     set methods for isotone optimization problems with arbitrary order
@@ -750,6 +754,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>irace</pkg>
   <pkg>isotone</pkg>
   <pkg>kernlab</pkg>
+  <pkg>kofnGA</pkg>
   <pkg>lbfgs</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
