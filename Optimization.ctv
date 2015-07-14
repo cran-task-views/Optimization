@@ -2,9 +2,9 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans
-W. Borchers</maintainer>
-<version>2015-06-12</version>
+<maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans W. Borchers
+</maintainer>
+<version>2015-07-14</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -23,8 +23,7 @@ W. Borchers</maintainer>
 
   <p>Many packages provide functionality for more than one
   of the subjects listed at the end of this task view. E.g., mixed
-  integer linear programming solvers typically offer standard linear
-  programming
+  integer linear programming solvers typically offer standard linear programming
   routines like the simplex algorithm. Therefore following each package
   description a list of abbreviations describes the typical features
   of the optimizer (i.e., the problems which can be solved). The
@@ -34,7 +33,7 @@ W. Borchers</maintainer>
   Subject</a>.</p>
 
   <p>If you think that some package is missing from the list, please
-  let me know.</p>
+  let us know.</p>
 
   <h2><a name="SolverInfrastructure">Optimization Infrastructure Packages</a></h2>
 <!--
@@ -71,8 +70,7 @@ W. Borchers</maintainer>
   <h3>Solvers provided by the base R distribution</h3>
 -->
   <ul>
-    <li>Package stats offers several general purpose optimization
-    routines.
+    <li>Package stats offers several general purpose optimization routines.
     First, function <code>optim()</code> provides an implementation of
     the Broyden-Fletcher-Goldfarb-Shanno (BFGS) method,
     bounded BFGS, conjugate gradient, Nelder-Mead, and simulated
@@ -100,19 +98,20 @@ W. Borchers</maintainer>
   <h3>Packages extending the basic solver spectrum</h3>
   <ul>
 -->
-    <li>Implementations of the augmented lagrange multiplier method
-    for general nonlinear optimization can be found in
-    packages <pkg>alabama</pkg> and <pkg>Rsolnp</pkg>.
-    <!--The latest development
-    snapshot of this package can be found in
-    project <rforge>rino</rforge>
-    at <a href="http://R-Forge.R-project.org/">R-Forge</a>.
-    -->
+    <li>
+    Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL licensed library of
+    various nonlinear optimization algorithms. It includes local derivative-free
+    (COBYLA, Nelder-Mead, Subplex) and gradient-based (e.g., BFGS) methods, and also
+    the augmented Lagrangian approach for nonlinear constraints. [DF, GO, QN]
     </li>
 
-    <li>Package <pkg>blowtorch</pkg> offers routines for building and
-    solving constrained optimization problems via stochastic gradient
-    descent.
+    <li>
+    Implementations of the augmented lagrange multiplier method for general nonlinear
+    optimization can be found in packages <pkg>alabama</pkg> and <pkg>Rsolnp</pkg>.
+    </li>
+
+    <li>Package <pkg>blowtorch</pkg> offers routines for building and solving
+    constrained optimization problems via stochastic gradient descent.
     </li>
 
     <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
@@ -120,25 +119,10 @@ W. Borchers</maintainer>
     unconstrained minimization technique (SUMT).
     </li>
 
-    <li>Package <pkg>cmaes</pkg> implements a global optimization
-    procedure using a covariance matrix adapting evolutionary
-    strategy (CMA-ES).
-    </li>
-
     <li>Package <pkg>dfoptim</pkg>, derivative-free optimization
     procedures, contains quite efficient R implementations of the
     Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
     bounds-constrained). [DF]</li>
-
-    <li><pkg>GA</pkg> provides functions for optimization using
-    genetic algorithms in both, the continuous and discrete case,
-    whether constrained or not. This package allows to run
-    corresponding optimization tasks in parallel.</li>
-
-    <li><pkg>GenSA</pkg> is a package providing a function for
-    generalized simulated annealing which can be used to search for a
-    global minimum of a very complex non-linear objective function
-    with a very large number of optima.</li>
 
     <li><pkg>GrassmannOptim</pkg> is a package for Grassmann manifold
     optimization. The implementation uses gradient-based algorithms
@@ -157,142 +141,142 @@ W. Borchers</maintainer>
     non-differentiable penalty.  [QN]
     </li>
     
-
     <li>Package <pkg>maxLik</pkg> provides a general purpose
     Newton-Raphson optimizer <code>maxNR()</code> as well as wrapper
     to methods, implemented in <code>optim()</code>. It supports fitting a
     submodel by specifying constant parameters.
     </li>
 
-    <li>An R port of the Scilab neldermead module is packaged
-    in <pkg>neldermead</pkg> offering several direct search
-    optimization algorithms based on the simplex method.
+    <li>An R port of the Scilab neldermead module is packaged in <pkg>neldermead</pkg>
+    offering several direct search algorithms based on the simplex approach.
     </li>
 
-    <li>
-    Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL
-    licensed library of various nonlinear optimization algorithms. It
-    especially supports global optimization with routines such as
-    DIRECT, StoGo, and others. It includes local derivative-free
-    (COBYLA, Nelder-Mead, Subplex) and gradient-based (e.g., BFGS)
-    methods, and also the augmented Lagrangian approach. [DF, GO, QN]
-    </li>
+    <li>Several derivative-free optimization algorithms are provided with package
+    <pkg>minqa</pkg>; e.g., the functions <code>bobyqa()</code>, <code>newuoa()</code>,
+    and <code>uobyqa()</code> allow to minimize a function of many variables by a trust
+    region method that forms quadratic models by interpolation. <code>bobyqa()</code>
+    additionally permits box constraints (bounds) on the parameters. [DF]</li>
 
-    <li>Several derivative-free optimization algorithms are provided
-    with package <pkg>minqa</pkg>. E.g., the
-    functions <code>bobyqa()</code>, <code>newuoa()</code>,
-    and <code>uobyqa()</code> allow to minimize a function of many
-    variables by a trust region method that forms quadratic models by
-    interpolation. <code>bobyqa()</code> additionally permits box
-    constraints (bounds) on the parameters. [DF]</li>
-
-    <li>Package <pkg>minpack.lm</pkg> provides a function
-    <code>nls.lm()</code> for solving nonlinear least-squares problems 
-    by a modification of the Levenberg-Marquardt algorithm, as found
-    in MINPACK.</li>
-
-    <li>The <pkg>NMOF</pkg> package provides implementations of
-    differential evolution, particle swarm optimization, local search
-    and threshold accepting (a variant of simulated annealing).  The
-    latter two methods also work for discrete optimization models, as
-    does the implementation of a genetic algorithm that is included in
-    the package.</li>
+    <li>Package <pkg>minpack.lm</pkg> provides a function <code>nls.lm()</code>
+    for solving nonlinear least-squares problems by a modification of the
+    Levenberg-Marquardt algorithm, as found in MINPACK.</li>
 
     <li>Package <pkg>powell</pkg> optimizes functions using Powell's
     UObyQA algorithm (Unconstrained Optimization by Quadratic
     Approximation).</li>
 
-    <li>A particle swarm optimizer (PSO) is implemented in package
-    <pkg>pso</pkg>. The algorithm follows the standard PSO 2007 by
-    Maurice Clerc et al. Additionally, a number of ancillary routines
-    are provided for easy testing and graphics. Another (parallelized)
-    implementation of the PSO algorithm can be found in package ppso
-    available from <a href="http://www.rforge.net/ppso/">rforge.net</a>.
-    </li>
-
-    <li>Package <pkg>hydroPSO</pkg> is a model-independent global
-    optimization tool for real-world models, implementing the latest
-    Standard Particle Swarm Optimization algorithm
-    (SPSO-2011). <pkg>hydroPSO</pkg> is parallel-capable, and includes
-    several fine-tuning options and post-processing functions.</li>
-
-    <li><pkg>RCEIM</pkg> implements a stochastic
-    heuristic method for performing multidimensional function
-    optimization.</li>
+    <li><pkg>RCEIM</pkg> implements a stochastic heuristic method for performing
+    multidimensional function optimization.</li>
 
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.</li>
 
-    <li> Package <pkg>ucminf</pkg> implements an algorithm of
-    quasi-Newtonian type for nonlinear unconstrained
-    optimization. [QN]</li>
+    <li> Package <pkg>ucminf</pkg> implements an algorithm of quasi-Newtonian type
+    for nonlinear unconstrained optimization. [QN]</li>
 
     <li>In package <pkg>trust</pkg>, a routine with the same name offers
-    local optimization based on the "trust region" approach.
-    </li>
+    local optimization based on the "trust region" approach.</li>
 
     <li><pkg>trustOptim</pkg> implements a "trust region" algorithm for
-    unconstrained nonlinear optimization. The algorithm is optimized
-    for objective functions with sparse Hessians. This makes the
-    algorithm highly scalable and efficient, in terms of both time and
-    memory footprint.</li>
+    unconstrained nonlinear optimization. The algorithm is optimized for
+    objective functions with sparse Hessians. This makes the algorithm highly
+    scalable and efficient, in terms of both time and memory footprint.</li>
 
-    <li>Package <pkg>nleqslv</pkg> provides a
-    function <code>nleqslv()</code> implementing Newton and Broyden
-    methods with line search and trust region global strategies for
-    solving medium sized system of nonlinear equations.
-    </li>
+    <li>Package <pkg>nleqslv</pkg> provides a function <code>nleqslv()</code>
+    implementing Newton and Broyden methods with line search and trust region global
+    strategies for solving medium sized system of nonlinear equations.</li>
 
-    <li>Package <pkg>genalg</pkg> contains
-    <code>rbga()</code>, an implementation of a genetic algorithm for
-    multi-dimensional function optimization.</li>
+    <li>Package <pkg>genalg</pkg> contains <code>rbga()</code>, an implementation
+    of a genetic algorithm for multi-dimensional function optimization.</li>
 
     <li>Machine coded genetic algorithm (MCGA) provided by package
     <pkg>mcga</pkg> is a tool which solves optimization problems based
     on byte representation of variables.</li>
 
-    <li>Package <pkg>rgenoud</pkg> offers
-    <code>genoud()</code>, a routine which is capable of solving
-    complex function minimization/maximization problems by combining
-    evolutionary algorithms with
-    a derivative-based (quasi-Newtonian) approach.</li>
+    <li>Package <pkg>rgenoud</pkg> offers <code>genoud()</code>, a routine which is
+    capable of solving complex function minimization/maximization problems by combining
+    evolutionary algorithms with a derivative-based (quasi-Newtonian) approach.</li>
 
     <li>An R implementation of the Self-Organising Migrating Algorithm
     (SOMA) is available in package <pkg>soma</pkg>. The approach of
     this stochastic optimization algorithm is similar to that of
     genetic algorithms and can be applied to any cost-minimization
-    problem with a bounded parameter space, and is robust to local
-    minima.
-    </li>
+    problem with a bounded parameter space, and is robust to local minima.</li>
+  </ul>
 
-    <li>Package <pkg>DEoptim</pkg> provides a global optimizer based
-    on the differential evolution algorithm. <pkg>RcppDE</pkg>
-    provides a C++ implementation of the <code>DEoptim()</code> function.
-    <!--
-    see the <a href="http://www.icsi.berkeley.edu/~storn/code.html">
-    Differential Evolution home page</a>.  -->
-    </li>
+  <h3>Semidefinite and Convex Solvers</h3>
 
-    <li>Package <pkg>DEoptimR</pkg> provides an implementation of the
-    jDE variant of the differential evolution stochastic algorithm for
-    global optimization of nonlinear programming problems. It allows
-    to handle constraints in a flexible manner.</li>
+  <ul>
+    <li>CSDP is a library of routines that implements a primal-dual barrier method
+    for solving semidefinite programming problems; it is interfaced in the
+    <pkg>Rcsdp</pkg> package. [SDP]</li>
 
-    <li>Package <pkg>Rmalschains</pkg> implements an algorithm family
-    for continuous optimization called memetic algorithms with local
-    search chains (MA-LS-Chains).</li>
+    <li>The <pkg>CLSOCP</pkg> package provides an implementation of a one-step
+    smoothing Newton method for the solution of second order cone programming
+    (SOCP) problems.</li>
+
+    <li><pkg>cccp</pkg> contains routines for solving cone constrained
+    convex problems by means of interior-point methods (partially ported
+    from Python's CVXOPT).</li>
+
+    <li>The DSDP library implements an interior-point method for semidefinite
+    programming with primal and dual solutions; it is interfaced in package
+    <pkg>Rdsdp</pkg>. [SDP]</li>
+  </ul>
+
+  <h3>Global Optimization</h3>
+
+  <ul>
+    <li>Package <pkg>DEoptim</pkg> provides a global optimizer based on the 
+    Differential Evolution algorithm. <pkg>RcppDE</pkg> provides a C++ implementation
+    (using Rcpp) of the same <code>DEoptim()</code> function.</li>
+
+    <li><pkg>DEoptimR</pkg> provides an implementation of the jDE variant of the
+    differential evolution stochastic algorithm for nonlinear programming problems
+    (It allows to handle constraints in a flexible manner.)</li>
+
+    <li><pkg>GenSA</pkg> is a package providing a function for generalized Simulated
+    Annealing which can be used to search for the global minimum of a quite complex
+    non-linear objective function with a large number of optima.</li>
+
+    <li><pkg>GA</pkg> provides functions for optimization using Genetic Algorithms
+    in both, the continuous and discrete case, whether constrained or not. This package
+    allows to run corresponding optimization tasks in parallel.</li>
+
+    <li>A particle swarm optimizer (PSO) is implemented in package <pkg>pso</pkg>.
+    Another (parallelized) implementation of the PSO algorithm can be found in package
+    ppso available from <a href="http://www.rforge.net/ppso/">rforge.net/ppso</a>.</li>
+
+    <li>Package <pkg>hydroPSO</pkg> implements the latest Standard Particle Swarm
+    Optimization algorithm (SPSO-2011); it is parallel-capable, and includes
+    several fine-tuning options and post-processing functions.</li>
+
+    <li>Package <pkg>cmaes</pkg> implements an effective global optimization procedure
+    using a covariance matrix adapting evolutionary strategy (CMA-ES).</li>
+
+    <li>Package <pkg>Rmalschains</pkg> implements an algorithm family for
+    continuous optimization called memetic algorithms with local search chains
+    (MA-LS-Chains).</li>
+
+    <li><pkg>nloptr</pkg> especially supports several global optimization routines,
+    such as DIRECT, controlled random search (CRS), multi-level single-linkage (MLSL),
+    improved stochastic ranking (ISR-ES), or stochastic global optimization (StoGO).</li>
+
+    <li>The <pkg>NMOF</pkg> package provides implementations of differential evolution,
+    particle swarm optimization, local search and threshold accepting (a variant of
+    simulated annealing).  The latter two methods also work for discrete optimization
+    problems, as does the implementation of a genetic algorithm that is included in
+    the package.</li>
   </ul>
 
 
-  <h2><a name="MathematicalProgrammingSolvers">Mathematical
-  Programming Solvers</a></h2>
+  <h2><a name="MathematicalProgrammingSolvers">Mathematical Programming Solvers</a></h2>
 
   This section provides an overview of open source as well as commercial
   optimizers. Which type of mathematical programming problem can be solved
-  by a certain package or function can be seen from the abbreviations in
-  square brackets. For a <a
-  href="#ClassificationBySubject">classification by subject</a> see
-  the list at the end of this task view.
+  by a certain package or function can be seen from the abbreviations in square
+  brackets. For a <a href="#ClassificationBySubject">classification by subject</a>
+  see the list at the end of this task view.
 
   <ul>
     <li>Package <pkg>linprog</pkg> solves linear programming problems using
@@ -316,14 +300,6 @@ W. Borchers</maintainer>
     <li>In the <pkg>boot</pkg> package there is a routine called
     <code>simplex()</code> which realizes the two-phase tableau simplex
     method for (relatively small) linear programming problems. [LP]</li>
-
-    <li>The <pkg>CLSOCP</pkg> package provides an implementation of a
-    one step smoothing Newton method for the solution of second order
-    cone programming (SOCP) problems.</li>
-
-    <li><pkg>cccp</pkg> contains routines for solving cone constrained
-    convex problems by means of interior-point methods (partially ported
-    from Python's CVXOPT).</li>
 
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
     solving quadratic programming problems using interior point
@@ -355,22 +331,12 @@ W. Borchers</maintainer>
     user to pass optimization problems to NEOS and retrieve results
     within R.
     </li>
-    <!--
-    <li>Package <rforge>stoprog</rforge> is a package for scenario
-    generation procedures used in
-    multi-stage stochastic programming. It is currently under
-    development on <a
-    href="http://R-Forge.R-project.org/">R-Forge</a>. [SP]
-    </li>
-    -->
-
+<!--
     <li> An interface to Ipopt from the <a
     href="http://www.coin-or.org/">COIN-OR</a> initiative called
-    <rforge>ipoptr</rforge> is available from <a
-    href="http://R-Forge.R-project.org/">R-Forge</a>. Ipopt is an open
-    source solver for large-scale nonlinear continuous
-    optimization. [NLP] </li>
-
+    <rforge>ipoptr</rforge> is available from R-Forge. Ipopt is an open
+    source solver for large-scale nonlinear continuous optimization. [NLP] </li>
+-->
   </ul>
 
   <h3>Interfaces to Open Source Optimizers</h3>
@@ -392,8 +358,7 @@ W. Borchers</maintainer>
     and transportation problems, respectively. Additionally, there is the
     package <pkg>lpSolveAPI</pkg> which provides an R interface to the
     low level API routines of lp_solve (see also project
-    <rforge>lpsolve</rforge> on
-    <a href="http://R-Forge.R-project.org/">R-Forge</a>).
+    <rforge>lpsolve</rforge> on R-Forge).
     <pkg>lpSolveAPI</pkg> supports reading linear programs from files in lp
     and MPS format. [BP, IP, LP, MILP, SPLP]</li>
 
@@ -430,16 +395,10 @@ W. Borchers</maintainer>
     primarily designed for constrained optimization of blackbox
     functions.</li>
 
-    <li> The CSDP semidefinite programming library is interfaced by
-    package <pkg>Rcsdp</pkg>. [SDP]</li>
-
 <!-- <li>Packages Rbonmin and
-    Rlago provide interfaces to the corresponding mixed integer
-    nonlinear optimizers part of the <a
-    href="http://www.coin-or.org/">COIN-OR</a> project. They are
-    currently being developed on <a
-    href="http://R-Forge.R-project.org/">R-Forge</a> in project
-    <rforge>rino</rforge>. [NLP] </li>
+    Rlago provide interfaces to the corresponding mixed integer nonlinear optimizers
+    part of the <a href="http://www.coin-or.org/">COIN-OR</a> project. They are
+    currently being developed on R-Forge in project <rforge>rino</rforge>. [NLP] </li>
 -->
 
   </ul>
@@ -536,33 +495,28 @@ W. Borchers</maintainer>
     shortest paths, maximal network flows, minimum
     spanning trees, etc. [GRAPH]</li>
 
-    <li><pkg>irace</pkg> contains an optimization algorithm for
-    optimizing the parameters of other optimization algorithms. This
-    problem is called "(offline) algorithm
-    configuration". [GO]</li>
+    <li><pkg>irace</pkg> contains an optimization algorithm for optimizing the
+    parameters of other optimization algorithms. This problem is called "(offline)
+    algorithm configuration". [GO]</li>
 
-    <li>Packages <pkg>matchingR</pkg> and <pkg>matchingMarkets</pkg> 
-    implement the Gale-Shapley algorithm and provide stable matchings for 
-    the marriage and house allocation problems, and for the college 
-    admissions problem.</li>
+    <li><pkg>matchingR</pkg> and <pkg>matchingMarkets</pkg> implement the Gale-Shapley
+    algorithm for the stable marriage and the college admissions problem, the stable
+    roommates and the house allocation problem. [COP, MM]</li>
 
     <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
     subset of a fixed size k from the integers 1:n, such that a user-
     supplied objective function is minimized at that subset.</li>
 
-    <li>Besides functionality for solving general isotone regression
-    problems, package <pkg>isotone</pkg> provides a framework of active
-    set methods for isotone optimization problems with arbitrary order
-    restrictions.</li>
+    <li>Besides functionality for solving general isotone regression problems,
+    package <pkg>isotone</pkg> provides a framework of active set methods for
+    isotone optimization problems with arbitrary order restrictions.</li>
 
-    <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a
-    number of maximization routines like Brendt-Hall-Hall-Hausman
-    (BHHH) and Newton-Raphson among others.  It includes summary and
-    print methods which extract the standard errors based on the
-    Hessian matrix and allows easy swapping of maximization
-    algorithms. It also provides a function to check whether an
-    analytic derivative is computed directly.
-    </li>
+    <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number of
+    maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson
+    among others. It includes summary and print methods which extract the standard
+    errors based on the Hessian matrix and allows easy swapping of maximization
+    algorithms. It also provides a function to check whether an analytic derivative
+    is computed directly.</li>
 
     <li>Multi-criteria optimization problems can be solved using
     package <pkg>mco</pkg> which implements genetic
@@ -637,7 +591,9 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
 -->
-      <li> GO (Global Optimization): <pkg>nloptr</pkg>, <pkg>irace</pkg></li>
+      <li> GO (Global Optimization): <pkg>DEoptim</pkg>, <pkg>DEoptimR</pkg>,
+      <pkg>GenSA</pkg>, <pkg>GA</pkg>, <pkg>pso</pkg>, <pkg>hydroPSO</pkg>,
+      <pkg>cmaes</pkg>, <pkg>nloptr</pkg>, <pkg>NMOF</pkg></li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
@@ -663,18 +619,19 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, <pkg>quadprog</pkg>,
       <pkg>Rcplex</pkg>, <pkg>Rmosek</pkg></li>
 
-      <li>SDP (Semidefinite programming, 90C22): <pkg>Rcsdp</pkg></li>
-	  <li>CP (Convex programming, 90C25): <pkg>cccp</pkg></li>
+      <li>SDP (Semidefinite programming, 90C22): <pkg>Rcsdp</pkg>, <pkg>Rdsdp</pkg></li>
+	  <li>CP (Convex programming, 90C25): <pkg>cccp</pkg>, <pkg>CLSOCP</pkg></li>
 <!--
 	  <li>Nonconvex programming, 90C26</li>
 -->
 	  <li>COP (Combinatorial optimization, 90C27): <pkg>adagio</pkg>,
-	  <pkg>CEoptim</pkg>, <pkg>TSP</pkg></li>
+	  <pkg>CEoptim</pkg>, <pkg>TSP</pkg>, <pkg>matchingR</pkg></li>
+
       <li>MOP (Multi-objective and goal programming, 90C29):
       <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
 
-      <li>NLP (Nonlinear programming, 90C30): Rdonlp2, <pkg>Rsolnp</pkg>,
-      <pkg>alabama</pkg></li>
+      <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
+      <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2</li>
 <!--
 	  <li>Sensitivity, stability, parametric optimization, 90C31</li>
 	  <li>Fractional programming, 90C32</li>
@@ -785,6 +742,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rcplex</pkg>
   <pkg>RcppDE</pkg>
   <pkg>Rcsdp</pkg>
+  <pkg>Rdsdp</pkg>
   <pkg>rgenoud</pkg>
   <pkg priority="core">Rglpk</pkg>
   <pkg>Rmalschains</pkg>
