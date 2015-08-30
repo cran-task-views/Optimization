@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and 
     Hans W. Borchers</maintainer>
-<version>2015-08-28</version>
+<version>2015-08-30</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -156,10 +156,6 @@
     models by interpolation. <code>bobyqa()</code> additionally permits box 
     constraints (bounds) on the parameters. [DF]</li>
 
-    <li>Package <pkg>minpack.lm</pkg> provides a function <code>nls.lm()</code>
-    for solving nonlinear least-squares problems by a modification of the
-    Levenberg-Marquardt algorithm, as found in MINPACK.</li>
-
     <li>Package <pkg>powell</pkg> optimizes functions using Powell's
     UObyQA algorithm (Unconstrained Optimization by Quadratic
     Approximation).</li>
@@ -192,6 +188,23 @@
     (quasi-Newtonian) approach.</li>
   </ul>
 
+  <h3>Least-Squares Problems</h3>
+
+  <ul>
+    <li>Function <code>solve.qr()</code> (resp. <code>qr.solve()</code>) handles over- and under-determined systems of linear equations, returning least-squares solutions if possible.
+    And package stats provides <code>nls()</code> to determine least-squares estimates of the parameters of a nonlinear model.<pkg></pkg></li>
+
+    <li><pkg>nls2</pkg> enhances function <code>nls()</code> with brute force or grid-based searches, to avoid being dependent on starting parameters or getting stuck in local solutions.</li>
+
+    <li>Package <pkg>minpack.lm</pkg> provides a function <code>nls.lm()</code>
+    for solving nonlinear least-squares problems by a modification of the
+    Levenberg-Marquardt algorithm, with support for lower and upper parameter bounds, as found in MINPACK.</li>
+
+    <li>Package <pkg>nnls</pkg> interfaces the Lawson-Hanson implementation of an algorithm for non-negative least-squares, allowing the combination of non-negative and non-positive constraints.</li>
+
+    <li>Package <pkg>bvls</pkg> interfaces the Stark-Parker implementation of an algorithm for least-squares with upper and lower bounded variables.</li>
+  </ul>
+
   <h3>Semidefinite and Convex Solvers</h3>
 
   <ul>
@@ -217,7 +230,7 @@
     issue on Optimization with R, see below.) [SDP, CP]</li>
   </ul>
 
-  <h3>Global Optimization</h3>
+  <h3>Global and Stochastic Optimization</h3>
 
   <ul>
     <li>Package <pkg>DEoptim</pkg> provides a global optimizer based on the 
@@ -698,6 +711,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>BB</pkg>
   <pkg>blowtorch</pkg>
   <pkg>boot</pkg>
+  <pkg>bvls</pkg>
   <pkg>cccp</pkg>
   <pkg>cec2005benchmark</pkg>
   <pkg>cec2013</pkg>
@@ -745,7 +759,9 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>neldermead</pkg>
   <pkg>nleqslv</pkg>
   <pkg>nloptr</pkg>
+  <pkg>nls2</pkg>
   <pkg>NMOF</pkg>
+  <pkg>nnls</pkg>
   <pkg>optmatch</pkg>
   <pkg priority="core">optimx</pkg>
   <pkg>powell</pkg>
@@ -773,7 +789,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>subplex</pkg>
   <pkg>trust</pkg>
   <pkg>trustOptim</pkg>
-  <pkg priority="core">TSP</pkg>
+  <pkg>TSP</pkg>
   <pkg>ucminf</pkg>
 </packagelist>
 
