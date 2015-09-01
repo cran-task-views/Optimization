@@ -192,7 +192,7 @@
 
   <ul>
     <li>Function <code>solve.qr()</code> (resp. <code>qr.solve()</code>) handles over- and under-determined systems of linear equations, returning least-squares solutions if possible.
-    And package stats provides <code>nls()</code> to determine least-squares estimates of the parameters of a nonlinear model.<pkg></pkg></li>
+    And package stats provides <code>nls()</code> to determine least-squares estimates of the parameters of a nonlinear model.</li>
 
     <li><pkg>nls2</pkg> enhances function <code>nls()</code> with brute force or grid-based searches, to avoid being dependent on starting parameters or getting stuck in local solutions.</li>
 
