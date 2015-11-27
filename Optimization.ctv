@@ -217,6 +217,11 @@
 
     <li>Package <pkg>bvls</pkg> interfaces the Stark-Parker implementation of an 
     algorithm for least-squares with upper and lower bounded variables.</li>
+
+    <li>Package <pkg>onls</pkg> implements orthogonal nonlinear least-squares 
+    regression (ONLS, a.k.a. Orthogonal Distance Regression, ODR) using a 
+    Levenberg-Marquardt-type minimization algorithm based on the ODRPACK Fortran 
+    library.</li>
   </ul>
 
   <h3>Semidefinite and Convex Solvers</h3>
@@ -804,6 +809,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>nls2</pkg>
   <pkg>NMOF</pkg>
   <pkg>nnls</pkg>
+  <pkg>onls</pkg>
   <pkg>optmatch</pkg>
   <pkg priority="core">optimx</pkg>
   <pkg>powell</pkg>
