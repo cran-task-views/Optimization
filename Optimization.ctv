@@ -394,7 +394,7 @@
   <ul>
     <li>Package <pkg>clpAPI</pkg> provides high level access from R to
     low-level API routines of the <a
-    href="https://projects.coin-or.org/Clp">COIN OR Clp</a> solver
+    href="http://projects.coin-or.org/Clp">COIN OR Clp</a> solver
     library. [LP]</li>
 
     <li>Package <pkg>lpSolve</pkg> contains the routine
