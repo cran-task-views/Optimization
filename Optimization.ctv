@@ -535,8 +535,10 @@
     Markov chain Monte Carlo methods.</li>
 
     <li> Objective functions for benchmarking the performance of
-    global optimization algorithms can be found in package
-    <pkg>globalOptTests</pkg>.</li>
+    global optimization algorithms can be found in <pkg>globalOptTests</pkg>.
+    Package <pkg>smoof</pkg> has generators for a number of both single- 
+	and multi-objective test functions that are frequently used for the 
+	benchmarking optimization algorithms.</li>
 
     <li><pkg>cec2013</pkg> and <pkg>cec2005benchmark</pkg> contain many test
     functions for global optimization from the 2005 and 2013 special sessions
@@ -838,6 +840,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rsolnp</pkg>
   <pkg priority="core">Rsymphony</pkg>
   <pkg>Rvmmin</pkg>
+  <pkg>smoof</pkg>
   <pkg>sna</pkg>
   <pkg>soma</pkg>
   <pkg>subplex</pkg>
