@@ -827,6 +827,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>rcdd</pkg>
   <pkg>RCEIM</pkg>
   <pkg>Rcgmin</pkg>
+  <pkg>rCMA</pkg>
   <pkg>Rcplex</pkg>
   <pkg>RcppDE</pkg>
   <pkg>Rcsdp</pkg>
