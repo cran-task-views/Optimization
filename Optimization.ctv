@@ -705,7 +705,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
-      <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2</li>, <pkg>rLindo</pkg>
+      <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2, <pkg>rLindo</pkg></li>
 <!--
 	  <li>Sensitivity, stability, parametric optimization, 90C31</li>
 	  <li>Fractional programming, 90C32</li>
