@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and 
     Hans W. Borchers</maintainer>
-<version>2016-05-02</version>
+<version>2016-05-25</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -286,7 +286,7 @@
     <pkg>pso</pkg>, and also in <pkg>psoptim</pkg>. Another (parallelized) 
 	implementation of the PSO algorithm can be found in package 
 	<code>ppso</code> available from
-	<a href="http://www.rforge.net/ppso/">rforge.net/ppso</a>.</li>
+	<a href="https://www.rforge.net/ppso/">rforge.net/ppso</a>.</li>
 
     <li>Package <pkg>hydroPSO</pkg> implements the latest Standard Particle 
     Swarm Optimization algorithm (SPSO-2011); it is parallel-capable, and 
@@ -367,7 +367,7 @@
 
     <li>Package <pkg>rcdd</pkg> offers the function <code>lpcdd()</code>
     for solving linear programs with exact arithmetic using the
-    <a href="http://gmplib.org">GNU Multiple Precision (GMP)
+    <a href="https://gmplib.org">GNU Multiple Precision (GMP)
     </a> library. [LP]</li>
 
     <li>In package Rdonlp2 (see the <rforge>rmetrics</rforge> project)
@@ -377,7 +377,7 @@
     purposes, otherwise it requires licensing. [GO, NLP]
     </li>
 
-    <li> The <a href="http://www.neos-server.org/neos/">NEOS Server
+    <li> The <a href="https://www.neos-server.org/neos/">NEOS Server
     for Optimization</a> provides online access to state-of-the-art
     optimization problem solvers. Package <pkg>rneos</pkg> enables the
     user to pass optimization problems to NEOS and retrieve results
@@ -397,7 +397,7 @@
   <ul>
     <li>Package <pkg>clpAPI</pkg> provides high level access from R to
     low-level API routines of the <a
-    href="http://projects.coin-or.org/Clp">COIN OR Clp</a> solver
+    href="https://projects.coin-or.org/Clp">COIN OR Clp</a> solver
     library. [LP]</li>
 
     <li>Package <pkg>lpSolve</pkg> contains the routine
@@ -418,7 +418,7 @@
 
     <li>Packages <pkg>glpkAPI</pkg> as well as
     package <pkg>Rglpk</pkg> provide an interface to the <a
-    href="http://www.gnu.org/software/glpk/">GNU Linear Programming
+    href="https://www.gnu.org/software/glpk/">GNU Linear Programming
     Kit</a> (GLPK). Whereas the former provides high level access
     to low level routines the latter offers a high level routine
     <code>Rglpk_solve_LP()</code> to solve MILPs using GLPK.  Both
@@ -460,32 +460,40 @@
   <ul>
     <li>Packages <pkg>cplexAPI</pkg> and <pkg>Rcplex</pkg> provide an
     interface to the CPLEX solver package from <a
-    href="http://www-01.ibm.com/software/integration/optimization/cplex-optimizer/">IBM</a>. CPLEX
+    href="https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/">IBM</a>. CPLEX
     provides dual/primal simplex optimizers as well as a barrier
     optimizer for solving large scale linear and quadratic
     programs. Furthermore, it offers a mixed integer optimizer to
-    solve difficult mixed integer programs. Note that CPLEX is <b>not
-    free</b> and you have to get a license from <a
-    href="http://www.ibm.com/">IBM</a>. Academics will receive a free
+    solve difficult mixed integer programs including (possibly
+    non-convex) MIQCP. Note that CPLEX is <b>not free</b> and you have
+    to get a license from <a
+    href="https://www.ibm.com/">IBM</a>. Academics will receive a free
     licence upon request. [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
 
+    <li>The API of the commercial solver LINDO can be accessed in R
+    via package <pkg>rLindo</pkg>. The <a
+    href="http://www.lindo.com/rlindo">LINDO API</a> allows for
+    solving linear, integer, quadratic, conic, general nonlinear,
+    global, and stochastic programming problems. [LP, IP, BP, QP,
+    MILP, MIQP, SP]</li>
+    
     <li>Package <pkg>Rmosek</pkg> offers an interface to the
     commercial optimizer from <a
-    href="http://www.mosek.com/">MOSEK</a>. It provides dual/primal
+    href="https://www.mosek.com/">MOSEK</a>. It provides dual/primal
     simplex optimizers as well as a barrier optimizer. In addition to
     solving LP and QP problems this solver can handle SOCP and
     quadratically constrained programming (QPQC) tasks. Furthermore,
     it offers a mixed integer optimizer to solve difficult mixed
     integer programs (MILP, MISOCP, etc.). Note that you have to get a
-    license from <a href="http://www.mosek.com/">MOSEK</a>. Academic
+    license from <a href="https://www.mosek.com/">MOSEK</a>. Academic
     licenses are free of charge.  [LP, IP, BP, QP, MILP, MIQP,
     IPM]</li>
 
-    <li>Gurobi Optimization ships an R binding with their 5.0 release
+    <li>Gurobi Optimization ships an R binding since their 5.0 release
     that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models
     from within R. See the <a
-    href="http://www.gurobi.com/documentation/5.0/reference-manual/node651#sec:R">R
-    reference manual</a> from the Gurobi documentation for details.</li>
+    href="https://www.gurobi.com/products/modeling-languages/r">R with
+    Gurobi</a> website for more details. [LP, QP, MILP, MIQP]</li>
 
     <li>The <pkg>localsolver</pkg> package provides an interface to the hybrid
     mathematical programming software LocalSolver from Innovation 24.
@@ -646,7 +654,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>clpAPI</pkg>, <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
       <pkg>limSolve</pkg>, <pkg>linprog</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>, <pkg>quantreg</pkg>, <pkg>rcdd</pkg>,
-      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>Rmosek</pkg>, 
+      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>, <pkg>Rmosek</pkg>, 
       <pkg>Rsymphony</pkg>
       </li>
 <!--
@@ -667,17 +675,17 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 
       <li>IP (Integer programming, 90C10): <pkg>cplexAPI</pkg>, 
       <pkg>glpkAPI</pkg>, <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, 
-      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
+      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>
       <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg></li>
 
       <li>MIP (Mixed integer programming and its variants MILP for LP
       and MIQP for QP, 90C11):  <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, 
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, 
-      <pkg>Rglpk</pkg>, <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg></li>
-<!--
-      <li>SP (Stochastic programming, 90C15):
+      <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>, <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg></li>
+
+      <li>SP (Stochastic programming, 90C15): <pkg>rLindo</pkg>
       </li>
--->
+
       <li>QP (Quadratic programming, 90C20): <pkg>cplexAPI</pkg>, 
       <pkg>kernlab</pkg>, <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, 
       <pkg>quadprog</pkg>, <pkg>Rcplex</pkg>, <pkg>Rmosek</pkg></li>
@@ -697,7 +705,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
-      <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2</li>
+      <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2</li>, <pkg>rLindo</pkg>
 <!--
 	  <li>Sensitivity, stability, parametric optimization, 90C31</li>
 	  <li>Fractional programming, 90C32</li>
@@ -824,6 +832,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rdsdp</pkg>
   <pkg>rgenoud</pkg>
   <pkg priority="core">Rglpk</pkg>
+  <pkg>rLindo</pkg>
   <pkg>Rmalschains</pkg>
   <pkg>Rmosek</pkg>
   <pkg>rneos</pkg>
@@ -843,11 +852,11 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 </packagelist>
 
 <links>
-  <a href="http://www.jstatsoft.org/v60">Journal of Statistical Software Special 
+  <a href="https://www.jstatsoft.org/v60">Journal of Statistical Software Special 
   Volume on Optimization (Editor: Ravi Varadhan)</a>
   <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html">
   Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)</a>
-  <a href="http://www.springer.com/mathematics/book/978-3-319-08262-2">
+  <a href="https://www.springer.com/mathematics/book/978-3-319-08262-2">
   Modern Optimization With R -- Paulo Cortez (Springer UseR Series)</a>
   <a href="http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/">
   Comparison of some heuristic optimization methods</a>
