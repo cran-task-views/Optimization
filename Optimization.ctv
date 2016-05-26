@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and 
     Hans W. Borchers</maintainer>
-<version>2016-05-25</version>
+<version>2016-05-26</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -194,14 +194,19 @@
 
   <ul>
     <li>Function <code>solve.qr()</code> (resp. <code>qr.solve()</code>) 
-	handles over- and under-determined systems of linear equations, returning 
+    handles over- and under-determined systems of linear equations, returning 
     least-squares solutions if possible. And package stats provides 
     <code>nls()</code> to determine least-squares estimates of the parameters 
-	of a nonlinear model.</li>
+    of a nonlinear model. <pkg>nls2</pkg> enhances function <code>nls()</code> 
+    with brute force or grid-based searches, to avoid being dependent on 
+    starting parameters or getting stuck in local solutions.</li>
 
-    <li><pkg>nls2</pkg> enhances function <code>nls()</code> with brute force 
-    or grid-based searches, to avoid being dependent on starting parameters or 
-    getting stuck in local solutions.</li>
+    <li>Package <pkg>nlmrt</pkg> provides tools for minimizing nonlinear sums 
+    of squares. The function to be minimized can be provided as an R function 
+    or as an expression, similar to the way that nls() works.
+    <code>nlmrt::nlxb()</code> tries to compute analytic derivatives for the 
+    Jacobian used in a Levenberg-Marquardt. This allows for the solution of 
+    problems with poorly conditioned Jacobians and small residuals</li>
 
     <li>Package <pkg>minpack.lm</pkg> provides a function <code>nls.lm()</code>
     for solving nonlinear least-squares problems by a modification of the
@@ -459,8 +464,8 @@
 
   <ul>
     <li>Packages <pkg>cplexAPI</pkg> and <pkg>Rcplex</pkg> provide an
-    interface to the CPLEX solver package from <a
-    href="https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/">IBM</a>. CPLEX
+    interface to the CPLEX solver package from <a href="https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/">
+	IBM</a>. CPLEX
     provides dual/primal simplex optimizers as well as a barrier
     optimizer for solving large scale linear and quadratic
     programs. Furthermore, it offers a mixed integer optimizer to
@@ -505,9 +510,9 @@
       Matching: Multivariate and Propensity Score Matching with Balance 
       Optimization
       Provides functions for multivariate and propensity score matching and
-      for finding optimal balance based on a genetic search algorithm. A variety 
-      of univariate and multivariate metrics to determine if balance has been 
-      obtained are also provided.
+      for finding optimal balance based on a genetic search algorithm. A 
+      variety of univariate and multivariate metrics to determine if balance 
+      has been obtained are also provided.
   -->
 
   <h2><a name="SpecificApplications">Specific Applications in
@@ -597,6 +602,11 @@
     package <pkg>mco</pkg> which implements genetic
     algorithms. [MOP]</li>
 
+    <li>Package <pkg>optmatch</pkg> provides routines for solving
+    matching problems by translating them into minimum-cost flow problems,
+    which are in turn solved optimally by the RELAX-IV codes of
+    Bertsekas and Tseng (free for research). [SPLP]</li>
+
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
     <code>crq()</code>). It provides an interface to L1 regression
@@ -654,8 +664,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <pkg>clpAPI</pkg>, <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
       <pkg>limSolve</pkg>, <pkg>linprog</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>, <pkg>quantreg</pkg>, <pkg>rcdd</pkg>,
-      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>, <pkg>Rmosek</pkg>, 
-      <pkg>Rsymphony</pkg>
+      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>,
+	  <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg>
       </li>
 <!--
       <li>LSP (Large-scale problems, 90C06): makes no sense to me here
@@ -681,7 +691,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
       <li>MIP (Mixed integer programming and its variants MILP for LP
       and MIQP for QP, 90C11):  <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, 
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, 
-      <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>, <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg></li>
+      <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>, <pkg>Rmosek</pkg>, 
+	  <pkg>Rsymphony</pkg></li>
 
       <li>SP (Stochastic programming, 90C15): <pkg>rLindo</pkg>
       </li>
@@ -805,6 +816,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>mcga</pkg>
   <pkg>mco</pkg>
   <pkg>minpack.lm</pkg>
+  <pkg>nlmrt</pkg>
+  <pkg>optmatch</pkg>
   <pkg priority="core">minqa</pkg>
   <pkg>neldermead</pkg>
   <pkg>NlcOptim</pkg>
@@ -852,8 +865,8 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
 </packagelist>
 
 <links>
-  <a href="https://www.jstatsoft.org/v60">Journal of Statistical Software Special 
-  Volume on Optimization (Editor: Ravi Varadhan)</a>
+  <a href="https://www.jstatsoft.org/v60">Journal of Statistical Software 
+  Special Volume on Optimization (Editor: Ravi Varadhan)</a>
   <a href="http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html">
   Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)</a>
   <a href="https://www.springer.com/mathematics/book/978-3-319-08262-2">
