@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and 
     Hans W. Borchers</maintainer>
-<version>2016-05-26</version>
+<version>2016-06-06</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -234,18 +234,22 @@
 	convex problems. Conic and equality constraints can be specified in 
 	addition to integer and boolean variable constraints for mixed-integer 
 	problems.</li>
+	
+	<li>Package <pkg>scs</pkg> applies operator splitting to solve linear 
+	programs, cone programs (SOCP), and semidefinite programs; cones can be 
+	second-order, exponential, power cones, or any combination of these.</li>
 
-    <li>CSDP is a library of routines that implements a primal-dual barrier 
-    method for solving semidefinite programming problems; it is interfaced in 
-    the <pkg>Rcsdp</pkg> package. [SDP]</li>
+    <li><pkg>cccp</pkg> contains routines for solving cone constrained
+    convex problems by means of interior-point methods (partially ported
+    from Python's CVXOPT).</li>
 
     <li>The <pkg>CLSOCP</pkg> package provides an implementation of a one-step
     smoothing Newton method for the solution of second order cone programming
     (SOCP) problems.</li>
 
-    <li><pkg>cccp</pkg> contains routines for solving cone constrained
-    convex problems by means of interior-point methods (partially ported
-    from Python's CVXOPT).</li>
+    <li>CSDP is a library of routines that implements a primal-dual barrier 
+    method for solving semidefinite programming problems; it is interfaced in 
+    the <pkg>Rcsdp</pkg> package. [SDP]</li>
 
     <li>The DSDP library implements an interior-point method for semidefinite
     programming with primal and dual solutions; it is interfaced in package
@@ -853,6 +857,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>Rsolnp</pkg>
   <pkg priority="core">Rsymphony</pkg>
   <pkg>Rvmmin</pkg>
+  <pkg>scs</pkg>
   <pkg>smoof</pkg>
   <pkg>sna</pkg>
   <pkg>soma</pkg>
