@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and 
     Hans W. Borchers</maintainer>
-<version>2016-10-18</version>
+<version>2017-08-08</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -67,44 +67,55 @@
 
   <h2><a name="GeneralPurposeSolvers">General Purpose Continuous
   Solvers</a></h2>
-<!--
-  <h3>Solvers provided by the base R distribution</h3>
--->
-  <ul>
-    <li>Package stats offers several general purpose optimization routines.
-    First, function <code>optim()</code> provides an implementation of
-    the Broyden-Fletcher-Goldfarb-Shanno (BFGS) method,
-    bounded BFGS, conjugate gradient, Nelder-Mead, and simulated
-    annealing (SANN) optimization
-    methods. It utilizes gradients, if provided, for faster
+
+  <p>Package stats offers several general purpose optimization routines.
+    For one-dimensional unconstrained function optimization there is
+    <code>optimize()</code> which searches an interval for a minimum
+    or maximum.
+
+    Function <code>optim()</code> provides an implementation of the
+    Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, CG, bounded BFGS,
+    conjugate gradient, Nelder-Mead, and simulated annealing (SANN)
+    optimization methods. It utilizes gradients, if provided, for faster
     convergence. Typically it is used for unconstrained optimization
-    but includes an option for box-constrained
-    optimization.
+    but includes an option for box-constrained optimization.
 
     Additionally, for minimizing a function subject to
-    linear inequality constraints stats contains the routine
+    linear inequality constraints, stats contains the routine
     <code>constrOptim()</code>.
-
-    For one-dimensional unconstrained function optimization there is
-    <code>optimize()</code> which searches an interval
-    for a minimum or maximum.
-
     Then there is <code>nlm</code> which is used for solving nonlinear
     unconstrained minimization problems. Eventually,
     <code>nlminb()</code> offers unconstrained and constrained
-    optimization using PORT routines. [RGA, QN]
-    </li>
-<!--
-  </ul>
-  <h3>Packages extending the basic solver spectrum</h3>
+    optimization using PORT routines. [RGA, QN]</p>
+
   <ul>
--->
-    <li>
-    Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL licensed 
+    <li><pkg>lbfgsb3</pkg> interfaces the J.Nocedal et al. L-BFGS-B 3.0
+    Fortran code, a limited memory BFGS solver, allowing bound constraints
+    and being applicable to higher-dimensional problems. [QN]</li>
+
+    <li><pkg>lbfgs</pkg> wraps the libBFGS library by N.Okazaki, interfacing 
+    both the L-BFGS and the OWL-QN algorithm, the latter being particularly 
+    suited for higher-dimensional problems. [QN]</li>
+
+    <li>Package <pkg>ucminf</pkg> implements an algorithm of quasi-Newton 
+    type for nonlinear unconstrained optimization, combining a trust region
+    with line search approaches. [QN]</li>
+
+    <li><pkg>mize</pkg> implements optimization algorithms in pure R,
+    including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS)
+    and limited memory BFGS (L-BFGS) methods. Most internal parameters
+    can be set through the call interface.</li>
+
+    <li>Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL licensed 
     library of various nonlinear optimization algorithms. It includes local 
     derivative-free (COBYLA, Nelder-Mead, Subplex) and gradient-based 
     (e.g., BFGS) methods, and also the augmented Lagrangian approach for 
     nonlinear constraints. [DF, GO, QN]</li>
+
+    <li>Package <pkg>dfoptim</pkg>, derivative-free optimization
+    procedures, contains quite efficient R implementations of the
+    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
+    bounds-constrained). [DF]</li>
 
     <li>Implementations of the augmented Lagrange barrier minimization 
 	algorithm for optimizing smooth nonlinear objective functions (with 
@@ -119,28 +130,19 @@
     solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).</li>
 
-    <li>Package <pkg>dfoptim</pkg>, derivative-free optimization
-    procedures, contains quite efficient R implementations of the
-    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
-    bounds-constrained). [DF]</li>
-
     <li><pkg>GrassmannOptim</pkg> is a package for Grassmann manifold
     optimization. The implementation uses gradient-based algorithms
     and embeds a stochastic gradient method for global search.</li>
+
+    <li><pkg>ManifoldOptim</pkg> is an R interface to the 'ROPTLIB'
+    optimization library. It optimizes real-valued functions over manifolds
+    such as Stiefel, Grassmann, and Symmetric Positive Definite matrices.</li>
 
     <li>Package <pkg>gsl</pkg> provides BFGS, conjugate gradient,
     steepest descent, and Nelder-Mead algorithms. It uses a "line
     search" approach via the function <code>multimin()</code>. It is
     based on the GNU Scientific Library (GSL). [RGA, QN]
     </li>
-
-    <li><pkg>lbfgsb3</pkg> interfaces the J.Nocedal et al. L-BFGS-B 3.0
-    Fortran code, a limited memory BFGS solver, allowing bound constraints
-    and being applicable to higher-dimensional problems. [QN]</li>
-
-    <li><pkg>lbfgs</pkg> wraps the libBFGS library by N.Okazaki, interfacing 
-    both the L-BFGS and the OWL-QN algorithm, the latter being particularly 
-    suited for higher-dimensional problems. [QN]</li>
 
     <li>Package <pkg>maxLik</pkg> provides a general purpose
     Newton-Raphson optimizer <code>maxNR()</code> as well as wrapper
@@ -165,9 +167,6 @@
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.</li>
 
-    <li> Package <pkg>ucminf</pkg> implements an algorithm of quasi-Newtonian 
-    type for nonlinear unconstrained optimization. [QN]</li>
-
     <li>In package <pkg>trust</pkg>, a routine with the same name offers
     local optimization based on the "trust region" approach.</li>
 
@@ -185,6 +184,26 @@
     which is capable of solving complex function minimization/maximization 
     problems by combining evolutionary algorithms with a derivative-based 
     (quasi-Newtonian) approach.</li>
+  </ul>
+
+  <h3>Optimization Test Functions</h3>
+
+  <ul>
+    <li> Objective functions for benchmarking the performance of global
+    optimization algorithms can be found in <pkg>globalOptTests</pkg>.</li>
+
+    <li>Package <pkg>smoof</pkg> has generators for a number of both single- 
+	and multi-objective test functions that are frequently used for the 
+	benchmarking optimization algorithms.</li>
+
+    <li><pkg>cec2013</pkg> and <pkg>cec2005benchmark</pkg> contain many test
+    functions for global optimization from the 2005 and 2013 special sessions
+    on real-parameter optimization at the IEEE CEC congresses on evolutionary
+    computation.</li>
+
+    <li>Package
+    <a href="https://github.com/jlmelville/funconstrain/">funconstrain</a>
+    (on Github) implements 35 of the test functions by More, Garbow, and Hillstom, useful for  testing unconstrained optimization methods.</li>
   </ul>
 
   <h3>Least-Squares Problems</h3>
@@ -251,6 +270,10 @@
     <li>The DSDP library implements an interior-point method for semidefinite
     programming with primal and dual solutions; it is interfaced in package
     <pkg>Rdsdp</pkg>. [SDP]</li>
+
+    <li><pkg>coneproj</pkg> contains routines for cone projection and quadratic
+    programming, estimation and inference for constrained parametric regression,
+    and shape-restricted regression problems.</li>
 
     <li>Package <pkg>Rmosek</pkg> provides an interface to the (commercial) 
     MOSEK optimization library for large-scale LP, QP, and MIP problems, with 
@@ -433,12 +456,6 @@
     <code>Rglpk_solve_LP()</code> to solve MILPs using GLPK.  Both
     packages offer the possibility to use models formulated in the MPS
     format. [BP, IP, IPM, LP, MILP]</li>
-    <!--
-	GNU LP or MathProg, can be loaded.
-	<code>Rglpk_solve_LP()</code> solves linear and mixed-integer programs
-	applying the GNU Linear Programming Kit (GLPK).  of target
-	functions and constraints is done through matrices.
-    -->
 
     <li><pkg>Rsymphony</pkg> has the routine <code>Rsymphony_solve_LP()</code> 
 	that interfaces the SYMPHONY solver for mixed-integer linear programs.
@@ -547,17 +564,6 @@
     functions for implementing maximum likelihood estimating
     procedures for complex models using data cloning and Bayesian
     Markov chain Monte Carlo methods.</li>
-
-    <li> Objective functions for benchmarking the performance of
-    global optimization algorithms can be found in <pkg>globalOptTests</pkg>.
-    Package <pkg>smoof</pkg> has generators for a number of both single- 
-	and multi-objective test functions that are frequently used for the 
-	benchmarking optimization algorithms.</li>
-
-    <li><pkg>cec2013</pkg> and <pkg>cec2005benchmark</pkg> contain many test
-    functions for global optimization from the 2005 and 2013 special sessions
-    on real-parameter optimization at the IEEE CEC congresses on evolutionary
-    computation.</li>
 
     <li>Package <pkg>goalprog</pkg> provides some functions for
     lexicographic linear goal
@@ -783,6 +789,7 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>clue</pkg>
   <pkg>cmaes</pkg>
   <pkg>cmaesr</pkg>
+  <pkg>coneproj</pkg>
   <pkg>copulaedas</pkg>
   <pkg>cplexAPI</pkg>
   <pkg>crs</pkg>
@@ -814,12 +821,14 @@ steady-state and equilibrium analysis of ordinary differential equations.</li>
   <pkg>LowRankQP</pkg>
   <pkg priority="core">lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
+  <pkg>ManifoldOptim</pkg>
   <pkg>matchingMarkets</pkg>
   <pkg>matchingR</pkg>
   <pkg>maxLik</pkg>
   <pkg>mcga</pkg>
   <pkg>mco</pkg>
   <pkg>minpack.lm</pkg>
+  <pkg>mize</pkg>
   <pkg>nlmrt</pkg>
   <pkg>optmatch</pkg>
   <pkg priority="core">minqa</pkg>
