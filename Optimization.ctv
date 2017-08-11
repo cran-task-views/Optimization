@@ -2,9 +2,9 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="R-optimization@mailbox.org">Stefan Theussl and 
-    Hans W. Borchers</maintainer>
-<version>2017-08-08</version>
+<maintainer email="R-optimization@mailbox.org">Hans W. Borchers and
+    Stefan Theussl</maintainer>
+<version>2017-08-12</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -93,9 +93,10 @@
     Fortran code, a limited memory BFGS solver, allowing bound constraints
     and being applicable to higher-dimensional problems. [QN]</li>
 
-    <li><pkg>lbfgs</pkg> wraps the libBFGS library by N.Okazaki, interfacing 
-    both the L-BFGS and the OWL-QN algorithm, the latter being particularly 
-    suited for higher-dimensional problems. [QN]</li>
+    <li>And <pkg>lbfgs</pkg> wraps the libBFGS library by N.Okazaki
+    (converted from Nocedal's library), interfacing both the L-BFGS and
+    the OWL-QN algorithm, the latter being particularly suited for
+    higher-dimensional problems. [QN]</li>
 
     <li>Package <pkg>ucminf</pkg> implements an algorithm of quasi-Newton 
     type for nonlinear unconstrained optimization, combining a trust region
@@ -104,7 +105,7 @@
     <li><pkg>mize</pkg> implements optimization algorithms in pure R,
     including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS)
     and limited memory BFGS (L-BFGS) methods. Most internal parameters
-    can be set through the call interface.</li>
+    can be set through the calling interface.</li>
 
     <li>Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL licensed 
     library of various nonlinear optimization algorithms. It includes local 
@@ -126,9 +127,23 @@
     and nonlinear equality and inequality constraints, implementing a Sequential
     Quadratic Programming (SQP) method.</li>
 
+    <li>In package Rdonlp2 (see the <rforge>rmetrics</rforge> project)
+    function<code>donlp2()</code> , a wrapper for the DONLP2
+    solver, offers the minimization of smooth nonlinear functions and
+    constraints. DONLP2 can be used freely for any kind of research
+    purposes, otherwise it requires licensing. [GO, NLP]</li>
+
     <li><pkg>clue</pkg> contains the function <code>sumt()</code> for
     solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).</li>
+
+    <li><pkg>BB</pkg> contains the function <code>spg()</code> providing a
+    spectral projected gradient method for large scale optimization with
+    simple constraints. It takes a nonlinear objective function as an
+    argument as well as basic constraints. Furthermore, <pkg>BB</pkg>
+    contains two functions (<code>dfsane()</code>
+    and <code>sane()</code>) for using the spectral gradient method
+    for solving a nonlinear system of equations.</li>
 
     <li><pkg>GrassmannOptim</pkg> is a package for Grassmann manifold
     optimization. The implementation uses gradient-based algorithms
@@ -174,16 +189,30 @@
     unconstrained nonlinear optimization. The algorithm is optimized for
     objective functions with sparse Hessians. This makes the algorithm highly
     scalable and efficient, in terms of both time and memory footprint.</li>
+  </ul>
 
-    <li>Package <pkg>nleqslv</pkg> provides a function <code>nleqslv()</code>
-    implementing Newton and Broyden methods with line search and trust region 
-    global strategies for solving medium sized system of nonlinear equations.
-    </li>
+  <h3>Quadratic Optimization</h3>
 
-    <li>Package <pkg>rgenoud</pkg> offers <code>genoud()</code>, a routine 
-    which is capable of solving complex function minimization/maximization 
-    problems by combining evolutionary algorithms with a derivative-based 
-    (quasi-Newtonian) approach.</li>
+  <ul>
+    <li>In package <pkg>quadprog</pkg> <code>solve.QP()</code> solves
+    quadratic programming problems with linear equality and inequality 
+	constraints. (The matrix has to be positive definite.) [QP]</li>
+
+    <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
+    solving quadratic programming problems using interior point
+    methods. (The matrix can be positive semidefinite.) [IPM, QP]</li>
+
+    <li><pkg>coneproj</pkg> contains routines for cone projection and quadratic
+    programming, estimation and inference for constrained parametric regression,
+    and shape-restricted regression problems. [QP]</li>
+
+
+    <li><pkg>LowRankQP</pkg> primal/dual interior point method solving
+    quadratic programming problems [IPM, QP]</li>
+
+    <li><pkg>limSolve</pkg> offers to solve linear or quadratic
+    optimization functions, subject to equality and/or inequality
+    constraints. [LP, QP]</li>
   </ul>
 
   <h3>Optimization Test Functions</h3>
@@ -203,7 +232,8 @@
 
     <li>Package
     <a href="https://github.com/jlmelville/funconstrain/">funconstrain</a>
-    (on Github) implements 35 of the test functions by More, Garbow, and Hillstom, useful for  testing unconstrained optimization methods.</li>
+    (on Github) implements 35 of the test functions by More, Garbow, and Hillstom,
+    useful for  testing unconstrained optimization methods.</li>
   </ul>
 
   <h3>Least-Squares Problems</h3>
@@ -271,10 +301,6 @@
     programming with primal and dual solutions; it is interfaced in package
     <pkg>Rdsdp</pkg>. [SDP]</li>
 
-    <li><pkg>coneproj</pkg> contains routines for cone projection and quadratic
-    programming, estimation and inference for constrained parametric regression,
-    and shape-restricted regression problems.</li>
-
     <li>Package <pkg>Rmosek</pkg> provides an interface to the (commercial) 
     MOSEK optimization library for large-scale LP, QP, and MIP problems, with 
     emphasis on (nonlinear) conic, semidefinite, and convex tasks; academic 
@@ -306,6 +332,11 @@
     <li>Package <pkg>genalg</pkg> contains <code>rbga()</code>, an
     implementation of a genetic algorithm for multi-dimensional function 
     optimization.</li>
+
+    <li>Package <pkg>rgenoud</pkg> offers <code>genoud()</code>, a routine 
+    which is capable of solving complex function minimization/maximization 
+    problems by combining evolutionary algorithms with a derivative-based 
+    (quasi-Newtonian) approach.</li>
 
     <li>Machine coded genetic algorithm (MCGA) provided by package
     <pkg>mcga</pkg> is a tool which solves optimization problems based
@@ -368,47 +399,23 @@
     <pkg>lpSolve</pkg>) and can read model files in MPS
     format. [LP]</li>
 
-    <li>In package <pkg>quadprog</pkg> <code>solve.QP()</code> solves
-    quadratic programming problems with linear equality and inequality 
-	constraints. [QP]</li>
-
-    <li><pkg>BB</pkg> contains the function <code>spg()</code> providing a
-    spectral projected gradient method for large scale optimization with
-    simple constraints. It takes a nonlinear objective function as an
-    argument as well as basic constraints. Furthermore, <pkg>BB</pkg>
-    contains two functions (<code>dfsane()</code>
-    and <code>sane()</code>) for using the spectral gradient method
-    for solving a nonlinear system of equations.
-    </li>
-
     <li>In the <pkg>boot</pkg> package there is a routine called
     <code>simplex()</code> which realizes the two-phase tableau simplex
     method for (relatively small) linear programming problems. [LP]</li>
-
-    <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
-    solving quadratic programming problems using interior point
-    methods. [IPM, QP]
-    </li>
-
-    <li><pkg>limSolve</pkg> offers to solve linear or quadratic
-    optimization functions. [LP, QP]
-    </li>
-
-    <li><pkg>LowRankQP</pkg> primal/dual interior point method solving
-    quadratic programming problems [IPM, QP]</li>
 
     <li>Package <pkg>rcdd</pkg> offers the function <code>lpcdd()</code>
     for solving linear programs with exact arithmetic using the
     <a href="https://gmplib.org">GNU Multiple Precision (GMP)
     </a> library. [LP]</li>
 
-    <li>In package Rdonlp2 (see the <rforge>rmetrics</rforge> project)
-    function<code>donlp2()</code> , a wrapper for the DONLP2
-    solver, offers the minimization of smooth nonlinear functions and
-    constraints. DONLP2 can be used freely for any kind of research
-    purposes, otherwise it requires licensing. [GO, NLP]
-    </li>
+    <li>The <pkg>CEoptim</pkg> package provides an optimization solver,
+    based on the Cross-Entropy method, for continuous and combinatorial
+    optimization problems. It can be used to solve multi-extremal problems,
+    accepts linear constraints,and handles discrete and continuous variables.
+    [COP]</li>
+  </ul>
 
+  <ul>
     <li> The <a href="https://www.neos-server.org/neos/">NEOS Server
     for Optimization</a> provides online access to state-of-the-art
     optimization problem solvers. Package <pkg>rneos</pkg> enables the
@@ -552,11 +559,10 @@
     applying a simulated annealing heuristics (other approaches will 
     follow).</li>
 
-    <li>The <pkg>CEoptim</pkg> package provides an optimization solver,
-    based on the Cross-Entropy method, for continuous and combinatorial
-    optimization problems. It can be used to solve multi-extremal problems,
-    accepts linear constraints,and handles discrete and continuous variables.
-    [COP]</li>
+    <li>Package <pkg>nleqslv</pkg> provides function <code>nleqslv()</code>,
+    implementing Newton and Broyden methods with line search and trust region 
+    global strategies for solving medium sized system of nonlinear equations.
+    </li>
 
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
