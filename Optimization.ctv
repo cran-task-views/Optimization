@@ -505,7 +505,7 @@
 
     <li>The API of the commercial solver LINDO can be accessed in R
     via package <pkg>rLindo</pkg>. The <a
-    href="http://www.lindo.com/rlindo">LINDO API</a> allows for
+    href="http://www.lindo.com/">LINDO API</a> allows for
     solving linear, integer, quadratic, conic, general nonlinear,
     global, and stochastic programming problems. [LP, IP, BP, QP,
     MILP, MIQP, SP]</li>
