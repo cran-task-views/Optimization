@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans W. Borchers
     </maintainer>
-<version>2017-11-09</version>
+<version>2017-11-10</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -70,9 +70,8 @@
   <p>Package stats offers several general purpose optimization routines.
     For one-dimensional unconstrained function optimization there is
     <code>optimize()</code> which searches an interval for a minimum
-    or maximum.</p>
-
-  <p>Function <code>optim()</code> provides an implementation of the
+    or maximum.
+    Function <code>optim()</code> provides an implementation of the
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, bounded BFGS,
     conjugate gradient (CG), Nelder-Mead, and simulated annealing (SANN)
     optimization methods. It utilizes gradients, if provided, for faster
@@ -173,7 +172,6 @@
     optimization algorithms such as the Nelder-Mead, Spendley, Box method, 
     or multi-dimensional search by Torczon, etc.</li>
     
-
     <li>Several derivative-free optimization algorithms are provided with 
     package <pkg>minqa</pkg>; e.g., the functions <code>bobyqa()</code>,
     <code>newuoa()</code>, and <code>uobyqa()</code> allow to minimize a 
@@ -229,9 +227,15 @@
     <li> Objective functions for benchmarking the performance of global
     optimization algorithms can be found in <pkg>globalOptTests</pkg>.</li>
 
-    <li>Package <pkg>smoof</pkg> has generators for a number of both single- 
-	and multi-objective test functions that are frequently used for the 
-	benchmarking optimization algorithms.</li>
+    <li><pkg>smoof</pkg> has generators for a number of both single- and
+    multi-objective test functions that are frequently used for benchmarking 
+    optimization algorithms; offers a set of convenient functions to generate, 
+	plot, and work with objective functions.</li>
+
+    <li><pkg>flacco</pkg> contains tools and features used for an Exploratory 
+    Landscape Analysis (ELA) of continuous optimization problems, capable of
+    quantifying rather complex properties, such as the global structure, 
+    separability, etc., of the optimization problems.</li>
 
     <li><pkg>cec2013</pkg> and <pkg>cec2005benchmark</pkg> contain many test
     functions for global optimization from the 2005 and 2013 special sessions
@@ -408,6 +412,11 @@
     work for discrete optimization problems, as does the implementation of a 
     genetic algorithm that is included in the package.</li>
 
+    <li><pkg>SACOBRA</pkg> is a package for numeric constrained optimization of 
+    expensive black-box functions under severely limited budgets; it implements 
+    an extension of the COBRA algorithm with initial design generation and 
+    self-adjusting random restarts.</li>
+
     <li><pkg>RCEIM</pkg> implements a stochastic heuristic method for 
     performing multidimensional function optimization.</li>
   </ul>
@@ -424,7 +433,12 @@
   see the list at the end of this task view.
 
   <ul>
-    <li>Package <pkg>linprog</pkg> solves linear programming problems using
+	<li>Package <pkg>ompr</pkg> is an optimization modelling package to model and 
+	solve Mixed Integer Linear Programs in an algebraic way directly in R. The 
+	models are solver-independent and thus offer the possibility to solve models 
+	with different solvers. (Inspired by Julia's JuMP project.)</li>
+
+    <li><pkg>linprog</pkg> solves linear programming problems using
     the function <code>solveLP()</code> (the solver is based on
     <pkg>lpSolve</pkg>) and can read model files in MPS
     format. [LP]</li>
@@ -433,7 +447,7 @@
     <code>simplex()</code> which realizes the two-phase tableau simplex
     method for (relatively small) linear programming problems. [LP]</li>
 
-    <li>Package <pkg>rcdd</pkg> offers the function <code>lpcdd()</code>
+    <li><pkg>rcdd</pkg> offers the function <code>lpcdd()</code>
     for solving linear programs with exact arithmetic using the
     <a href="https://gmplib.org">GNU Multiple Precision (GMP)
     </a> library. [LP]</li>
@@ -829,6 +843,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>desirability</pkg>
   <pkg>ECOSolveR</pkg>
   <pkg>ecr</pkg>
+  <pkg>flacco</pkg>
   <pkg>GA</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
@@ -871,6 +886,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>nls2</pkg>
   <pkg>NMOF</pkg>
   <pkg>nnls</pkg>
+  <pkg>ompr</pkg>
   <pkg>onls</pkg>
   <pkg>optimsimplex</pkg>
   <pkg>optimx</pkg>
@@ -900,6 +916,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>Rsolnp</pkg>
   <pkg>Rsymphony</pkg>
   <pkg>Rvmmin</pkg>
+  <pkg>SACOBRA</pkg>
   <pkg>scs</pkg>
   <pkg>sdpt3r</pkg>
   <pkg>smoof</pkg>
