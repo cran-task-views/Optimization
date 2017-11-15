@@ -285,7 +285,7 @@
 
     <li><pkg>colf</pkg> performs least squares constrained optimization on a 
     linear objective function. It contains a number of algorithms to choose 
-    from and offers a formula syntax similar to <code>lm()</code></li>.
+    from and offers a formula syntax similar to <code>lm()</code>.</li>
   </ul>
 
   <h3>Semidefinite and Convex Solvers</h3>
