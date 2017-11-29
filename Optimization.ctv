@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans W. Borchers
     </maintainer>
-<version>2017-11-10</version>
+<version>2017-11-28</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -40,29 +40,34 @@
 <!--
   <h3>Solvers provided by the base R distribution</h3>
 -->
-  <p>Trying to unify optimization algorithms via a single wrapper
-    function, <pkg>optimx</pkg> helps to proper specify the
-    (nonlinear) optimization problem including objective function,
-    gradient function, and scaling. This package supports the
-    (local) optimization of smooth, nonlinear functions with at most
-    box constraints (bounds). <pkg>optimx</pkg> depends not only on
-    packages and/or functions mentioned in this section of this task
-    view but also on two packages implemented by the author(s),
-    namely <pkg>Rcgmin</pkg> and <pkg>Rvmmin</pkg>. Both are "pure
-    R" implementations of conjugate gradient minimization and
-    variable metric nonlinear function minimization algorithms,
-    respectively.</p>
+  <ul>
+    <li>Trying to unify optimization algorithms via a single wrapper 
+    function, <pkg>optimr</pkg> (and 'optimrx' on R-Forge) helps to proper 
+    specify (nonlinear) optimization problems, including objective 
+    function, gradient function, and scaling. It supports the (local) 
+    optimization of smooth, nonlinear functions with at most box/bound
+    constraints. Function <code>opm</code>, returning a dataframe, compares
+    solvers for a selected optimization task. (Note that <pkg>optimx</pkg>
+    will get deprecated.)</li>
 
-  <p>The R Optimization Infrastructure (<pkg>ROI</pkg>) package
-    provides a framework for handling optimization problems in R. It
-    uses an object oriented approach to define and solve various
-    optimization tasks in R which can be from different problem
-    classes (e.g., linear, quadratic, non-linear programming
-    problems). This makes optimization transparent for the R user as
-    the corresponding workflow is completely abstracted from the
-    underlying solver. Furthermore, this approach allows for easy
-    switching between solvers, given that corresponding solver plugins
-    are available, and thus enhances comparability.</p>
+    <li>The R Optimization Infrastructure (<pkg>ROI</pkg>) package 
+    provides a framework for handling optimization problems in R. 
+    It uses an object-oriented approach to define and solve various
+    optimization tasks in R which can be from different problem classes
+    (e.g., linear, quadratic, non-linear programming problems). This makes 
+    optimization transparent for the R user as the corresponding workflow 
+    is completely abstracted from the underlying solver. The approach allows 
+    for easy switching between solvers and thus enhances comparability.</li>
+
+    <li>The package <pkg>CVXR</pkg> provides an object-oriented modeling 
+    language for Disciplined Convex Programming (DCP). It allows the user 
+    to formulate convex optimization problems in a natural way following 
+    mathematical convention and DCP rules. The system analyzes the problem, 
+    verifies its convexity, converts it into a canonical form, and hands it 
+    off to an appropriate solver such as ECOS or SCS to obtain the solution.
+    (CVXR is derived from the well-known MATLAB toolbox CVX, developed at
+    Stanford University.)</li>
+  </ul>
 
   <h2><a name="GeneralPurposeSolvers">General Purpose Continuous
   Solvers</a></h2>
@@ -95,10 +100,16 @@
     the OWL-QN algorithm, the latter being particularly suited for
     higher-dimensional problems. [QN]</li>
 
+    <li>The following packages implement optimization routines in pure R, 
+    for nonlinear functions with bounds constraints.
+    <pkg>Rcgmin</pkg>: gradient function minimization similar to GC;
+    <pkg>Rvmmin</pkg>: variable metric function minimization;
+    <pkg>Rtnmin</pkg>: truncated Newton function minimization.</li>
+
     <li>Package <pkg>ucminf</pkg> implements an algorithm of quasi-Newton 
     type for nonlinear unconstrained optimization, combining a trust region
     with line search approaches. The interface of <code>ucminf()</code> is 
-	designed for easy interchange with <code>optim()</code>.[QN]</li>
+    designed for easy interchange with <code>optim()</code>.[QN]</li>
 
     <li><pkg>mize</pkg> implements optimization algorithms in pure R,
     including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS)
@@ -250,15 +261,15 @@
 
   <h3>Least-Squares Problems</h3>
 
-  <ul>
-    <li>Function <code>solve.qr()</code> (resp. <code>qr.solve()</code>) 
+  <p>Function <code>solve.qr()</code> (resp. <code>qr.solve()</code>) 
     handles over- and under-determined systems of linear equations, returning 
     least-squares solutions if possible. And package stats provides 
     <code>nls()</code> to determine least-squares estimates of the parameters 
     of a nonlinear model. <pkg>nls2</pkg> enhances function <code>nls()</code> 
     with brute force or grid-based searches, to avoid being dependent on 
-    starting parameters or getting stuck in local solutions.</li>
+    starting parameters or getting stuck in local solutions.</p>
 
+  <ul>
     <li>Package <pkg>nlmrt</pkg> provides tools for minimizing nonlinear sums 
     of squares. The function to be minimized can be provided as an R function 
     or as an expression, similar to the way that nls() works.
@@ -836,6 +847,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>copulaedas</pkg>
   <pkg>cplexAPI</pkg>
   <pkg>crs</pkg>
+  <pkg>CVXR</pkg>
   <pkg>dclone</pkg>
   <pkg priority="core">dfoptim</pkg>
   <pkg priority="core">DEoptim</pkg>
@@ -889,6 +901,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>ompr</pkg>
   <pkg>onls</pkg>
   <pkg>optimsimplex</pkg>
+  <pkg>optimr</pkg>
   <pkg>optimx</pkg>
   <pkg>parma</pkg>
   <pkg>powell</pkg>
@@ -915,6 +928,7 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   <pkg>ROI</pkg>
   <pkg>Rsolnp</pkg>
   <pkg>Rsymphony</pkg>
+  <pkg>Rtnmin</pkg>
   <pkg>Rvmmin</pkg>
   <pkg>SACOBRA</pkg>
   <pkg>scs</pkg>
