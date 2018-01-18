@@ -254,7 +254,7 @@
     computation.</li>
 
     <li>Package
-    <a href="https://github.com/jlmelville/funconstrain/">funconstrain</a>
+    <github>jlmelville/funconstrain</github>
     (on Github) implements 35 of the test functions by More, Garbow, and Hillstom,
     useful for  testing unconstrained optimization methods.</li>
   </ul>
