@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl and Hans W. Borchers
     </maintainer>
-<version>2017-11-28</version>
+<version>2018-01-26</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -292,7 +292,7 @@
     <li>Package <pkg>onls</pkg> implements orthogonal nonlinear least-squares 
     regression (ONLS, a.k.a. Orthogonal Distance Regression, ODR) using a 
     Levenberg-Marquardt-type minimization algorithm based on the ODRPACK 
-	Fortran library.</li>
+    Fortran library.</li>
 
     <li><pkg>colf</pkg> performs least squares constrained optimization on a 
     linear objective function. It contains a number of algorithms to choose 
@@ -951,8 +951,6 @@ Carlo algorithm, genetic algorithm, and a brute force algorithm)</li>
   Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)</a>
   <a href="https://www.springer.com/mathematics/book/978-3-319-08262-2">
   Modern Optimization With R -- Paulo Cortez (Springer UseR Series)</a>
-  <a href="http://www.portfolioprobe.com/2012/07/23/a-comparison-of-some-heuristic-optimization-methods/">
-  Comparison of some heuristic optimization methods</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
   <a href="http://www.neos-guide.org/Optimization-Guide">
   NEOS Optimization Guide</a>
