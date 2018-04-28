@@ -1,3 +1,4 @@
+
 <CRANTaskView>
 
 <name>Optimization</name>
@@ -52,7 +53,9 @@
     constraints. Function <code>opm</code>, returning a dataframe, compares
     solvers for a selected optimization task. (Note that <pkg>optimx</pkg>
     will get deprecated.)</li>
+  </ul>
 
+  <ul>
     <li>The R Optimization Infrastructure (<pkg>ROI</pkg>) package 
     provides a framework for handling optimization problems in R. 
     It uses an object-oriented approach to define and solve various
@@ -61,7 +64,9 @@
     optimization transparent for the R user as the corresponding workflow 
     is completely abstracted from the underlying solver. The approach allows 
     for easy switching between solvers and thus enhances comparability.</li>
+  </ul>
 
+  <ul>
     <li>The package <pkg>CVXR</pkg> provides an object-oriented modeling 
     language for Disciplined Convex Programming (DCP). It allows the user 
     to formulate convex optimization problems in a natural way following 
@@ -247,7 +252,7 @@
     quadratic programming problems (especially for semidefinite quadratic 
     forms). [IPM, QP]</li>
 
-    <li>The COIN-OR project
+    <li>The COIN-OR project 
     <a href="https://projects.coin-or.org/qpOASES/">qpOASES</a> 
     implements a reliable QP solver, even when tackling semi-definite or 
     degenerated QP problems; it is particularly suited for model predictive 
