@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl 
   and Hans W. Borchers
 </maintainer>
-<version>2018-04-26</version>
+<version>2018-04-28</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -247,7 +247,8 @@
     quadratic programming problems (especially for semidefinite quadratic 
     forms). [IPM, QP]</li>
 
-    <li>The COIN-OR project [qpOASES](https://projects.coin-or.org/qpOASES/) 
+    <li>The COIN-OR project
+    <a href="https://projects.coin-or.org/qpOASES/">qpOASES</a> 
     implements a reliable QP solver, even when tackling semi-definite or 
     degenerated QP problems; it is particularly suited for model predictive 
     control (MPC) applications; the ROI plugin <pkg>ROI.plugin.qpoases</pkg> 
