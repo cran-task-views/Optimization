@@ -6,7 +6,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl 
   and Hans W. Borchers
 </maintainer>
-<version>2018-04-28</version>
+<version>2018-05-07</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -18,10 +18,8 @@
   among others. The focus of this task view is on 
   <a href="#optimization-infrastructure-packages">Optimization Infrastructure 
   Packages</a>, 
-  <a
-  href="#general-purpose-continuous-solvers">General Purpose Continuous 
-  Solvers</a>, 
-  <a href="#mathematical-programming-solvers">Mathematical 
+  <a href="#general-purpose-continuous-solvers">General Purpose Continuous 
+  Solvers</a>, <a href="#mathematical-programming-solvers">Mathematical 
   Programming Solvers</a>, and 
   <a href="#specific-applications-in-optimization">Specific Applications in
   Optimization</a>. Packages are categorized in these four sections.</p>
@@ -73,8 +71,8 @@
     mathematical convention and DCP rules. The system analyzes the problem, 
     verifies its convexity, converts it into a canonical form, and hands it 
     off to an appropriate solver such as ECOS or SCS to obtain the solution.
-    (CVXR is derived from the well-known MATLAB toolbox CVX, developed at
-    Stanford University.)</li>
+    (CVXR is derived from the MATLAB toolbox CVX, developed at Stanford 
+    University, cf. <a href="https://cvxr.rbind.io">CVXR home page</a>.)</li>
   </ul>
 
 
@@ -252,16 +250,13 @@
     quadratic programming problems (especially for semidefinite quadratic 
     forms). [IPM, QP]</li>
 
-    <li>The COIN-OR project 
-    <a href="https://projects.coin-or.org/qpOASES/">qpOASES</a> 
-    implements a reliable QP solver, even when tackling semi-definite or 
-    degenerated QP problems; it is particularly suited for model predictive 
-    control (MPC) applications; the ROI plugin <pkg>ROI.plugin.qpoases</pkg> 
-    makes it accessible for R users. [QP]</li>
+    <li>The COIN-OR project 'qpOASES' implements a reliable QP solver, even 
+    when tackling semi-definite or degenerated QP problems; it is particularly 
+    suited for model predictive control (MPC) applications; the ROI plugin 
+    <pkg>ROI.plugin.qpoases</pkg> makes it accessible for R users. [QP]</li>
 
-    <li><pkg>limSolve</pkg> offers to solve linear or quadratic
-    optimization functions, subject to equality and/or inequality
-    constraints. [LP, QP]</li>
+    <li><pkg>limSolve</pkg> offers to solve linear or quadratic optimization 
+    functions, subject to equality and/or inequality constraints. [LP, QP]</li>
   </ul>
 
 
@@ -630,12 +625,12 @@
   </ul>
 
 
-  <h2><a name="discrete-optimization-and-graph-theory">
-  Discrete Optimization and Graph Theory</a></h2>
+  <h2><a name="combinatorial-optimization">
+  Combinatorial Optimization</a></h2>
 
   <ul>
-    <li>Package <pkg>adagio</pkg> provides functions for single and multiple 
-    knapsack problems and solves subset sum and assignment tasks.</li>
+    <li>Package <pkg>adagio</pkg> provides R functions for single and multiple 
+    knapsack problems, and solves subset sum and assignment tasks.</li>
 
     <li>In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
     the user to solve the linear sum assignment problem (LSAP) using an
@@ -654,9 +649,9 @@
     solvers such as 'lpSolve' or 'CBC'; will assign items to knapsacks in a 
     way that the value of the top knapsacks is as large as possible.</li>
 
-    <li>Package 'knapsack' (see project <rforge>optimist</rforge> on R-Forge) 
+    <li>Package 'knapsack' (see R-Forge project <rforge>optimist</rforge>) 
     provides routines from the book `Knapsack Problems' by Martello and Toth. 
-    There are functions for (multiple) knapsack, subsetsum and binpacking 
+    There are functions for (multiple) knapsack, subset sum and binpacking 
     problems. (Use of Fortran codes is restricted to personal research and
     academic purposes only.)</li>
 
