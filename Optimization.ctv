@@ -1,4 +1,3 @@
-
 <CRANTaskView>
 
 <name>Optimization</name>
@@ -6,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl 
   and Hans W. Borchers
 </maintainer>
-<version>2018-05-07</version>
+<version>2018-05-10</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -660,6 +659,11 @@
     problem, the stable roommates and the house allocation problem.
     [COP, MM]</li>
 
+    <li>Package <pkg>optmatch</pkg> provides routines for solving 
+    matching problems by translating them into minimum-cost flow problems 
+    and then solved optimaly by the RELAX-IV codes of Bertsekas and Tseng 
+    (free for research). [SPLP]</li>
+
     <li>Package <pkg>TSP</pkg> provides basic infrastructure for handling 
     and solving the traveling salesperson problem (TSP). The main routine
     <code>solve_TSP()</code> solves the TSP through several heuristics. 
@@ -677,61 +681,57 @@
     implementing Newton and Broyden methods with line search and trust region 
     global strategies for solving medium sized system of nonlinear equations.
     </li>
-  
+
     <li>Package <pkg>goalprog</pkg> provides some functions for
     lexicographic linear goal programming and optimization. Goal programming is 
     a branch of multi-objective, multi-criteria decision analysis. [MOP]</li>
-  
-    <li><pkg>mlrMBO</pkg> is a flexible and comprehensive R toolbox for 
-    model-based optimization ('MBO'), also known as Bayesian optimization. 
-    It is designed for both single- and multi-objective optimization with 
-    mixed continuous, categorical and conditional parameters. [MOP]</li>
-  
+
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
     in package <pkg>dclone</pkg>. The package provides low level
     functions for implementing maximum likelihood estimating
     procedures for complex models using data cloning and Bayesian
     Markov chain Monte Carlo methods.</li>
-  
+
     <li><pkg>irace</pkg> contains an optimization algorithm for optimizing the
     parameters of other optimization algorithms. This problem is called 
     "(offline) algorithm configuration". [GO]</li>
-  
+
     <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
     subset of a fixed size k from the integers 1:n, such that a user-
     supplied objective function is minimized at that subset.</li>
-  
+
     <li><pkg>copulaedas</pkg> provides a platform where 'estimation of 
     distribution algorithms' (EDA) based on copulas can be implemented and 
     studied; the package offers various EDAs, and newly developed EDAs can be 
     integrated by extending an S4 class.</li>
-  
+
     <li><pkg>tabuSearch</pkg> implements a tabu search algorithm for optimizing 
     binary strings, maximizing a user defined target function, and returns the 
     best (i.e. maximizing) binary configuration found.</li>
-  
+
     <li>Besides functionality for solving general isotone regression problems,
     package <pkg>isotone</pkg> provides a framework of active set methods for
     isotone optimization problems with arbitrary order restrictions.</li>
-  
+
+    <li><pkg>mlrMBO</pkg> is a flexible and comprehensive R toolbox for 
+    model-based optimization ('MBO'), also known as Bayesian optimization. 
+    And <pkg>rBayesianOptimization</pkg> is an implementation of Bayesian 
+    global optimization with Gaussian Processes, for parameter tuning and 
+    optimization of hyperparameters.</li>
+
     <li>Multi-criteria optimization problems can be solved using package 
     <pkg>mco</pkg> which implements genetic algorithms. [MOP]</li>
-  
-    <li>Package <pkg>optmatch</pkg> provides routines for solving
-    matching problems by translating them into minimum-cost flow problems,
-    which are in turn solved optimally by the RELAX-IV codes of
-    Bertsekas and Tseng (free for research). [SPLP]</li>
-  
+
     <li>The <pkg>desirability</pkg> package contains S3 classes for
     multivariate optimization using the desirability function approach
     of Harrington (1965) using functional forms described by
     Derringer and Suich (1980).</li>
-  
+
     <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
     which is the front-end to a series of heuristic routines for optimizing
     some bivariate graph statistic. [GRAPH]</li>
-  
+
     <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number 
     of maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and 
     Newton-Raphson among others. It includes summary and print methods which 
@@ -945,6 +945,7 @@
   <pkg priority="core">quadprog</pkg>
   <pkg>quadprogXT</pkg>
   <pkg>quantreg</pkg>
+  <pkg>rBayesianOptimization</pkg>
   <pkg>rcdd</pkg>
   <pkg>RCEIM</pkg>
   <pkg>Rcgmin</pkg>
