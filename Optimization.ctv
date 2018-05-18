@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl 
   and Hans W. Borchers
 </maintainer>
-<version>2018-05-10</version>
+<version>2018-05-18</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -21,7 +21,7 @@
   Solvers</a>, <a href="#mathematical-programming-solvers">Mathematical 
   Programming Solvers</a>, and 
   <a href="#specific-applications-in-optimization">Specific Applications in
-  Optimization</a>. Packages are categorized in these four sections.</p>
+  Optimization</a>. Packages are categorized in these sections.</p>
 
   <p>Many packages provide functionality for more than one
   of the subjects listed at the end of this task view. E.g., mixed
@@ -567,7 +567,14 @@
     for solving mixed integer programming problems. This algorithm is
     accessible via the <code>snomadr()</code> function and is
     primarily designed for constrained optimization of blackbox
-    functions.</li>
+    functions. [MILP]</li>
+
+    <li>'Clp' and 'Cbc' are open source solvers from the COIN-OR suite.
+    'Clp' solves linear programs with continuous objective variables and is 
+    available through <pkg>ROI.plugin.clp</pkg>. 'Cbc' is a powerful mixed 
+    integer linear programming solver (based on 'Clp'); package 'rcbc' can 
+    be installed from: <github>dirkschumacher/rcbc</github> (on Github).
+    [LP, MILP]</li>
 
 <!-- <li>Packages Rbonmin and Rlago provide interfaces to the corresponding 
      mixed integer nonlinear optimizers part of the 
@@ -962,6 +969,7 @@
   <pkg>Rmosek</pkg>
   <pkg>rneos</pkg>
   <pkg>ROI</pkg>
+  <pkg>ROI.plugin.clp</pkg>
   <pkg>ROI.plugin.qpoases</pkg>
   <pkg>rosqp</pkg>
   <pkg>Rsolnp</pkg>
