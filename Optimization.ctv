@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl 
   and Hans W. Borchers
 </maintainer>
-<version>2018-05-18</version>
+<version>2018-08-12</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -661,6 +661,11 @@
     problems. (Use of Fortran codes is restricted to personal research and
     academic purposes only.)</li>
 
+    <li><pkg>nilde</pkg> provides routines for enumerating all integer 
+    solutions of linear Diophantine equations, resp. all solutions of knapsack, 
+    subset sum, and additive partitioning problems (based on a generating 
+    functions approach).</li>
+
     <li><pkg>matchingR</pkg> and <pkg>matchingMarkets</pkg> implement the 
     Gale-Shapley algorithm for the stable marriage and the college admissions 
     problem, the stable roommates and the house allocation problem.
@@ -924,16 +929,16 @@
   <pkg>mco</pkg>
   <pkg>metaheuristicOpt</pkg>
   <pkg>minpack.lm</pkg>
-  <pkg>mize</pkg>
-  <pkg>mlrMBO</pkg>
-  <pkg>nlmrt</pkg>
-  <pkg>optmatch</pkg>
   <pkg>minqa</pkg>
+  <pkg>mize</pkg>
   <pkg>mknapsack</pkg>
+  <pkg>mlrMBO</pkg>
   <pkg>n1qn1</pkg>
   <pkg>neldermead</pkg>
+  <pkg>nilde</pkg>
   <pkg>NlcOptim</pkg>
   <pkg>nleqslv</pkg>
+  <pkg>nlmrt</pkg>
   <pkg>nloptr</pkg>
   <pkg>nls2</pkg>
   <pkg>nlsr</pkg>
@@ -944,6 +949,7 @@
   <pkg>optimsimplex</pkg>
   <pkg>optimr</pkg>
   <pkg>optimx</pkg>
+  <pkg>optmatch</pkg>
   <pkg>parma</pkg>
   <pkg>powell</pkg>
   <pkg>pso</pkg>
@@ -997,6 +1003,8 @@
   Nonlinear Parameter Optimization Using R Tools -- John C. Nash (Wiley)</a>
   <a href="https://www.springer.com/mathematics/book/978-3-319-08262-2">
   Modern Optimization With R -- Paulo Cortez (Springer UseR Series)</a>
+  <a href="http://yetanothermathprogrammingconsultant.blogspot.com">
+  Yet Another Math Programming Consultant</a>
   <a href="http://www.coin-or.org/">COIN-OR Project</a>
   <a href="http://www.neos-guide.org/Optimization-Guide">
   NEOS Optimization Guide</a>
