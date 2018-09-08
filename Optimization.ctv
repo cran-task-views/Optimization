@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl 
   and Hans W. Borchers
 </maintainer>
-<version>2018-08-12</version>
+<version>2018-09-08</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -236,10 +236,10 @@
     semidefinite matrices. The routine allows for a combination of equality 
     and inequality constraints. [QP]</li>
 
-    <li><pkg>rosqp</pkg> provides bindings to the 'OSQP' solver, the 
-    'Operator Splitting QP Solver' of the University of Oxford Control Group, 
-    which can solve sparse convex quadratic programming problems with optional 
-    equality and inequality constraints. [QP]</li>
+    <li><pkg>rosqp</pkg> and <pkg>osqp</pkg> both provide bindings to the 
+    'OSQP' solver, the 'Operator Splitting QP Solver' of the University of 
+    Oxford Control Group, which can solve sparse convex quadratic programming 
+    problems with optional equality and inequality constraints. [QP]</li>
 
     <li><pkg>coneproj</pkg> contains routines for cone projection and
     quadratic programming, estimation and inference for constrained parametric
@@ -950,6 +950,7 @@
   <pkg>optimr</pkg>
   <pkg>optimx</pkg>
   <pkg>optmatch</pkg>
+  <pkg>osqp</pkg>
   <pkg>parma</pkg>
   <pkg>powell</pkg>
   <pkg>pso</pkg>
