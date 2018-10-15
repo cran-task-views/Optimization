@@ -2,10 +2,9 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="R-optimization@mailbox.org">Stefan Theussl 
-  and Hans W. Borchers
+<maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, and Hans W. Borchers
 </maintainer>
-<version>2018-09-27</version>
+<version>2018-10-15</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -236,11 +235,11 @@
     semidefinite matrices. The routine allows for a combination of equality 
     and inequality constraints. [QP]</li>
 
-    <li><pkg>osqp</pkg> (preferred) and <pkg>rosqp</pkg> provide bindings to 
+    <li><pkg>osqp</pkg> and <pkg>rosqp</pkg> both provide bindings to 
     <a href="https://osqp.org">OSQP</a>, the 'Operator Splitting QP' solver
     from the University of Oxford Control Group; it solves sparse convex 
     quadratic programming problems with optional equality and inequality 
-    constraints very efficiently. [QP]</li>
+    constraints efficiently. [QP]</li>
 
     <li><pkg>coneproj</pkg> contains routines for cone projection and
     quadratic programming, estimation and inference for constrained parametric
@@ -690,14 +689,18 @@
   Specific Applications in Optimization</a></h2>
 
   <ul>
-    <li>Package <pkg>nleqslv</pkg> provides function <code>nleqslv()</code>,
-    implementing Newton and Broyden methods with line search and trust region 
-    global strategies for solving medium sized system of nonlinear equations.
-    </li>
+    <li>Package <pkg>goalprog</pkg> provides functions for lexicographic 
+    linear goal programming and optimization. Goal programming is a branch of 
+    multi-objective, multi-criteria decision analysis. [MOP]</li>
 
-    <li>Package <pkg>goalprog</pkg> provides some functions for
-    lexicographic linear goal programming and optimization. Goal programming is 
-    a branch of multi-objective, multi-criteria decision analysis. [MOP]</li>
+    <li>Function <code>caRamel</code> in package <pkg>caRamel</pkg> is a 
+    multi-objective optimizer, applying a combination of the multiobjective 
+    evolutionary annealing-simplex (MEAS) method and the non-dominated sorting 
+    genetic algorithm (NGSA-II); it was initially developed for the 
+    calibration of hydrological models.</li>
+
+    <li>Multi-criteria optimization problems can be solved using package 
+    <pkg>mco</pkg> which implements genetic algorithms. [MOP]</li>
 
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
@@ -719,9 +722,9 @@
     studied; the package offers various EDAs, and newly developed EDAs can be 
     integrated by extending an S4 class.</li>
 
-    <li><pkg>tabuSearch</pkg> implements a tabu search algorithm for optimizing 
-    binary strings, maximizing a user defined target function, and returns the 
-    best (i.e. maximizing) binary configuration found.</li>
+    <li><pkg>tabuSearch</pkg> implements a tabu search algorithm for 
+    optimizing binary strings, maximizing a user defined target function, and 
+    returns the best (i.e. maximizing) binary configuration found.</li>
 
     <li>Besides functionality for solving general isotone regression problems,
     package <pkg>isotone</pkg> provides a framework of active set methods for
@@ -732,9 +735,6 @@
     And <pkg>rBayesianOptimization</pkg> is an implementation of Bayesian 
     global optimization with Gaussian Processes, for parameter tuning and 
     optimization of hyperparameters.</li>
-
-    <li>Multi-criteria optimization problems can be solved using package 
-    <pkg>mco</pkg> which implements genetic algorithms. [MOP]</li>
 
     <li>The <pkg>desirability</pkg> package contains S3 classes for
     multivariate optimization using the desirability function approach
@@ -875,6 +875,7 @@
   <pkg>BB</pkg>
   <pkg>boot</pkg>
   <pkg>bvls</pkg>
+  <pkg>caRamel</pkg>
   <pkg>cccp</pkg>
   <pkg>cec2005benchmark</pkg>
   <pkg>cec2013</pkg>
@@ -938,7 +939,6 @@
   <pkg>neldermead</pkg>
   <pkg>nilde</pkg>
   <pkg>NlcOptim</pkg>
-  <pkg>nleqslv</pkg>
   <pkg>nlmrt</pkg>
   <pkg>nloptr</pkg>
   <pkg>nls2</pkg>
