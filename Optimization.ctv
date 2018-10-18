@@ -1,10 +1,11 @@
+
 <CRANTaskView>
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, and Hans W. Borchers
 </maintainer>
-<version>2018-10-15</version>
+<version>2018-10-18</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -41,14 +42,18 @@
   Optimization Infrastructure Packages</a></h2>
 
   <ul>
-    <li>Trying to unify optimization algorithms via a single wrapper 
-    function, <pkg>optimr</pkg> (and 'optimrx' on R-Forge) helps to proper 
-    specify (nonlinear) optimization problems, including objective 
-    function, gradient function, and scaling. It supports the (local) 
-    optimization of smooth, nonlinear functions with at most box/bound
-    constraints. Function <code>opm</code>, returning a dataframe, compares
-    solvers for a selected optimization task. (Note that <pkg>optimx</pkg>
-    will get deprecated.)</li>
+    <li>The <pkg>optimx</pkg> package provides a replacement and extension of 
+    the <code>optim()</code> function in Base R with a call to several 
+    function minimization codes in R in a single statement. These methods 
+    handle smooth, possibly box constrained functions of several or many 
+    parameters. Function <code>optimr()</code> in this package extends the 
+    <code>optim()</code> function with the same syntax but more 'method' 
+    choices. Function <code>opm()</code> applies several solvers to a selected 
+    optimization task and returns a dataframe of results for easy comparison. 
+    The earlier <code>optimx()</code> function which has similar functionality 
+    but a slightly different syntax and output is included for compatibility. 
+    Also implements some utility codes and extra solvers, including 
+    safeguarded Newton methods.</li>
   </ul>
 
   <ul>
@@ -235,7 +240,7 @@
     semidefinite matrices. The routine allows for a combination of equality 
     and inequality constraints. [QP]</li>
 
-    <li><pkg>osqp</pkg> and <pkg>rosqp</pkg> both provide bindings to 
+    <li><pkg>osqp</pkg> provides bindings to 
     <a href="https://osqp.org">OSQP</a>, the 'Operator Splitting QP' solver
     from the University of Oxford Control Group; it solves sparse convex 
     quadratic programming problems with optional equality and inequality 
@@ -948,7 +953,6 @@
   <pkg>ompr</pkg>
   <pkg>onls</pkg>
   <pkg>optimsimplex</pkg>
-  <pkg>optimr</pkg>
   <pkg>optimx</pkg>
   <pkg>optmatch</pkg>
   <pkg>osqp</pkg>
@@ -979,7 +983,6 @@
   <pkg>ROI</pkg>
   <pkg>ROI.plugin.clp</pkg>
   <pkg>ROI.plugin.qpoases</pkg>
-  <pkg>rosqp</pkg>
   <pkg>Rsolnp</pkg>
   <pkg>Rsymphony</pkg>
   <pkg>Rtnmin</pkg>
