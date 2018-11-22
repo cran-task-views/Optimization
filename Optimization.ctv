@@ -3,9 +3,10 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, and Hans W. Borchers
+<maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
+	Florian Schwendinger, and Hans W. Borchers
 </maintainer>
-<version>2018-10-18</version>
+<version>2018-11-22</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -101,35 +102,41 @@
 	PORT routines. [RGA, QN]</p>
 
   <ul>
-    <li><pkg>lbfgsb3</pkg> interfaces the J.Nocedal et al. L-BFGS-B 3.0
-    Fortran code, a limited memory BFGS solver, allowing bound constraints
-    and being applicable to higher-dimensional problems. [QN]</li>
+    <li>Package <pkg>lbfgs</pkg> wraps the libBFGS C library by Okazaki and
+    Morales (converted from Nocedal's L-BFGS-B 3.0 Fortran code), interfacing 
+    both the L-BFGS and the OWL-QN algorithm, the latter being particularly 
+    suited for higher-dimensional problems.</li>
 
-    <li>And <pkg>lbfgs</pkg> wraps the libBFGS library by N. Okazaki
-    (converted from Nocedal's library), interfacing both the L-BFGS and
-    the OWL-QN algorithm, the latter being particularly suited for
-    higher-dimensional problems. [QN]</li>
+    <li><pkg>lbfgsb3</pkg> and <pkg>lbfgsb3c</pkg> both interface J.Nocedal's
+    L-BFGS-B 3.0 Fortran code, a limited memory BFGS minimizer, allowing bound 
+    constraints and being applicable to higher-dimensional problems. 
+    ('lbfgsb3c' has an 'optim'-like interface based on 'Rcpp'.)</li>
 
     <li><pkg>RcppNumerical</pkg> is a collection of open source libraries 
     for numerical computing and their integration with 'Rcpp'. It provides 
     a wrapper for the L-BFGS algorithm, based on the LBFGS++ library 
     (based on code of N. Okazaki).</li>
 
-    <li>The following packages implement optimization routines in pure R, 
-    for nonlinear functions with bounds constraints.
-    <pkg>Rcgmin</pkg>: gradient function minimization similar to GC;
-    <pkg>Rvmmin</pkg>: variable metric function minimization;
-    <pkg>Rtnmin</pkg>: truncated Newton function minimization.</li>
-
     <li>Package <pkg>ucminf</pkg> implements an algorithm of quasi-Newton 
     type for nonlinear unconstrained optimization, combining a trust region
     with line search approaches. The interface of <code>ucminf()</code> is 
     designed for easy interchange with <code>optim()</code>.[QN]</li>
 
+    <li>The following packages implement optimization routines in pure R, 
+    for nonlinear functions with bounds constraints:
+    <pkg>Rcgmin</pkg>: gradient function minimization similar to GC;
+    <pkg>Rvmmin</pkg>: variable metric function minimization;
+    <pkg>Rtnmin</pkg>: truncated Newton function minimization.</li>
+
     <li><pkg>mize</pkg> implements optimization algorithms in pure R,
     including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS)
     and limited memory BFGS (L-BFGS) methods. Most internal parameters
     can be set through the calling interface.</li>
+
+    <li>Package <pkg>dfoptim</pkg>, for derivative-free optimization
+    procedures, contains quite efficient R implementations of the
+    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and with
+    bounds constraints). [DF]</li>
 
     <li>Package <pkg>nloptr</pkg> provides access to NLopt, an LGPL licensed 
     library of various nonlinear optimization algorithms. It includes local 
@@ -137,19 +144,19 @@
     (e.g., BFGS) methods, and also the augmented Lagrangian approach for 
     nonlinear constraints. [DF, GO, QN]</li>
 
-    <li>Package <pkg>dfoptim</pkg>, derivative-free optimization
-    procedures, contains quite efficient R implementations of the
-    Nelder-Mead and Hooke-Jeeves algorithms (unconstrained and
-    bounds-constrained). [DF]</li>
+    <li>Package <pkg>alabama</pkg> provides an implementations of the
+    Augmented Lagrange Barrier minimization algorithm for optimizing smooth
+    nonlinear objective functions with (nonlinear) equality and inequality
+    constraints.</li>
 
-    <li>Implementations of the augmented Lagrange barrier minimization 
-    algorithm for optimizing smooth nonlinear objective functions (with 
-    equality and inequality constraints) can be found in packages 
-    <pkg>alabama</pkg> and <pkg>Rsolnp</pkg>.</li>
+    <li>Package <pkg>Rsolnp</pkg> provides an implementation of the Augmented
+    Lagrange Multiplier method for solving nonlinear optimization problems
+    with equality and inequality constraints (based on code by Y. Ye).</li>
 
-    <li><pkg>NlcOptim</pkg> solves nonlinear optimization problems with 
-    linear and nonlinear equality and inequality constraints, implementing 
-    a Sequential Quadratic Programming (SQP) method.</li>
+    <li><pkg>NlcOptim</pkg> solves nonlinear optimization problems with
+    linear and nonlinear equality and inequality constraints, implementing
+    a Sequential Quadratic Programming (SQP) method; accepts the input
+    parameters as a constrained matrix.</li>
 
     <li>In package Rdonlp2 (see the <rforge>rmetrics</rforge> project)
     function<code>donlp2()</code> , a wrapper for the DONLP2
@@ -921,6 +928,7 @@
   <pkg>kofnGA</pkg>
   <pkg>lbfgs</pkg>
   <pkg>lbfgsb3</pkg>
+  <pkg>lbfgsb3c</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
   <pkg>localsolver</pkg>
