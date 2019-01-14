@@ -53,8 +53,7 @@
     optimization task and returns a dataframe of results for easy comparison. 
     The earlier <code>optimx()</code> function which has similar functionality 
     but a slightly different syntax and output is included for compatibility. 
-    Also implements some utility codes and extra solvers, including 
-    safeguarded Newton methods.</li>
+    </li>
   </ul>
 
   <ul>
@@ -921,6 +920,7 @@
   <pkg>ECOSolveR</pkg>
   <pkg>ecr</pkg>
   <pkg>flacco</pkg>
+  <pkg>FLSSS</pkg>
   <pkg>GA</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
