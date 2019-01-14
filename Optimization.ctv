@@ -6,7 +6,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, and Hans W. Borchers
 </maintainer>
-<version>2018-11-22</version>
+<version>2019-01-14</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -65,7 +65,9 @@
     (e.g., linear, quadratic, non-linear programming problems). This makes 
     optimization transparent for the R user as the corresponding workflow 
     is completely abstracted from the underlying solver. The approach allows 
-    for easy switching between solvers and thus enhances comparability.</li>
+    for easy switching between solvers and thus enhances comparability.
+    More information can be found at the <a href="http://roi.r-forge.r-project.org/">ROI home page</a>.
+    </li>
   </ul>
 
   <ul>
@@ -521,9 +523,9 @@
   <ul>
     <li> The <a href="https://www.neos-server.org/neos/">NEOS Server
     for Optimization</a> provides online access to state-of-the-art
-    optimization problem solvers. Package <pkg>rneos</pkg> enables the
-    user to pass optimization problems to NEOS and retrieve results
-    within R.
+    optimization problem solvers. The packages <pkg>rneos</pkg> and 
+    <pkg>ROI.plugin.neos</pkg> enable the user to pass optimization 
+    problems to NEOS and retrieve results within R.
     </li>
 <!--
     <li> An interface to Ipopt from the <a
@@ -653,6 +655,13 @@
     <li>In package <pkg>clue</pkg> <code>solve_LSAP()</code> enables
     the user to solve the linear sum assignment problem (LSAP) using an
     efficient C implementation of the Hungarian algorithm. [SPLP]</li>
+
+    <li><pkg>FLSSS</pkg> provides multi-threaded solvers for 
+    fixed-size single and multi dimensional subset sum problems with optional 
+    constraints on target sum and element range, 
+    fixed-size single and multi dimensional knapsack problems, 
+    binary knapsack problems and generalized assignment problems via exact 
+    algorithms or metaheuristics.</li>
 
     <li>Package <pkg>qap</pkg> solves Quadratic Assignment Problems (QAP) 
     applying a simulated annealing heuristics (other approaches will 
@@ -990,6 +999,7 @@
   <pkg>rneos</pkg>
   <pkg>ROI</pkg>
   <pkg>ROI.plugin.clp</pkg>
+  <pkg>ROI.plugin.neos</pkg>
   <pkg>ROI.plugin.qpoases</pkg>
   <pkg>Rsolnp</pkg>
   <pkg>Rsymphony</pkg>
