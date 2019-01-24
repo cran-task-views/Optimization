@@ -6,7 +6,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, and Hans W. Borchers
 </maintainer>
-<version>2019-01-14</version>
+<version>2019-01-24</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -363,10 +363,6 @@
     <li><pkg>cccp</pkg> contains routines for solving cone constrained
     convex problems by means of interior-point methods (partially ported
     from Python's CVXOPT).</li>
-
-    <li><pkg>sdpt3r</pkg> solves general semidefinite Linear Programming 
-    (LP) problems, using an R implementation of SDPT3, a MATLAB software for 
-    semidefinite quadratic-linear programming. </li>
 
     <li>The <pkg>CLSOCP</pkg> package provides an implementation of a one-step
     smoothing Newton method for the solution of second order cone programming
@@ -1007,7 +1003,6 @@
   <pkg>Rvmmin</pkg>
   <pkg>SACOBRA</pkg>
   <pkg>scs</pkg>
-  <pkg>sdpt3r</pkg>
   <pkg>smoof</pkg>
   <pkg>sna</pkg>
   <pkg>soma</pkg>
