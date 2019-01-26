@@ -6,7 +6,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, and Hans W. Borchers
 </maintainer>
-<version>2019-01-24</version>
+<version>2019-01-26</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -705,10 +705,6 @@
   Specific Applications in Optimization</a></h2>
 
   <ul>
-    <li>Package <pkg>goalprog</pkg> provides functions for lexicographic 
-    linear goal programming and optimization. Goal programming is a branch of 
-    multi-objective, multi-criteria decision analysis. [MOP]</li>
-
     <li>Function <code>caRamel</code> in package <pkg>caRamel</pkg> is a 
     multi-objective optimizer, applying a combination of the multiobjective 
     evolutionary annealing-simplex (MEAS) method and the non-dominated sorting 
@@ -833,7 +829,7 @@
       <pkg>CEoptim</pkg>, <pkg>TSP</pkg>, <pkg>matchingR</pkg></li>
 
       <li>MOP (Multi-objective and goal programming, 90C29):
-      <pkg>goalprog</pkg>, <pkg>mco</pkg> </li>
+      <pkg>mco</pkg> </li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
       <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2, <pkg>rLindo</pkg></li>
@@ -922,7 +918,6 @@
   <pkg>GenSA</pkg>
   <pkg>globalOptTests</pkg>
   <pkg>glpkAPI</pkg>
-  <pkg>goalprog</pkg>
   <pkg>GrassmannOptim</pkg>
   <pkg>gsl</pkg>
   <pkg>hydroPSO</pkg>
