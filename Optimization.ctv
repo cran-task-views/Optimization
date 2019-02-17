@@ -4,9 +4,9 @@
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
-	Florian Schwendinger, and Hans W. Borchers
+	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2019-01-26</version>
+<version>2019-02-17</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -351,18 +351,25 @@
 
   <ul>
     <li>Package <pkg>ECOSolveR</pkg> provides an interface to the Embedded 
-	COnic Solver (ECOS), a well-known, efficient, and robust C library for 
-	convex problems. Conic and equality constraints can be specified in 
-	addition to integer and boolean variable constraints for mixed-integer 
-	problems.</li>
+    COnic Solver (ECOS), a well-known, efficient, and robust C library for 
+    convex problems. Conic and equality constraints can be specified in 
+    addition to integer and boolean variable constraints for mixed-integer 
+    problems.</li>
 	
-	<li>Package <pkg>scs</pkg> applies operator splitting to solve linear 
-	programs, cone programs (SOCP), and semidefinite programs; cones can be 
-	second-order, exponential, power cones, or any combination of these.</li>
+    <li>Package <pkg>scs</pkg> applies operator splitting to solve linear 
+    programs (LPs), second-order cone programs (SOCP), semidefinite programs, 
+    (SDPs), exponential cone programs (ECPs), and power cone programs (PCPs), 
+    or problems with any combination of those cones.</li>
+
+    <li><pkg>sdpt3r</pkg> solves general semidefinite Linear Programming  
+    problems, using an R implementation of the MATLAB toolbox SDPT3. Includes 
+    problems such as the nearest correlation matrix, D-optimal experimental 
+    design, Distance Weighted Discrimination, or the maximum cut problem.</li>
 
     <li><pkg>cccp</pkg> contains routines for solving cone constrained
-    convex problems by means of interior-point methods (partially ported
-    from Python's CVXOPT).</li>
+    convex problems by means of interior-point methods. The implemented 
+    algorithms are partially ported from CVXOPT, a Python module for convex 
+    optimization</li>
 
     <li>The <pkg>CLSOCP</pkg> package provides an implementation of a one-step
     smoothing Newton method for the solution of second order cone programming
@@ -998,6 +1005,7 @@
   <pkg>Rvmmin</pkg>
   <pkg>SACOBRA</pkg>
   <pkg>scs</pkg>
+  <pkg>sdpt3r</pkg>
   <pkg>smoof</pkg>
   <pkg>sna</pkg>
   <pkg>soma</pkg>
