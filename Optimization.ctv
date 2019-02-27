@@ -6,7 +6,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2019-02-17</version>
+<version>2019-02-27</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -576,7 +576,7 @@
     that interfaces the SYMPHONY solver for mixed-integer linear programs.
     (SYMPHONY is part of the <a href="http://www.coin-or.org/">Computational 
     Infrastructure for Operations Research</a> (COIN-OR) project.) 
-    Package <code>lsymphony</code> in Bioconductor provides a similar 
+    Package <code>lpsymphony</code> in Bioconductor provides a similar 
     interface to SYMPHONY that is easier to install. [LP, IP, MILP]</li>
 
     <li>The NOMAD solver is implemented in the <pkg>crs</pkg> package
