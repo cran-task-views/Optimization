@@ -6,7 +6,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2019-02-27</version>
+<version>2019-04-20</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -207,10 +207,6 @@
     function of many variables by a trust region method that forms quadratic
     models by interpolation. <code>bobyqa()</code> additionally permits box 
     constraints (bounds) on the parameters. [DF]</li>
-
-    <li>Package <pkg>powell</pkg> optimizes functions using Powell's
-    UObyQA algorithm (Unconstrained Optimization by Quadratic
-    Approximation).</li>
 
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.</li>
@@ -972,7 +968,6 @@
   <pkg>optmatch</pkg>
   <pkg>osqp</pkg>
   <pkg>parma</pkg>
-  <pkg>powell</pkg>
   <pkg>pso</pkg>
   <pkg>psoptim</pkg>
   <pkg>qap</pkg>
