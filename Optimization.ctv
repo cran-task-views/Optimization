@@ -113,6 +113,8 @@
     constraints and being applicable to higher-dimensional problems. 
     ('lbfgsb3c' has an 'optim'-like interface based on 'Rcpp'.)</li>
 
+    <li><pkg>optimParallel</pkg> provides a parallel version of the L-BFGS-B method.</li>
+
     <li><pkg>RcppNumerical</pkg> is a collection of open source libraries 
     for numerical computing and their integration with 'Rcpp'. It provides 
     a wrapper for the L-BFGS algorithm, based on the LBFGS++ library 
@@ -862,7 +864,8 @@
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
       (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>lbfgs</pkg>,
-      <pkg>lbfgsb3</pkg>, <pkg>nloptr</pkg>, <pkg>ucminf</pkg></li>
+      <pkg>lbfgsb3</pkg>, <pkg>nloptr</pkg>, <pkg>optimParallel</pkg>, 
+      <pkg>ucminf</pkg></li>
 
       <li>DF (Derivative-free methods, 90C56): <pkg>dfoptim</pkg>,
       <pkg>minqa</pkg>, <pkg>nloptr</pkg></li>
@@ -963,6 +966,7 @@
   <pkg>nnls</pkg>
   <pkg>ompr</pkg>
   <pkg>onls</pkg>
+  <pkg>optimParallel</pkg>
   <pkg>optimsimplex</pkg>
   <pkg>optimx</pkg>
   <pkg>optmatch</pkg>
