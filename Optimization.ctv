@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
 <CRANTaskView>
 
@@ -6,7 +7,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2019-04-20</version>
+<version>2019-05-25</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -51,8 +52,6 @@
     <code>optim()</code> function with the same syntax but more 'method' 
     choices. Function <code>opm()</code> applies several solvers to a selected 
     optimization task and returns a dataframe of results for easy comparison. 
-    The earlier <code>optimx()</code> function which has similar functionality 
-    but a slightly different syntax and output is included for compatibility. 
     </li>
   </ul>
 
@@ -60,12 +59,12 @@
     <li>The R Optimization Infrastructure (<pkg>ROI</pkg>) package 
     provides a framework for handling optimization problems in R. 
     It uses an object-oriented approach to define and solve various
-    optimization tasks in R which can be from different problem classes
-    (e.g., linear, quadratic, non-linear programming problems). This makes 
-    optimization transparent for the R user as the corresponding workflow 
-    is completely abstracted from the underlying solver. The approach allows 
-    for easy switching between solvers and thus enhances comparability.
-    More information can be found at the <a href="http://roi.r-forge.r-project.org/">ROI home page</a>.
+    optimization tasks from different problem classes (e.g., linear, quadratic, 
+    non-linear programming problems). This makes optimization transparent 
+    for the user as the corresponding workflow  is abstracted from the 
+    underlying solver. The approach allows for easy switching between 
+    solvers and thus enhances comparability. For more information see the 
+    <a href="http://roi.r-forge.r-project.org/">ROI home page</a>.
     </li>
   </ul>
 
@@ -171,13 +170,10 @@
     solving constrained optimization problems via the sequential
     unconstrained minimization technique (SUMT).</li>
 
-    <li><pkg>BB</pkg> contains the function <code>spg()</code> providing a
-    spectral projected gradient method for large scale optimization with
+    <li><pkg>BB</pkg> contains the function <code>spg()</code> providing 
+    a spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
-    argument as well as basic constraints. Furthermore, <pkg>BB</pkg>
-    contains two functions (<code>dfsane()</code>
-    and <code>sane()</code>) for using the spectral gradient method
-    for solving a nonlinear system of equations.</li>
+    argument as well as basic constraints.</li>
 
     <li><pkg>GrassmannOptim</pkg> is a package for Grassmann manifold
     optimization. The implementation uses gradient-based algorithms
@@ -237,6 +233,12 @@
     <pkg>quadprogXT</pkg> extends this with absolute value constraints and 
     absolute values in the objective function. [QP]</li>
 
+    <li><pkg>osqp</pkg> provides bindings to 
+    <a href="https://osqp.org">OSQP</a>, the 'Operator Splitting QP' solver
+    from the University of Oxford Control Group; it solves sparse convex 
+    quadratic programming problems with optional equality and inequality 
+    constraints efficiently. [QP]</li>
+
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
     solving quadratic programming problems using interior point
     methods. (The matrix can be positive semidefinite.) [IPM, QP]</li>
@@ -245,12 +247,6 @@
     R. L. Dykstra's cyclic projection algorithm for positive definite and 
     semidefinite matrices. The routine allows for a combination of equality 
     and inequality constraints. [QP]</li>
-
-    <li><pkg>osqp</pkg> provides bindings to 
-    <a href="https://osqp.org">OSQP</a>, the 'Operator Splitting QP' solver
-    from the University of Oxford Control Group; it solves sparse convex 
-    quadratic programming problems with optional equality and inequality 
-    constraints efficiently. [QP]</li>
 
     <li><pkg>coneproj</pkg> contains routines for cone projection and
     quadratic programming, estimation and inference for constrained parametric
