@@ -420,6 +420,10 @@
     problems by combining evolutionary algorithms with a derivative-based 
     (quasi-Newtonian) approach.</li>
 
+    <li>The <pkg>Jaya</pkg> package provides a implementation Jaya algorithm,
+    a population based heuristic algorithm which repeatedly modifies a population 
+    of individual solutions.</li>
+
     <li>Machine coded genetic algorithm (MCGA) provided by package
     <pkg>mcga</pkg> is a tool which solves optimization problems based
     on byte representation of variables.</li>
@@ -475,6 +479,9 @@
     accepting (a variant of simulated annealing).  The latter two methods also 
     work for discrete optimization problems, as does the implementation of a 
     genetic algorithm that is included in the package.</li>
+
+    <li><pkg>OOR</pkg> implements optimistic optimization methods for global 
+    optimization of deterministic or stochastic functions.</li>
 
     <li><pkg>SACOBRA</pkg> is a package for numeric constrained optimization 
     of expensive black-box functions under severely limited budgets; 
@@ -702,18 +709,28 @@
   </ul>
 
 
-  <h2><a name="specific-applications-in-optimization">
-  Specific Applications in Optimization</a></h2>
+  <h2><a name="multi-objective-optimization">Multi Objective Optimization</a></h2>
 
   <ul>
-    <li>Function <code>caRamel</code> in package <pkg>caRamel</pkg> is a 
-    multi-objective optimizer, applying a combination of the multiobjective 
+  	<li>Function <code>caRamel</code> in package <pkg>caRamel</pkg> is a 
+    multi-objective optimizer, applying a combination of the multi-objective 
     evolutionary annealing-simplex (MEAS) method and the non-dominated sorting 
     genetic algorithm (NGSA-II); it was initially developed for the 
     calibration of hydrological models.</li>
 
     <li>Multi-criteria optimization problems can be solved using package 
     <pkg>mco</pkg> which implements genetic algorithms. [MOP]</li>
+
+    <li><pkg>GPareto</pkg> provides multi-objective optimization algorithms 
+    for expensive black-box functions and uncertainty quantification methods.</li>
+
+  </ul>
+
+
+  <h2><a name="specific-applications-in-optimization">
+  Specific Applications in Optimization</a></h2>
+
+  <ul>
 
     <li> The data cloning algorithm is a global optimization approach
     and a variant of simulated annealing which has been implemented
@@ -789,7 +806,8 @@
 -->
       <li> GO (Global Optimization): <pkg>DEoptim</pkg>, <pkg>DEoptimR</pkg>,
       <pkg>GenSA</pkg>, <pkg>GA</pkg>, <pkg>pso</pkg>, <pkg>hydroPSO</pkg>,
-      <pkg>cmaes</pkg>, <pkg>nloptr</pkg>, <pkg>NMOF</pkg></li>
+      <pkg>Jaya</pkg>, <pkg>rgenoud</pkg>,
+      <pkg>cmaes</pkg>, <pkg>nloptr</pkg>, <pkg>NMOF</pkg>, <pkg>OOR</pkg></li>
 
       <li>SPLP (Special problems of linear programming like transportation,
       multi-index, etc., 90C08): <pkg>clue</pkg>, <pkg>lpSolve</pkg>,
@@ -830,7 +848,7 @@
       <pkg>CEoptim</pkg>, <pkg>TSP</pkg>, <pkg>matchingR</pkg></li>
 
       <li>MOP (Multi-objective and goal programming, 90C29):
-      <pkg>mco</pkg> </li>
+      <pkg>caRamel</pkg>, <pkg>GPareto</pkg>, <pkg>mco</pkg></li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
       <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2, <pkg>rLindo</pkg></li>
@@ -918,6 +936,7 @@
   <pkg>GA</pkg>
   <pkg>genalg</pkg>
   <pkg>GenSA</pkg>
+  <pkg>GPareto</pkg>
   <pkg>globalOptTests</pkg>
   <pkg>glpkAPI</pkg>
   <pkg>GrassmannOptim</pkg>
@@ -925,6 +944,7 @@
   <pkg>hydroPSO</pkg>
   <pkg>igraph</pkg>
   <pkg>irace</pkg>
+  <pkg>Jaya</pkg>
   <pkg>isotone</pkg>
   <pkg>kernlab</pkg>
   <pkg>kofnGA</pkg>
@@ -966,6 +986,7 @@
   <pkg>optimsimplex</pkg>
   <pkg>optimx</pkg>
   <pkg>optmatch</pkg>
+  <pkg>OOR</pkg>
   <pkg>osqp</pkg>
   <pkg>parma</pkg>
   <pkg>pso</pkg>
