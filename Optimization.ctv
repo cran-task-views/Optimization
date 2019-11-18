@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2019-05-25</version>
+<version>2019-11-21</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -110,9 +110,11 @@
     constraints and being applicable to higher-dimensional problems. 
     ('lbfgsb3c' has an 'optim'-like interface based on 'Rcpp'.)</li>
 
-    <li><pkg>optimParallel</pkg> provides a parallel version of the L-BFGS-B 
-    method of optim(); using <code>optimParallel()</code> can significantly 
-    reduce the optimization time.</li>
+    <li>Package <pkg>roptim</pkg> provides a unified wrapper to call 
+    C++ functions of the algorithms underlying optim().
+    And <pkg>optimParallel</pkg> provides a parallel version of the L-BFGS-B 
+    method of optim(); using these packages can significantly reduce the 
+    optimization time.</li>
 
     <li><pkg>RcppNumerical</pkg> is a collection of open source libraries 
     for numerical computing and their integration with 'Rcpp'. It provides 
@@ -1015,6 +1017,7 @@
   <pkg>ROI.plugin.clp</pkg>
   <pkg>ROI.plugin.neos</pkg>
   <pkg>ROI.plugin.qpoases</pkg>
+  <pkg>roptim</pkg>
   <pkg>Rsolnp</pkg>
   <pkg>Rsymphony</pkg>
   <pkg>Rtnmin</pkg>
