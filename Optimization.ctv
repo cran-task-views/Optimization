@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2019-11-21</version>
+<version>2019-11-22</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -21,7 +21,9 @@
   Solvers</a>, <a href="#mathematical-programming-solvers">Mathematical 
   Programming Solvers</a>, and 
   <a href="#specific-applications-in-optimization">Specific Applications in
-  Optimization</a>. Packages are categorized in these sections.</p>
+  Optimization</a>, or <a href="#multi-objective-optimization">Multi 
+  Objective Optimization</a>.
+  Packages are categorized according to these sections.</p>
 
   <p>Many packages provide functionality for more than one
   of the subjects listed at the end of this task view. E.g., mixed
@@ -111,8 +113,8 @@
     ('lbfgsb3c' has an 'optim'-like interface based on 'Rcpp'.)</li>
 
     <li>Package <pkg>roptim</pkg> provides a unified wrapper to call 
-    C++ functions of the algorithms underlying optim().
-    And <pkg>optimParallel</pkg> provides a parallel version of the L-BFGS-B 
+    C++ functions of the algorithms underlying the optim() solver;
+    and <pkg>optimParallel</pkg> provides a parallel version of the L-BFGS-B 
     method of optim(); using these packages can significantly reduce the 
     optimization time.</li>
 
@@ -136,6 +138,9 @@
     including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS)
     and limited memory BFGS (L-BFGS) methods. Most internal parameters
     can be set through the calling interface.</li>
+
+    <li><pkg>nonneg.cg</pkg> realizes a conjugate-gradient based method 
+    to minimize functions subject to all variables being non-negative.</li>
 
     <li>Package <pkg>dfoptim</pkg>, for derivative-free optimization
     procedures, contains quite efficient R implementations of the
@@ -176,6 +181,10 @@
     a spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
     argument as well as basic constraints.</li>
+
+    <li>Package <pkg>SCOR</pkg> solves optimization problems under the
+    constraint that the combined parameters lie on the surface of a unit
+    hypersphere.</li>
 
     <li><pkg>GrassmannOptim</pkg> is a package for Grassmann manifold
     optimization. The implementation uses gradient-based algorithms
@@ -422,9 +431,9 @@
     problems by combining evolutionary algorithms with a derivative-based 
     (quasi-Newtonian) approach.</li>
 
-    <li>The <pkg>Jaya</pkg> package provides a implementation Jaya algorithm,
-    a population based heuristic algorithm which repeatedly modifies a population 
-    of individual solutions.</li>
+    <li>The <pkg>Jaya</pkg> package provides an implementation of the Jaya 
+    algorithm, a population based heuristic algorithm which repeatedly 
+    modifies a population by looking at best and worst solutions.</li>
 
     <li>Machine coded genetic algorithm (MCGA) provided by package
     <pkg>mcga</pkg> is a tool which solves optimization problems based
@@ -482,13 +491,13 @@
     work for discrete optimization problems, as does the implementation of a 
     genetic algorithm that is included in the package.</li>
 
-    <li><pkg>OOR</pkg> implements optimistic optimization methods for global 
-    optimization of deterministic or stochastic functions.</li>
-
     <li><pkg>SACOBRA</pkg> is a package for numeric constrained optimization 
     of expensive black-box functions under severely limited budgets; 
     it implements an extension of the COBRA algorithm with initial design 
     generation and self-adjusting random restarts.</li>
+
+    <li><pkg>OOR</pkg> implements optimistic optimization methods for global 
+    optimization of deterministic or stochastic functions.</li>
 
     <li><pkg>RCEIM</pkg> implements a stochastic heuristic method for 
     performing multi-dimensional function optimization.</li>
@@ -982,6 +991,7 @@
   <pkg>nlsr</pkg>
   <pkg>NMOF</pkg>
   <pkg>nnls</pkg>
+  <pkg>nonneg.cg</pkg>
   <pkg>ompr</pkg>
   <pkg>onls</pkg>
   <pkg>optimParallel</pkg>
@@ -1023,6 +1033,7 @@
   <pkg>Rtnmin</pkg>
   <pkg>Rvmmin</pkg>
   <pkg>SACOBRA</pkg>
+  <pkg>SCOR</pkg>
   <pkg>scs</pkg>
   <pkg>sdpt3r</pkg>
   <pkg>smoof</pkg>
