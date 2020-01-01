@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2019-11-22</version>
+<version>2020-01-02</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -463,7 +463,9 @@
 
     <li>Package <pkg>ecr</pkg> provides a framework for building evolutionary 
     algorithms for single- and multi-objective continuous or discrete 
-    optimization problems.</li>
+    optimization problems. And <pkg>emoa</pkg> has a collection of building 
+    blocks for the design and analysis of evolutionary multiobjective 
+    optimization algorithms.</li>
 
     <li>CMA-ES by N. Hansen, global optimization procedure using a covariance 
     matrix adapting evolutionary strategy, is implemented in several packages:
@@ -859,7 +861,8 @@
       <pkg>CEoptim</pkg>, <pkg>TSP</pkg>, <pkg>matchingR</pkg></li>
 
       <li>MOP (Multi-objective and goal programming, 90C29):
-      <pkg>caRamel</pkg>, <pkg>GPareto</pkg>, <pkg>mco</pkg></li>
+      <pkg>caRamel</pkg>, <pkg>GPareto</pkg>, <pkg>mco</pkg>, 
+      <pkg>emoa</pkg></li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
       <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2, <pkg>rLindo</pkg></li>
@@ -941,6 +944,7 @@
   <pkg>desirability</pkg>
   <pkg>Dykstra</pkg>
   <pkg>ECOSolveR</pkg>
+  <pkg>emoa</pkg>
   <pkg>ecr</pkg>
   <pkg>flacco</pkg>
   <pkg>FLSSS</pkg>
