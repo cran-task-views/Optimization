@@ -5,7 +5,7 @@
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 	Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-01-02</version>
+<version>2020-01-12</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -293,8 +293,8 @@
     quantifying rather complex properties, such as the global structure, 
     separability, etc., of the optimization problems.</li>
 
-    <li><pkg>cec2013</pkg> and <pkg>cec2005benchmark</pkg> contain many test
-    functions for global optimization from the 2005 and 2013 special sessions
+    <li><pkg>cec2013</pkg> contains many test
+    functions for global optimization from the 2005 special session
     on real-parameter optimization at the IEEE CEC congresses on evolutionary
     computation.</li>
 
@@ -923,7 +923,6 @@
   <pkg>bvls</pkg>
   <pkg>caRamel</pkg>
   <pkg>cccp</pkg>
-  <pkg>cec2005benchmark</pkg>
   <pkg>cec2013</pkg>
   <pkg>CEoptim</pkg>
   <pkg>clpAPI</pkg>
