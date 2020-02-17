@@ -2,8 +2,7 @@
 
 <name>Optimization</name>
 <topic>Optimization and Mathematical Programming</topic>
-<maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
-	Florian Schwendinger, Hans W. Borchers
+<maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
 <version>2020-01-12</version>
 
