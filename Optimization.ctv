@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-02-20</version>
+<version>2020-03-30</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -747,10 +747,6 @@
     procedures for complex models using data cloning and Bayesian
     Markov chain Monte Carlo methods.</li>
 
-    <li><pkg>irace</pkg> contains an optimization algorithm for optimizing the
-    parameters of other optimization algorithms. This problem is called 
-    "(offline) algorithm configuration". [GO]</li>
-
     <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
     subset of a fixed size k from the integers 1:n, such that a user-
     supplied objective function is minimized at that subset.</li>
@@ -896,10 +892,7 @@
        <li>Methods of successive quadratic programming type, 90C55</li>
        <li>Polyhedral combinatorics, branch-and-bound,
        branch-and-cut, 90C57</li>
--->
-      <li>HEUR (Approximation methods and heuristics, 90C59): 
-      <pkg>irace</pkg></li>
-<!--
+      <li>HEUR (Approximation methods and heuristics, 90C59)</li>
        <li>Abstract computational complexity for mathematical
        programming problems, 90C60</li>
        <li>LFuzzy programming, 90C70</li>
@@ -951,7 +944,6 @@
   <pkg>GrassmannOptim</pkg>
   <pkg>gsl</pkg>
   <pkg>igraph</pkg>
-  <pkg>irace</pkg>
   <pkg>Jaya</pkg>
   <pkg>isotone</pkg>
   <pkg>kernlab</pkg>
