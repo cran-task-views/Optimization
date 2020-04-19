@@ -271,6 +271,11 @@
     suited for model predictive control (MPC) applications; the ROI plugin 
     <pkg>ROI.plugin.qpoases</pkg> makes it accessible for R users. [QP]</li>
 
+    <li><pkg>mixsqp</pkg> implements the "mix-SQP" algorithm, based on 
+    sequential quadratic programming (SQP), for maximum likelihood estimations 
+    in finite mixture models; the algorithm is expected to be accurate and to 
+    arrive at solutions quickly.</li>
+
     <li><pkg>limSolve</pkg> offers to solve linear or quadratic optimization 
     functions, subject to equality and/or inequality constraints. [LP, QP]</li>
   </ul>
@@ -292,8 +297,8 @@
     quantifying rather complex properties, such as the global structure, 
     separability, etc., of the optimization problems.</li>
 
-    <li><pkg>cec2013</pkg> contains many test
-    functions for global optimization from the 2005 special session
+    <li><pkg>cec2013</pkg> and 'cec2005benchmark' (archived) contain many test
+    functions for global optimization from the 2005 and 2013 special sessions
     on real-parameter optimization at the IEEE CEC congresses on evolutionary
     computation.</li>
 
@@ -443,6 +448,10 @@
     Another (parallelized) implementation of the PSO algorithm can be found 
     in package <code>ppso</code> available from
     <a href="https://www.rforge.net/ppso/">rforge.net/ppso</a>.</li>
+
+    <li>Package <pkg>hydroPSO</pkg> implements the Standard Particle Swarm
+    Optimization (SPSO) algorithm; it is parallel-capable and includes
+    several fine-tuning options and post-processing functions.</li>
 
     <li><github>floybix/hydromad</github> (on Github) contains the 
     <code>SCEoptim</code> function for Shuffled Compex Evolution (SCE) 
@@ -943,6 +952,7 @@
   <pkg>glpkAPI</pkg>
   <pkg>GrassmannOptim</pkg>
   <pkg>gsl</pkg>
+  <pkg>hydroPSO</pkg>
   <pkg>igraph</pkg>
   <pkg>Jaya</pkg>
   <pkg>isotone</pkg>
@@ -967,6 +977,7 @@
   <pkg>metaheuristicOpt</pkg>
   <pkg>minpack.lm</pkg>
   <pkg>minqa</pkg>
+  <pkg>mixsqp</pkg>
   <pkg>mize</pkg>
   <pkg>mknapsack</pkg>
   <pkg>mlrMBO</pkg>
