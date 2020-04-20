@@ -756,6 +756,10 @@
     procedures for complex models using data cloning and Bayesian
     Markov chain Monte Carlo methods.</li>
 
+    <li><pkg>irace</pkg> contains an optimization algorithm for optimizing the
+    parameters of other optimization algorithms. This problem is called 
+    "(offline) algorithm configuration". [GO]</li>
+
     <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
     subset of a fixed size k from the integers 1:n, such that a user-
     supplied objective function is minimized at that subset.</li>
@@ -901,7 +905,10 @@
        <li>Methods of successive quadratic programming type, 90C55</li>
        <li>Polyhedral combinatorics, branch-and-bound,
        branch-and-cut, 90C57</li>
-      <li>HEUR (Approximation methods and heuristics, 90C59)</li>
+-->
+      <li>HEUR (Approximation methods and heuristics, 90C59): 
+      <pkg>irace</pkg></li>
+<!--
        <li>Abstract computational complexity for mathematical
        programming problems, 90C60</li>
        <li>LFuzzy programming, 90C70</li>
@@ -954,6 +961,7 @@
   <pkg>gsl</pkg>
   <pkg>hydroPSO</pkg>
   <pkg>igraph</pkg>
+  <pkg>irace</pkg>
   <pkg>Jaya</pkg>
   <pkg>isotone</pkg>
   <pkg>kernlab</pkg>
