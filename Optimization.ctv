@@ -106,10 +106,10 @@
     both the L-BFGS and the OWL-QN algorithm, the latter being particularly 
     suited for higher-dimensional problems.</li>
 
-    <li><pkg>lbfgsb3</pkg> and <pkg>lbfgsb3c</pkg> both interface J.Nocedal's
+    <li><pkg>lbfgsb3c</pkg> interfaces J.Nocedal's
     L-BFGS-B 3.0 Fortran code, a limited memory BFGS minimizer, allowing bound 
     constraints and being applicable to higher-dimensional problems. 
-    ('lbfgsb3c' has an 'optim'-like interface based on 'Rcpp'.)</li>
+    It has an 'optim'-like interface based on 'Rcpp'.</li>
 
     <li>Package <pkg>roptim</pkg> provides a unified wrapper to call 
     C++ functions of the algorithms underlying the optim() solver;
@@ -896,7 +896,7 @@
 
       <li>QN (Methods of quasi-Newton type, 90C53): stats
       (<code>optim()</code>), <pkg>gsl</pkg>, <pkg>lbfgs</pkg>,
-      <pkg>lbfgsb3</pkg>, <pkg>nloptr</pkg>, <pkg>optimParallel</pkg>, 
+      <pkg>lbfgsb3c</pkg>, <pkg>nloptr</pkg>, <pkg>optimParallel</pkg>, 
       <pkg>ucminf</pkg></li>
 
       <li>DF (Derivative-free methods, 90C56): <pkg>dfoptim</pkg>,
@@ -967,7 +967,6 @@
   <pkg>kernlab</pkg>
   <pkg>kofnGA</pkg>
   <pkg>lbfgs</pkg>
-  <pkg>lbfgsb3</pkg>
   <pkg>lbfgsb3c</pkg>
   <pkg>limSolve</pkg>
   <pkg>linprog</pkg>
