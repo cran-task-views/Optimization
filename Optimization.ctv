@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-05-08</version>
+<version>2020-05-15</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -784,10 +784,6 @@
     of Harrington (1965) using functional forms described by
     Derringer and Suich (1980).</li>
 
-    <li>Package <pkg>sna</pkg> contains the function <code>lab.optim()</code>
-    which is the front-end to a series of heuristic routines for optimizing
-    some bivariate graph statistic. [GRAPH]</li>
-
     <li><pkg>maxLik</pkg> adds a likelihood-specific layer on top of a number 
     of maximization routines like Brendt-Hall-Hall-Hausman (BHHH) and 
     Newton-Raphson among others. It includes summary and print methods which 
@@ -873,7 +869,7 @@
       <li>Semi-infinite programming, 90C34</li>
 -->
       <li>GRAPH (Programming involving graphs or networks, 90C35):
-      <pkg>igraph</pkg>, <pkg>sna</pkg> </li>
+      <pkg>igraph</pkg></li>
 <!--
       <li>Dynamic programming, 90C39</li>
       <li>Markov and semi-Markov decision processes, 90C40</li>
@@ -1037,7 +1033,6 @@
   <pkg>scs</pkg>
   <pkg>sdpt3r</pkg>
   <pkg>smoof</pkg>
-  <pkg>sna</pkg>
   <pkg>soma</pkg>
   <pkg>subplex</pkg>
   <pkg>tabuSearch</pkg>
