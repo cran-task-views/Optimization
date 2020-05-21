@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-05-15</version>
+<version>2020-05-21</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -330,12 +330,6 @@
     for solving nonlinear least-squares problems by a modification of the
     Levenberg-Marquardt algorithm, with support for lower and upper parameter 
     bounds, as found in MINPACK.</li>
-
-    <li>Package <pkg>lsei</pkg> contains functions that solve least-squares 
-    linear regression problems under linear equality/inequality constraints. 
-    Functions for solving quadratic programming problems are also available, 
-    which transform such problems into least squares ones first. (Based on 
-    Fortran programs of Lawson and Hanson.)</li>
 
     <li>Package <pkg>nnls</pkg> interfaces the Lawson-Hanson implementation of 
     an algorithm for non-negative least-squares, allowing the combination of 
@@ -963,7 +957,6 @@
   <pkg>LowRankQP</pkg>
   <pkg>lpSolve</pkg>
   <pkg>lpSolveAPI</pkg>
-  <pkg>lsei</pkg>
   <pkg>ManifoldOptim</pkg>
   <pkg>matchingMarkets</pkg>
   <pkg>matchingR</pkg>
