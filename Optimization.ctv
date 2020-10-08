@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-05-21</version>
+<version>2020-10-08</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -248,6 +248,10 @@
     from the University of Oxford Control Group; it solves sparse convex 
     quadratic programming problems with optional equality and inequality 
     constraints efficiently. [QP]</li>
+
+    <li><pkg>qpmadr</pkg> interfaces the 'qpmad' software and solves 
+    quadratic programming (QP) problems with linear inequality, equality 
+    and bound constraints, using the method by Goldfarb and Idnani.[QP]</li>
 
     <li><pkg>kernlab</pkg> contains the function <code>ipop</code> for
     solving quadratic programming problems using interior point
@@ -993,6 +997,7 @@
   <pkg>pso</pkg>
   <pkg>psoptim</pkg>
   <pkg>qap</pkg>
+  <pkg>qpmadr</pkg>
   <pkg priority="core">quadprog</pkg>
   <pkg>quadprogXT</pkg>
   <pkg>quantreg</pkg>
