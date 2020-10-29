@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-10-08</version>
+<version>2020-10-29</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -634,12 +634,6 @@
     <b>not free</b> and you have to get a license. Academics will receive a 
     free licence upon request. [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
 
-    <li>The API of the commercial solver LINDO can be accessed in R
-    via package <pkg>rLindo</pkg>. 
-    The <a href="http://www.lindo.com/">LINDO API</a> allows for solving 
-    linear, integer, quadratic, conic, general nonlinear, global and 
-    stochastic programming problems. [LP, IP, BP, QP,MILP, MIQP, SP]</li>
-    
     <li>Package <pkg>Rmosek</pkg> offers an interface to the commercial 
     optimizer from <a href="https://www.mosek.com/">MOSEK</a>. It provides 
     dual/primal simplex optimizers as well as a barrier optimizer. 
@@ -805,7 +799,7 @@
       <pkg>clpAPI</pkg>, <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>,
       <pkg>limSolve</pkg>, <pkg>linprog</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>, <pkg>quantreg</pkg>, <pkg>rcdd</pkg>,
-      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>,
+      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, 
       <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg>
       </li>
 <!--
@@ -827,17 +821,14 @@
 
       <li>IP (Integer programming, 90C10): <pkg>cplexAPI</pkg>, 
       <pkg>glpkAPI</pkg>, <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, 
-      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>
+      <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>,
       <pkg>Rmosek</pkg>, <pkg>Rsymphony</pkg></li>
 
       <li>MIP (Mixed integer programming and its variants MILP for LP
       and MIQP for QP, 90C11):  <pkg>cplexAPI</pkg>, <pkg>glpkAPI</pkg>, 
       <pkg>lpSolve</pkg>, <pkg>lpSolveAPI</pkg>, <pkg>Rcplex</pkg>, 
-      <pkg>Rglpk</pkg>, <pkg>rLindo</pkg>, <pkg>Rmosek</pkg>, 
+      <pkg>Rglpk</pkg>, <pkg>Rmosek</pkg>, 
       <pkg>Rsymphony</pkg></li>
-
-      <li>SP (Stochastic programming, 90C15): <pkg>rLindo</pkg>
-      </li>
 
       <li>QP (Quadratic programming, 90C20): <pkg>cplexAPI</pkg>, 
       <pkg>kernlab</pkg>, <pkg>limSolve</pkg>, <pkg>LowRankQP</pkg>, 
@@ -859,7 +850,7 @@
       <pkg>emoa</pkg></li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
-      <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2, <pkg>rLindo</pkg></li>
+      <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2</li>
 <!--
       <li>Sensitivity, stability, parametric optimization, 90C31</li>
       <li>Fractional programming, 90C32</li>
@@ -1013,7 +1004,6 @@
   <pkg>Rdsdp</pkg>
   <pkg>rgenoud</pkg>
   <pkg>Rglpk</pkg>
-  <pkg>rLindo</pkg>
   <pkg>Rmalschains</pkg>
   <pkg>Rmosek</pkg>
   <pkg>rneos</pkg>
