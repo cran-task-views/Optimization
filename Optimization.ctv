@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-10-29</version>
+<version>2020-11-25</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -745,8 +745,12 @@
     and a variant of simulated annealing which has been implemented
     in package <pkg>dclone</pkg>. The package provides low level
     functions for implementing maximum likelihood estimating
-    procedures for complex models using data cloning and Bayesian
-    Markov chain Monte Carlo methods.</li>
+    procedures for complex models.</li>
+
+    <li>The <pkg>irace</pkg> package implements automatic configuration 
+    procedures for optimizing the parameters of other optimization algorithms, 
+    that is (offline) tuning their parameters by finding the most appropriate 
+    settings given a set of optimization problems.</li>
 
     <li>Package <pkg>kofnGA</pkg> uses a genetic algorithm to choose a 
     subset of a fixed size k from the integers 1:n, such that a user-
@@ -940,6 +944,7 @@
   <pkg>gsl</pkg>
   <pkg>hydroPSO</pkg>
   <pkg>igraph</pkg>
+  <pkg>irace</pkg>
   <pkg>Jaya</pkg>
   <pkg>isotone</pkg>
   <pkg>kernlab</pkg>
