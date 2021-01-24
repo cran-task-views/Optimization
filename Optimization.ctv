@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, Florian Schwendinger, Hans W. Borchers
 </maintainer>
-<version>2020-11-25</version>
+<version>2021-01-24</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -733,6 +733,9 @@
     <li><pkg>GPareto</pkg> provides multi-objective optimization algorithms 
     for expensive black-box functions and uncertainty quantification methods.</li>
 
+    <li>The <pkg>rmoo</pkg> package is a framework for multi- and many-objective optimization, 
+      allowing to work with representation of real numbers, permutations and binaries, 
+      offering a high range of configurations.</li>
   </ul>
 
 
@@ -851,7 +854,7 @@
 
       <li>MOP (Multi-objective and goal programming, 90C29):
       <pkg>caRamel</pkg>, <pkg>GPareto</pkg>, <pkg>mco</pkg>, 
-      <pkg>emoa</pkg></li>
+      <pkg>emoa</pkg>, <pkg>rmoo</pkg></li>
 
       <li>NLP (Nonlinear programming, 90C30): <pkg>nloptr</pkg>,
       <pkg>alabama</pkg>, <pkg>Rsolnp</pkg>, Rdonlp2</li>
@@ -1010,6 +1013,7 @@
   <pkg>rgenoud</pkg>
   <pkg>Rglpk</pkg>
   <pkg>Rmalschains</pkg>
+  <pkg>rmoo</pkg>
   <pkg>Rmosek</pkg>
   <pkg>rneos</pkg>
   <pkg>ROI</pkg>
