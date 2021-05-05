@@ -726,8 +726,8 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
     <li><pkg>rminizinc</pkg> provides an interface to the open-source
     constraint modeling language and system (to be downloaded separately)
     <a href="https://www.minizinc.org/">MiniZinc</a>. R users can apply the 
-    package to solve combinatorial optimization problems by modify existing 
-    'MiniZinc' models, and also by creating their own models.</li>
+    package to solve combinatorial optimization problems by modifying 
+    existing 'MiniZinc' models, and also by creating their own models.</li>
   </ul>
 
 
