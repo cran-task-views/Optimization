@@ -207,10 +207,6 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
     <code>n1qn1</code> optimization procedure in Scilab, a quasi-Newton BFGS 
     method without constraints.</li>
 
-    <li><pkg>optimsimplex</pkg> provides building blocks for simplex-based 
-    optimization algorithms such as the Nelder-Mead, Spendley, Box method, 
-    or multi-dimensional search by Torczon, etc.</li>
-    
     <li>Several derivative-free optimization algorithms are provided with 
     package <pkg>minqa</pkg>; e.g., the functions <code>bobyqa()</code>,
     <code>newuoa()</code>, and <code>uobyqa()</code> allow to minimize a 
@@ -999,7 +995,6 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
   <pkg>ompr</pkg>
   <pkg>onls</pkg>
   <pkg>optimParallel</pkg>
-  <pkg>optimsimplex</pkg>
   <pkg>optimx</pkg>
   <pkg>optmatch</pkg>
   <pkg>OOR</pkg>
