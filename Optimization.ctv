@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 Florian Schwendinger, Hans W. Borchers</maintainer>
-<version>2021-06-10</version>
+<version>2021-07-10</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -203,10 +203,6 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
     based on the GNU Scientific Library (GSL). [RGA, QN]
     </li>
 
-    <li><pkg>n1qn1</pkg> provides an R port of the 
-    <code>n1qn1</code> optimization procedure in Scilab, a quasi-Newton BFGS 
-    method without constraints.</li>
-
     <li>Several derivative-free optimization algorithms are provided with 
     package <pkg>minqa</pkg>; e.g., the functions <code>bobyqa()</code>,
     <code>newuoa()</code>, and <code>uobyqa()</code> allow to minimize a 
@@ -217,13 +213,12 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
     <li><pkg>subplex</pkg> provides unconstrained function
     optimization based on a subspace searching simplex method.</li>
 
-    <li>In package <pkg>trust</pkg>, a routine with the same name offers
+    <li>In package <pkg>trust</pkg>, a routine with the same name offers 
     local optimization based on the "trust region" approach.</li>
 
-    <li><pkg>trustOptim</pkg> implements a "trust region" algorithm for
-    unconstrained nonlinear optimization. The algorithm is optimized for
-    objective functions with sparse Hessians. This makes the algorithm highly
-    scalable and efficient, in terms of both time and memory footprint.</li>
+    <li><pkg>trustOptim</pkg> implements "trust region" for unconstrained 
+    nonlinear optimization. The algorithm is optimized for objective 
+    functions with sparse Hessians.</li>
 
     <li>Package <pkg>quantreg</pkg> contains variations of simplex and
     of interior point routines (<code>nlrq()</code>,
@@ -644,18 +639,23 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
     programs (MILP, MISOCP, etc.). You have to get a license, but Academic 
     licenses are free of charge.  [LP, IP, BP, QP, MILP, MIQP, IPM]</li>
 
-    <li>Gurobi Optimization ships an R binding since their 5.0 release
-    that allows to solve LP, MIP, QP, MIQP, SOCP, and MISOCP models
-    from within R. See the <a
-    href="https://www.gurobi.com/products/modeling-languages/r">R with
-    Gurobi</a> website for more details. [LP, QP, MILP, MIQP]</li>
-
     <li>The <pkg>localsolver</pkg> package provides an interface to the hybrid
     mathematical programming software 
-    <a href="http://www.localsolver.com/">LocalSolver</a> from Innovation 24.
-    LocalSolver is a commercial product, academic licenses are available on
-    request. [LP, MIP, QP, NLP, HEUR]</li>
+    <a href="http://www.localsolver.com/">LocalSolver</a> from Innovation 24, 
+    combining exact and heuristic techniques. See their website for more 
+    details. (Academic licenses are available on request.) 
+    [LP, MIP, QP, NLP, HEUR]</li>
+
+    <li>'Gurobi Optimization' ships an R package with its software that 
+    allows to call its solvers from R. Gurobi provides powerful solvers for 
+    LP, MIP, QP, MIQP, SOCP, and MISOCP models. See their website for more details. (Academic licenses are available on request.)
+    [LP, QP, MILP, MIQP]</li>
   </ul>
+
+  <p>Some more commercial companies, e.g. 'Artelys Knitro' or 'FICO Xpress 
+  Optimization', have R interfaces that are installed while the software 
+  gets installed. Trial licenses are available, see the corresponding 
+  websites for more information.</p>
 
 
   <h2><a name="combinatorial-optimization">
@@ -982,7 +982,6 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
   <pkg>mize</pkg>
   <pkg>mknapsack</pkg>
   <pkg>mlrMBO</pkg>
-  <pkg>n1qn1</pkg>
   <pkg>nilde</pkg>
   <pkg>NlcOptim</pkg>
   <pkg>nlmrt</pkg>
