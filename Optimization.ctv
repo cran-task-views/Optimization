@@ -4,7 +4,7 @@
 <topic>Optimization and Mathematical Programming</topic>
 <maintainer email="R-optimization@mailbox.org">Stefan Theussl, 
 Florian Schwendinger, Hans W. Borchers</maintainer>
-<version>2021-07-10</version>
+<version>2021-09-28</version>
 
 <info>
   <p>This CRAN task view contains a list of packages which offer
@@ -137,6 +137,11 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
     including conjugate gradient (CG), Broyden-Fletcher-Goldfarb-Shanno (BFGS)
     and limited memory BFGS (L-BFGS) methods. Most internal parameters
     can be set through the calling interface.</li>
+
+    <li><pkg>stochQN</pkg> provides implementations of stochastic,
+    limited-memory quasi-Newton optimizers, similar in spirit to the LBFGS.
+    It includes an implementation of online LBFGS, stochastic quasi-Newton and adaptive quasi-Newton.
+    </li>
 
     <li><pkg>nonneg.cg</pkg> realizes a conjugate-gradient based method 
     to minimize functions subject to all variables being non-negative.</li>
@@ -1041,6 +1046,7 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
   <pkg>smoof</pkg>
   <pkg>soma</pkg>
   <pkg>SPOT</pkg>
+  <pkg>stochQN</pkg>
   <pkg>subplex</pkg>
   <pkg>tabuSearch</pkg>
   <pkg>trust</pkg>
