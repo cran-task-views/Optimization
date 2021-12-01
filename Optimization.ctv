@@ -566,11 +566,6 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
   Open Source Optimizers</a></h3>
 
   <ul>
-    <li>Package <pkg>clpAPI</pkg> provides high level access from R to
-    low-level API routines of the <a
-    href="https://projects.coin-or.org/Clp">COIN OR Clp</a> solver
-    library. [LP]</li>
-
     <li>Package <pkg>lpSolve</pkg> contains the routine
     <code>lp()</code> to solve LPs and MILPs by calling the freely
     available solver <a
@@ -823,7 +818,7 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
   </p>
     <ul>
       <li>LP (Linear programming, 90C05): <pkg>boot</pkg>,
-      <pkg>clpAPI</pkg>, <pkg>glpkAPI</pkg>,
+      <pkg>glpkAPI</pkg>,
       <pkg>limSolve</pkg>, <pkg>linprog</pkg>, <pkg>lpSolve</pkg>,
       <pkg>lpSolveAPI</pkg>, <pkg>quantreg</pkg>, <pkg>rcdd</pkg>,
       <pkg>Rcplex</pkg>, <pkg>Rglpk</pkg>, 
@@ -935,7 +930,6 @@ Florian Schwendinger, Hans W. Borchers</maintainer>
   <pkg>cccp</pkg>
   <pkg>cec2013</pkg>
   <pkg>CEoptim</pkg>
-  <pkg>clpAPI</pkg>
   <pkg>CLSOCP</pkg>
   <pkg>clue</pkg>
   <pkg>cmaes</pkg>
