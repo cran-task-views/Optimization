@@ -1,27 +1,27 @@
 ---
 name: Optimization
 topic: Optimization and Mathematical Programming
-maintainer: Hans W. Borchers, Florian Schwendinger, Stefan Theussl
-email: R-optimization@mailbox.org
+maintainer: Hans W. Borchers, Florian Schwendinger
+email: R-optimization at mailbox.org
 version: 2022-01-09
 source: https://github.com/cran-task-views/Optimization/
 ---
 
-This CRAN task view contains a list of packages which offer facilities
+This CRAN Task View contains a list of packages which offer facilities
 for solving optimization problems. Although every regression model in
-statistics solves an optimization problem they are not part of this
+statistics solves an optimization problem, they are not part of this
 view. If you are looking for regression methods, the following views
-will contain useful starting points:
-`r view("Multivariate")`,
-`r view("SocialSciences")`, `r view("Robust")`
-among others. The focus of this task view is on [Optimization
-Infrastructure Packages](#optimization-infrastructure-packages) ,
-[General Purpose Continuous
-Solvers](#general-purpose-continuous-solvers) , [Mathematical
-Programming Solvers](#mathematical-programming-solvers) , and [Specific
-Applications in Optimization](#specific-applications-in-optimization) ,
-or [Multi Objective Optimization](#multi-objective-optimization) .
+will contain useful starting points: 
+`r view("Multivariate")`, 
+`r view("SocialSciences")`, 
+`r view("Robust")`
+The focus of this task view is on **Optimization
+Infrastructure Packages**, **General Purpose Continuous
+Solvers**, **Mathematical Programming Solvers**, **Specific
+Applications in Optimization**, or **Multi Objective Optimization**.
+
 Packages are categorized according to these sections.
+See also the "Related Links" and "Other Resources" sections at the end.
 
 Many packages provide functionality for more than one of the subjects
 listed at the end of this task view. E.g., mixed integer linear
@@ -30,16 +30,14 @@ like the simplex algorithm. Therefore following each package description
 a list of abbreviations describes the typical features of the optimizer
 (i.e., the problems which can be solved). The full names of the
 abbreviations given in square brackets can be found at the end of this
-task view under [Classification According to
-Subject](#classification-according-to-subject) .
+task view under **Classification According to Subject**.
 
 If you think that some package is missing from the list, please contact
 the maintainer via e-mail or submit an issue or pull request in the GitHub
 repository linked above.
 
 
-[Optimization Infrastructure Packages]{#optimization-infrastructure-packages}
------------------------------------------------------------------------------
+### Optimization Infrastructure Packages
 
 -   The `r pkg("optimx")` package provides a replacement and
     extension of the `optim()` function in Base R with a call to several
@@ -50,9 +48,6 @@ repository linked above.
     Function `opm()` applies several solvers to a selected optimization
     task and returns a dataframe of results for easy comparison.
 
-```{=html}
-<!-- -->
-```
 -   The R Optimization Infrastructure (`r pkg("ROI")`)
     package provides a framework for handling optimization problems in
     R. It uses an object-oriented approach to define and solve various
@@ -64,9 +59,6 @@ repository linked above.
     information see the [ROI home
     page](http://roi.r-forge.r-project.org/) .
 
-```{=html}
-<!-- -->
-```
 -   The package `r pkg("CVXR")` provides an object-oriented
     modeling language for Disciplined Convex Programming (DCP). It
     allows the user to formulate convex optimization problems in a
@@ -77,8 +69,7 @@ repository linked above.
     the MATLAB toolbox CVX, developed at Stanford University, cf. [CVXR
     home page](https://cvxr.rbind.io) .)
 
-[General Purpose Continuous Solvers]{#general-purpose-continuous-solvers}
--------------------------------------------------------------------------
+### General Purpose Continuous Solvers
 
 Package stats offers several general purpose optimization routines. For
 one-dimensional unconstrained function optimization there is
@@ -207,7 +198,7 @@ routines. \[RGA, QN\]
     provides an interface to L1 regression in the R code of function
     `rq()`. \[SPLP, LP, IPM\]
 
-### [Quadratic Optimization]{#quadratic-optimization}
+### Quadratic Optimization
 
 -   In package `r pkg("quadprog", priority = "core")`
     `solve.QP()` solves quadratic programming problems with linear
@@ -253,7 +244,7 @@ routines. \[RGA, QN\]
     optimization functions, subject to equality and/or inequality
     constraints. \[LP, QP\]
 
-### [Optimization Test Functions]{#optimization-test-functions}
+### Optimization Test Functions
 
 -   Objective functions for benchmarking the performance of global
     optimization algorithms can be found in
@@ -275,7 +266,7 @@ routines. \[RGA, QN\]
     Github) implements 35 of the test functions by More, Garbow, and
     Hillstom, useful for testing unconstrained optimization methods.
 
-### [Least-Squares Problems]{#least-squares-problems}
+### Least-Squares Problems
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and
 under-determined systems of linear equations, returning least-squares
@@ -317,7 +308,7 @@ or getting stuck in local solutions.
     algorithms to choose from and offers a formula syntax similar to
     `lm()`.
 
-### [Semidefinite and Convex Solvers]{#semidefinite-and-convex-solvers}
+### Semidefinite and Convex Solvers
 
 -   Package `r pkg("ECOSolveR")` provides an interface to
     the Embedded COnic Solver (ECOS), a well-known, efficient, and
@@ -354,7 +345,7 @@ or getting stuck in local solutions.
     appeared in the JSS special issue on Optimization with R, see
     below.) \[SDP, CP\]
 
-### [Global and Stochastic Optimization]{#global-and-stochastic-optimization}
+### Global and Stochastic Optimization
 
 -   Package `r pkg("DEoptim", priority = "core")` provides a
     global optimizer based on the Differential Evolution algorithm.
@@ -443,8 +434,7 @@ or getting stuck in local solutions.
 -   `r pkg("RCEIM")` implements a stochastic heuristic
     method for performing multi-dimensional function optimization.
 
-[Mathematical Programming Solvers]{#mathematical-programming-solvers}
----------------------------------------------------------------------
+### Mathematical Programming Solvers
 
 This section provides an overview of open source as well as commercial
 optimizers. Which type of mathematical programming problem can be solved
@@ -468,10 +458,6 @@ of this task view.
 -   `r pkg("rcdd")` offers the function `lpcdd()` for
     solving linear programs with exact arithmetic using the [GNU
     Multiple Precision (GMP)](https://gmplib.org) library. \[LP\]
-
-```{=html}
-<!-- -->
-```
 -   The [NEOS Server for
     Optimization](https://www.neos-server.org/neos/) provides online
     access to state-of-the-art optimization problem solvers. The
@@ -479,7 +465,7 @@ of this task view.
     `r pkg("ROI.plugin.neos")` enable the user to pass
     optimization problems to NEOS and retrieve results within R.
 
-### [Interfaces to Open Source Optimizers]{#interfaces-to-open-source-optimizers}
+#### Interfaces to Open Source Optimizers
 
 -   Package `r pkg("lpSolve")` contains the routine `lp()`
     to solve LPs and MILPs by calling the freely available solver
@@ -521,7 +507,7 @@ of this task view.
     `r github("dirkschumacher/rcbc")` (on Github). \[LP,
     MILP\]
 
-### [Interfaces to Commercial Optimizers]{#interfaces-to-commercial-optimizers}
+#### Interfaces to Commercial Optimizers
 
 This section surveys interfaces to commercial solvers. Typically, the
 corresponding libraries have to be installed separately.
@@ -561,8 +547,7 @@ Optimization', have R interfaces that are installed while the software
 gets installed. Trial licenses are available, see the corresponding
 websites for more information.
 
-[Combinatorial Optimization]{#combinatorial-optimization}
----------------------------------------------------------
+### Combinatorial Optimization
 
 -   Package `r pkg("adagio")` provides R functions for
     single and multiple knapsack problems, and solves subset sum and
@@ -619,8 +604,7 @@ websites for more information.
     problems by modifying existing 'MiniZinc' models, and also by
     creating their own models.
 
-[Multi Objective Optimization]{#multi-objective-optimization}
--------------------------------------------------------------
+### Multi Objective Optimization
 
 -   Function `caRamel` in package `r pkg("caRamel")` is a
     multi-objective optimizer, applying a combination of the
@@ -638,8 +622,7 @@ websites for more information.
     representation of real numbers, permutations and binaries, offering
     a high range of configurations.
 
-[Specific Applications in Optimization]{#specific-applications-in-optimization}
--------------------------------------------------------------------------------
+### Specific Applications in Optimization
 
 -   The data cloning algorithm is a global optimization approach and a
     variant of simulated annealing which has been implemented in package
@@ -686,8 +669,7 @@ websites for more information.
     based on the Hessian matrix and allows easy swapping of maximization
     algorithms.
 
-[Classification According to Subject]{#classification-according-to-subject}
----------------------------------------------------------------------------
+### Classification According to Subject
 
 What follows is an attempt to provide a by-subject overview of packages.
 The full name of the subject as well as the corresponding [MSC
@@ -758,9 +740,16 @@ code (if available) are given in brackets.
 
 
 ### Links
--   [Journal of Statistical Software Special Volume on Optimization (Editor: Ravi Varadhan)](https://www.jstatsoft.org/v60)
--   [Nonlinear Parameter Optimization Using R Tools \-- John C. Nash (Wiley)](http://www.wiley.com/WileyCDA/WileyTitle/productCd-1118569288.html)
--   [Modern Optimization With R \-- Paulo Cortez (Springer UseR Series)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
+
+-   JSS Article: [ROI: An Extensible R Optimization Infrastructure (Theußl, Schwendinger, Hornik)](https://www.jstatsoft.org/article/view/v094i15)
+-   JSS Article: [CVXR: An R Package for Disciplined Convex Optimization (Fu, Narasimhan, Boyd)](https://www.jstatsoft.org/article/view/v094i14)
+-   JSS Special Issue: [Special Volume on Optimization (Ed. R. Varadhan)](https://www.jstatsoft.org/v60)
+-   Textbook: [Nonlinear Parameter Optimization Using R Tools (J.C. Nash)](https://www.wiley.com/en-us/Nonlinear+Parameter+Optimization+Using+R+Tools-p-9781118569283)
+-   Textbook: [Modern Optimization With R (P. Cortez)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
+-   Textbook: [Numerical Optimization (Nocedal, Wright)](https://link.springer.com/book/10.1007/978-0-387-40065-5)
+-   Cheatsheet: [Base R Optim Cheatsheet](https://github.com/hwborchers/CheatSheets/blob/main/Base%20R%20Optim%20Cheatsheet.pdf)
+-   Tutorial: [CVXR Tutorial](https://github.com/bnaras/cvxr_tutorial) and [Examples](https://cvxr.rbind.io/examples/)
+-   Manual: [NLopt Manual (S. Johnson)](https://nlopt.readthedocs.io/en/latest/NLopt_manual/)
 -   [Yet Another Math Programming Consultant](http://yetanothermathprogrammingconsultant.blogspot.com)
 -   [COIN-OR Project](http://www.coin-or.org/)
 -   [NEOS Optimization Guide](http://www.neos-guide.org/Optimization-Guide)
