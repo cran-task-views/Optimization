@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Hans W. Borchers, Florian Schwendinger, Stefan Theussl
 email: R-optimization@mailbox.org
-version: 2021-12-30
+version: 2022-01-09
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -515,7 +515,7 @@ of this task view.
     functions. \[MILP\]
 -   'Clp' and 'Cbc' are open source solvers from the COIN-OR suite.
     'Clp' solves linear programs with continuous objective variables
-    and is available through `r pkg("ROI.plugin.clp")`.
+    and is available through `r github("datastorm-open/ROI.plugin.clp")`.
     'Cbc' is a powerful mixed integer linear programming solver (based
     on 'Clp'); package 'rcbc' can be installed from:
     `r github("dirkschumacher/rcbc")` (on Github). \[LP,
