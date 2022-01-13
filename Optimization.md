@@ -500,12 +500,10 @@ of this task view.
     primarily designed for constrained optimization of blackbox
     functions. \[MILP\]
 -   'Clp' and 'Cbc' are open source solvers from the COIN-OR suite.
-    'Clp' solves linear programs with continuous objective variables
-    and is available through `r github("datastorm-open/ROI.plugin.clp")`.
-    'Cbc' is a powerful mixed integer linear programming solver (based
-    on 'Clp'); package 'rcbc' can be installed from:
-    `r github("dirkschumacher/rcbc")` (on Github). \[LP,
-    MILP\]
+    'Clp' solves linear programs with continuous objective variables,
+    and 'Cbc' is a powerful mixed integer linear programming solver based
+    on 'Clp', i.e. applies 'Clp' if no integer variables are set.
+    'Cbc' can be installed from `r github("dirkschumacher/rcbc")`. \[LP, MILP\]
 
 #### Interfaces to Commercial Optimizers
 
