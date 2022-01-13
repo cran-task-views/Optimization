@@ -503,7 +503,7 @@ of this task view.
     'Clp' solves linear programs with continuous objective variables,
     and 'Cbc' is a powerful mixed integer linear programming solver based
     on 'Clp', i.e. applies 'Clp' if no integer variables are set.
-    'Cbc' can be installed from r github("dirkschumacher/rcbc"). \[LP, MILP\]
+    'Cbc' can be installed from `r github("dirkschumacher/rcbc")`. \[LP, MILP\]
 
 #### Interfaces to Commercial Optimizers
 
