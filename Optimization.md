@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Hans W. Borchers, Florian Schwendinger
 email: R-optimization at mailbox.org
-version: 2022-01-09
+version: 2022-02-20
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -585,10 +585,6 @@ websites for more information.
     algorithm for the stable marriage and the college admissions
     problem, the stable roommates and the house allocation problem.
     \[COP, MM\]
--   Package `r pkg("optmatch")` provides routines for
-    solving matching problems by translating them into minimum-cost flow
-    problems and then solved optimaly by the RELAX-IV codes of Bertsekas
-    and Tseng (free for research). \[SPLP\]
 -   Package `r pkg("TSP")` provides basic infrastructure for
     handling and solving the traveling salesperson problem (TSP). The
     main routine `solve_TSP()` solves the TSP through several
