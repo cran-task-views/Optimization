@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Hans W. Borchers, Florian Schwendinger
 email: R-optimization@mailbox.org
-version: 2022-02-20
+version: 2022-03-07
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -329,9 +329,6 @@ or getting stuck in local solutions.
     constrained convex problems by means of interior-point methods. The
     implemented algorithms are partially ported from CVXOPT, a Python
     module for convex optimization
--   The `r pkg("CLSOCP")` package provides an implementation
-    of a one-step smoothing Newton method for the solution of second
-    order cone programming (SOCP) problems.
 -   CSDP is a library of routines that implements a primal-dual barrier
     method for solving semidefinite programming problems; it is
     interfaced in the `r pkg("Rcsdp")` package. \[SDP\]
@@ -705,8 +702,7 @@ code (if available) are given in brackets.
     `r pkg("Rmosek")`
 -   SDP (Semidefinite programming, 90C22): `r pkg("Rcsdp")`,
     `r pkg("Rdsdp")`
--   CP (Convex programming, 90C25): `r pkg("cccp")`,
-    `r pkg("CLSOCP")`
+-   CP (Convex programming, 90C25): `r pkg("cccp")`
 -   COP (Combinatorial optimization, 90C27):
     `r pkg("adagio")`, `r pkg("CEoptim")`,
     `r pkg("TSP")`, `r pkg("matchingR")`
