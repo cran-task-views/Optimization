@@ -582,6 +582,9 @@ websites for more information.
     algorithm for the stable marriage and the college admissions
     problem, the stable roommates and the house allocation problem.
     \[COP, MM\]
+-   Package r pkg("optmatch") provides routines for solving matching problems
+    by translating them into minimum-cost flow problems and then solving them
+    optimally by the RELAX-IV codes of Bertsekas and Tseng (free for research).
 -   Package `r pkg("TSP")` provides basic infrastructure for
     handling and solving the traveling salesperson problem (TSP). The
     main routine `solve_TSP()` solves the TSP through several
