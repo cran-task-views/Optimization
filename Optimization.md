@@ -1,7 +1,7 @@
 ---
 name: Optimization
 topic: Optimization and Mathematical Programming
-maintainer: Florian Schwendinger and Hans W. Borchers
+maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
 version: 2022-03-22
 source: https://github.com/cran-task-views/Optimization/
