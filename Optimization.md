@@ -120,6 +120,8 @@ routines. \[RGA, QN\]
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
     (L-BFGS) methods. Most internal parameters can be set through the
     calling interface.
+-   `r pkg("n1qn1")` provides an R port of the `n1qn1` optimization procedure 
+    ported from Scilab, a quasi-Newton BFGS method without constraints.
 -   `r pkg("stochQN")` provides implementations of
     stochastic, limited-memory quasi-Newton optimizers, similar in
     spirit to the LBFGS. It includes an implementation of online LBFGS,
@@ -721,7 +723,7 @@ code (if available) are given in brackets.
     `r pkg("rmoo")`
 -   NLP (Nonlinear programming, 90C30): `r pkg("nloptr")`,
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
-    Rdonlp2
+    `r pkg("Rdonlp2")`
 -   GRAPH (Programming involving graphs or networks, 90C35):
     `r pkg("igraph")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
@@ -732,7 +734,7 @@ code (if available) are given in brackets.
 -   QN (Methods of quasi-Newton type, 90C53): stats ( `optim()`),
     `r pkg("gsl")`, `r pkg("lbfgs")`,
     `r pkg("lbfgsb3c")`, `r pkg("nloptr")`,
-    `r pkg("optimParallel")`, `r pkg("ucminf")`
+    `r pkg("optimParallel")`, `r pkg("ucminf")`, `r pkg("n1qn1")`
 -   DF (Derivative-free methods, 90C56): `r pkg("dfoptim")`,
     `r pkg("minqa")`, `r pkg("nloptr")`, `r pkg("optimsimplex")`,
     `r pkg("neldermead")`
