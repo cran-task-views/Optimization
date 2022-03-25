@@ -179,6 +179,9 @@ routines. \[RGA, QN\]
     gradient, steepest descent, and Nelder-Mead algorithms. It uses a
     "line search" approach via the function `multimin()`. It is based
     on the GNU Scientific Library (GSL). \[RGA, QN\]
+-   `r pkg("optimsimplex")` provides building blocks for simplex-based 
+    optimization algorithms such as the Nelder-Mead, Spendley, Box method, 
+    or multi-dimensional search by Torczon, etc.
 -   Several derivative-free optimization algorithms are provided with
     package `r pkg("minqa")`; e.g., the functions
     `bobyqa()`, `newuoa()`, and `uobyqa()` allow to minimize a function
@@ -728,7 +731,7 @@ code (if available) are given in brackets.
     `r pkg("lbfgsb3c")`, `r pkg("nloptr")`,
     `r pkg("optimParallel")`, `r pkg("ucminf")`
 -   DF (Derivative-free methods, 90C56): `r pkg("dfoptim")`,
-    `r pkg("minqa")`, `r pkg("nloptr")`
+    `r pkg("minqa")`, `r pkg("nloptr")`, `r pkg("optimsimplex")`
 
 
 
