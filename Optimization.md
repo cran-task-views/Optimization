@@ -671,6 +671,9 @@ websites for more information.
 -   The `r pkg("desirability")` package contains S3 classes
     for multivariate optimization using the desirability function
     approach of Harrington (1965).
+-   Package `r pkg("sna")` contains the function `lab.optimize()`
+    which is the front-end to a series of heuristic routines for optimizing
+    some bivariate graph statistic. \[GRAPH\]
 -   `r pkg("maxLik")` adds a likelihood-specific layer on
     top of a number of maximization routines like
     Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It
@@ -732,7 +735,7 @@ code (if available) are given in brackets.
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
     `r pkg("Rdonlp2")`
 -   GRAPH (Programming involving graphs or networks, 90C35):
-    `r pkg("igraph")`
+    `r pkg("igraph")`, `r pkg("sna")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
     `r pkg("glpkAPI")`, `r pkg("LowRankQP")`,
     `r pkg("quantreg")`, `r pkg("Rcplex")`
