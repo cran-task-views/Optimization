@@ -120,6 +120,8 @@ routines. \[RGA, QN\]
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
     (L-BFGS) methods. Most internal parameters can be set through the
     calling interface.
+-   `r pkg("n1qn1")` provides an R port of the `n1qn1` optimization procedure 
+    ported from Scilab, a quasi-Newton BFGS method without constraints.
 -   `r pkg("stochQN")` provides implementations of
     stochastic, limited-memory quasi-Newton optimizers, similar in
     spirit to the LBFGS. It includes an implementation of online LBFGS,
@@ -179,6 +181,12 @@ routines. \[RGA, QN\]
     gradient, steepest descent, and Nelder-Mead algorithms. It uses a
     "line search" approach via the function `multimin()`. It is based
     on the GNU Scientific Library (GSL). \[RGA, QN\]
+-   An R port of the Scilab neldermead module is packaged in
+    `r pkg("neldermead")` offering several direct search algorithms based
+    on the simplex approach.
+-   `r pkg("optimsimplex")` provides building blocks for simplex-based 
+    optimization algorithms such as the Nelder-Mead, Spendley, Box method, 
+    or multi-dimensional search by Torczon, etc.
 -   Several derivative-free optimization algorithms are provided with
     package `r pkg("minqa")`; e.g., the functions
     `bobyqa()`, `newuoa()`, and `uobyqa()` allow to minimize a function
@@ -291,6 +299,11 @@ or getting stuck in local solutions.
     implementation of an algorithm for non-negative least-squares,
     allowing the combination of non-negative and non-positive
     constraints.
+-   Package `r pkg("lsei")` contains functions that solve least-squares 
+    linear regression problems under linear equality/inequality constraints. 
+    Functions for solving quadratic programming problems are also available, 
+    which transform such problems into least squares ones first. (Based on 
+    Fortran programs of Lawson and Hanson.)
 -   Package `r pkg("gslnls")` provides an interface to
     nonlinear least-squares optimization methods from the GNU Scientific
     Library (GSL). The available trust region methods include the
@@ -363,6 +376,8 @@ or getting stuck in local solutions.
 -   `r pkg("GA")` provides functions for optimization using
     Genetic Algorithms in both, the continuous and discrete case. This
     package allows to run corresponding optimization tasks in parallel.
+-   In package `r pkg("gafit")` `gafit()` uses a genetic algorithm approach
+    to find the minimum of a one-dimensional function.
 -   Package `r pkg("genalg")` contains `rbga()`, an
     implementation of a genetic algorithm for multi-dimensional function
     optimization.
@@ -656,6 +671,9 @@ websites for more information.
 -   The `r pkg("desirability")` package contains S3 classes
     for multivariate optimization using the desirability function
     approach of Harrington (1965).
+-   Package `r pkg("sna")` contains the function `lab.optimize()`
+    which is the front-end to a series of heuristic routines for optimizing
+    some bivariate graph statistic. \[GRAPH\]
 -   `r pkg("maxLik")` adds a likelihood-specific layer on
     top of a number of maximization routines like
     Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It
@@ -682,7 +700,7 @@ code (if available) are given in brackets.
     `r pkg("GA")`, `r pkg("pso")`,
     `r pkg("rgenoud")`, `r pkg("cmaes")`,
     `r pkg("nloptr")`, `r pkg("NMOF")`,
-    `r pkg("OOR")`
+    `r pkg("OOR")`, `r pkg("gafit")`
 -   SPLP (Special problems of linear programming like transportation,
     multi-index, etc., 90C08): `r pkg("clue")`,
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
@@ -715,9 +733,9 @@ code (if available) are given in brackets.
     `r pkg("rmoo")`
 -   NLP (Nonlinear programming, 90C30): `r pkg("nloptr")`,
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
-    Rdonlp2
+    `r pkg("Rdonlp2")`
 -   GRAPH (Programming involving graphs or networks, 90C35):
-    `r pkg("igraph")`
+    `r pkg("igraph")`, `r pkg("sna")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
     `r pkg("glpkAPI")`, `r pkg("LowRankQP")`,
     `r pkg("quantreg")`, `r pkg("Rcplex")`
@@ -726,9 +744,10 @@ code (if available) are given in brackets.
 -   QN (Methods of quasi-Newton type, 90C53): stats ( `optim()`),
     `r pkg("gsl")`, `r pkg("lbfgs")`,
     `r pkg("lbfgsb3c")`, `r pkg("nloptr")`,
-    `r pkg("optimParallel")`, `r pkg("ucminf")`
+    `r pkg("optimParallel")`, `r pkg("ucminf")`, `r pkg("n1qn1")`
 -   DF (Derivative-free methods, 90C56): `r pkg("dfoptim")`,
-    `r pkg("minqa")`, `r pkg("nloptr")`
+    `r pkg("minqa")`, `r pkg("nloptr")`, `r pkg("optimsimplex")`,
+    `r pkg("neldermead")`
 
 
 
