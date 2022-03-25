@@ -299,6 +299,11 @@ or getting stuck in local solutions.
     implementation of an algorithm for non-negative least-squares,
     allowing the combination of non-negative and non-positive
     constraints.
+-   Package `r pkg("lsei")` contains functions that solve least-squares 
+    linear regression problems under linear equality/inequality constraints. 
+    Functions for solving quadratic programming problems are also available, 
+    which transform such problems into least squares ones first. (Based on 
+    Fortran programs of Lawson and Hanson.)
 -   Package `r pkg("gslnls")` provides an interface to
     nonlinear least-squares optimization methods from the GNU Scientific
     Library (GSL). The available trust region methods include the
