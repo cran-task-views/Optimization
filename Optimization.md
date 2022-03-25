@@ -12,8 +12,8 @@ for solving optimization problems. Although every regression model in
 statistics solves an optimization problem, they are not part of this
 view. If you are looking for regression methods, the following views
 will contain useful starting points: 
-`r view("Multivariate")`, 
-`r view("SocialSciences")`, 
+`r view("MachineLearning")`, 
+`r view("Econometrics")`, 
 `r view("Robust")`
 The focus of this task view is on **Optimization
 Infrastructure Packages**, **General Purpose Continuous
