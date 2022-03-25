@@ -376,6 +376,8 @@ or getting stuck in local solutions.
 -   `r pkg("GA")` provides functions for optimization using
     Genetic Algorithms in both, the continuous and discrete case. This
     package allows to run corresponding optimization tasks in parallel.
+-   In package `r pkg("gafit")` `gafit()` uses a genetic algorithm approach
+    to find the minimum of a one-dimensional function.
 -   Package `r pkg("genalg")` contains `rbga()`, an
     implementation of a genetic algorithm for multi-dimensional function
     optimization.
@@ -695,7 +697,7 @@ code (if available) are given in brackets.
     `r pkg("GA")`, `r pkg("pso")`,
     `r pkg("rgenoud")`, `r pkg("cmaes")`,
     `r pkg("nloptr")`, `r pkg("NMOF")`,
-    `r pkg("OOR")`
+    `r pkg("OOR")`, `r pkg("gafit")`
 -   SPLP (Special problems of linear programming like transportation,
     multi-index, etc., 90C08): `r pkg("clue")`,
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
