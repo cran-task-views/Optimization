@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2022-03-22
+version: 2022-04-12
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -412,6 +412,10 @@ or getting stuck in local solutions.
     or discrete optimization problems. And `r pkg("emoa")`
     has a collection of building blocks for the design and analysis of
     evolutionary multiobjective optimization algorithms.
+-   Package `r pkg("MaOEA")` provides an interface to the Python
+    package pygmo which can solve constrained, unconstrained,
+    single objective, multiple objective, continuous and
+    integer optimization problems, stochastic and deterministic problems.
 -   CMA-ES by N. Hansen, global optimization procedure using a
     covariance matrix adapting evolutionary strategy, is implemented in
     several packages: In packages `r pkg("cmaes")` and
@@ -730,7 +734,7 @@ code (if available) are given in brackets.
 -   MOP (Multi-objective and goal programming, 90C29):
     `r pkg("caRamel")`, `r pkg("GPareto")`,
     `r pkg("mco")`, `r pkg("emoa")`,
-    `r pkg("rmoo")`
+    `r pkg("rmoo")`, `r pkg("MaOEA")`
 -   NLP (Nonlinear programming, 90C30): `r pkg("nloptr")`,
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
     `r pkg("Rdonlp2")`
