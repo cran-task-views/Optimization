@@ -737,7 +737,7 @@ code (if available) are given in brackets.
     `r pkg("rmoo")`, `r pkg("MaOEA")`
 -   NLP (Nonlinear programming, 90C30): `r pkg("nloptr")`,
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
-    `r pkg("Rdonlp2")`
+    Rdonlp2 (in `r rforge("rmetrics")` on R-Forge)
 -   GRAPH (Programming involving graphs or networks, 90C35):
     `r pkg("igraph")`, `r pkg("sna")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
