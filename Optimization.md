@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2022-04-12
+version: 2022-08-08
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -312,10 +312,6 @@ or getting stuck in local solutions.
 -   Package `r pkg("bvls")` interfaces the Stark-Parker
     implementation of an algorithm for least-squares with upper and
     lower bounded variables.
--   Package `r pkg("onls")` implements orthogonal nonlinear
-    least-squares regression (ONLS, a.k.a. Orthogonal Distance
-    Regression, ODR) using a Levenberg-Marquardt-type minimization
-    algorithm based on the ODRPACK Fortran library.
 -   `r pkg("colf")` performs least squares constrained
     optimization on a linear objective function. It contains a number of
     algorithms to choose from and offers a formula syntax similar to
