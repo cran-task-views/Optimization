@@ -205,6 +205,11 @@ routines. \[RGA, QN\]
     simplex and of interior point routines ( `nlrq()`, `crq()`). It
     provides an interface to L1 regression in the R code of function
     `rq()`. \[SPLP, LP, IPM\]
+-   `r pkg("marqLevAlg")` implements a parallelized version of the
+    Marquardt-Levenberg algorithm. It is particularly suited
+    for complex problems and when starting from points very
+    far from the final optimum. The package is designed to be
+    used for unconstrained local optimization. \[NLP\]
 
 ### Quadratic Optimization
 
