@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2022-08-08
+version: 2022-12-07
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -11,7 +11,7 @@ This CRAN Task View contains a list of packages which offer facilities
 for solving optimization problems. Although every regression model in
 statistics solves an optimization problem, they are not part of this
 view. If you are looking for regression methods, the following views
-will contain useful starting points: 
+will also contain useful starting points: 
 `r view("MachineLearning")`, 
 `r view("Econometrics")`, 
 `r view("Robust")`
@@ -207,6 +207,7 @@ routines. \[RGA, QN\]
     `rq()`. \[SPLP, LP, IPM\]
 -   `r pkg("marqLevAlg")` implements a parallelized version of the
     Marquardt-Levenberg algorithm. It is particularly suited
+    
     for complex problems and when starting from points very
     far from the final optimum. The package is designed to be
     used for unconstrained local optimization. \[NLP\]
@@ -271,13 +272,13 @@ routines. \[RGA, QN\]
     problems, capable of quantifying rather complex properties, such as
     the global structure, separability, etc., of the optimization
     problems.
--   `r pkg("cec2013")` and 'cec2005benchmark' (archived)
+-   Packages 'cec2013' and 'cec2005benchmark' (both archived)
     contain many test functions for global optimization from the 2005
     and 2013 special sessions on real-parameter optimization at the IEEE
     CEC congresses on evolutionary computation.
--   Package `r github("jlmelville/funconstrain")` (on
-    Github) implements 35 of the test functions by More, Garbow, and
-    Hillstom, useful for testing unconstrained optimization methods.
+-   Package `r github("jlmelville/funconstrain")` (on Github)
+    implements 35 of the test functions by More, Garbow, and Hillstom,
+    useful for testing unconstrained optimization methods.
 
 ### Least-Squares Problems
 
@@ -293,13 +294,16 @@ or getting stuck in local solutions.
     nonlinear least-squares problems. Functions `nlfb` and `nlxb` are
     intended to eventually supersede the 'nls()' function in Base R,
     by applying a variant of the Marquardt procedure for nonlinear
-    least-squares, with bounds constraints and optionally Jacobian
-    described as R functions. (It is based on the now-deprecated package
-    `r pkg("nlmrt")`.)
+    least-squares, with bounds constraints and optionally Jacobians
+    described as R functions.
 -   Package `r pkg("minpack.lm")` provides a function
     `nls.lm()` for solving nonlinear least-squares problems by a
     modification of the Levenberg-Marquardt algorithm, with support for
     lower and upper parameter bounds, as found in MINPACK.
+-   Package `r pkg("onls")` fits two-dimensional data by means of orthogonal
+    nonlinear least-squares regression (ONLS), using Levenberg-Marquardt
+    minimization; it provides functionality for fit diagnostics and plotting
+    and comes into question when one encounters "error in variables" problems.
 -   Package `r pkg("nnls")` interfaces the Lawson-Hanson
     implementation of an algorithm for non-negative least-squares,
     allowing the combination of non-negative and non-positive
