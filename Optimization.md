@@ -248,9 +248,6 @@ routines. \[RGA, QN\]
     particularly suited for model predictive control (MPC) applications;
     the ROI plugin `r pkg("ROI.plugin.qpoases")` makes it
     accessible for R users. \[QP\]
--   `r pkg("QPmin")` is active set method solver for the
-    solution of indefinite quadratic programs, subject to lower bounds
-    on linear functions of the variables. \[QP\]
 -   `r pkg("mixsqp")` implements the "mix-SQP" algorithm,
     based on sequential quadratic programming (SQP), for maximum
     likelihood estimations in finite mixture models.
