@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-02-16
+version: 2023-04-03
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -522,6 +522,11 @@ of this task view.
     and 'Cbc' is a powerful mixed integer linear programming solver based
     on 'Clp', i.e. applies 'Clp' if no integer variables are set.
     'Cbc' can be installed from `r github("dirkschumacher/rcbc")`. \[LP, MILP\]
+-   Package `r pkg("highs")` is an R interface to the [`HiGHS`](https://highs.dev/)
+    solver. HiGHS is currently among the best open source
+    mixed integer linear programming solver. Furthermore, it
+    can be used to solve quadratic optimization problems (without
+    mixed integer constraints). \[MILP, QP\]
 
 #### Interfaces to Commercial Optimizers
 
@@ -700,7 +705,7 @@ code (if available) are given in brackets.
     `r pkg("lpSolveAPI")`, `r pkg("quantreg")`,
     `r pkg("rcdd")`, `r pkg("Rcplex")`,
     `r pkg("Rglpk")`, `r pkg("Rmosek")`,
-    `r pkg("Rsymphony")`
+    `r pkg("Rsymphony")`, `r pkg("highs")`
 -   GO (Global Optimization): `r pkg("DEoptim")`,
     `r pkg("DEoptimR")`, `r pkg("GenSA")`,
     `r pkg("GA")`, `r pkg("pso")`,
@@ -722,11 +727,12 @@ code (if available) are given in brackets.
     for QP, 90C11): `r pkg("glpkAPI")`,
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
     `r pkg("Rcplex")`, `r pkg("Rglpk")`,
-    `r pkg("Rmosek")`, `r pkg("Rsymphony")`
+    `r pkg("Rmosek")`, `r pkg("Rsymphony")`,
+    `r pkg("highs")`
 -   QP (Quadratic programming, 90C20): `r pkg("kernlab")`,
     `r pkg("limSolve")`, `r pkg("LowRankQP")`,
     `r pkg("quadprog")`, `r pkg("Rcplex")`,
-    `r pkg("Rmosek")`
+    `r pkg("Rmosek")`, `r pkg("highs")`
 -   SDP (Semidefinite programming, 90C22): `r pkg("Rcsdp")`,
     `r pkg("Rdsdp")`
 -   CP (Convex programming, 90C25): `r pkg("cccp")`
