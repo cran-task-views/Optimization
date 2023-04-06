@@ -322,6 +322,11 @@ or getting stuck in local solutions.
     optimization on a linear objective function. It contains a number of
     algorithms to choose from and offers a formula syntax similar to
     `lm()`.
+-   `r pkg("nlsic")` solves non linear least squares problem (possibly
+    rank deficient) with linear equality/inequality constraints.
+    Linearized problems are solved as LSI (linear least squares with
+    inequality constraints), i.e. QR-based, cf. `r pkg("nnls")`.
+    Non linear iterations are globalized by backtracking method.
 
 ### Semidefinite and Convex Solvers
 
