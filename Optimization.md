@@ -213,7 +213,7 @@ routines. \[RGA, QN\]
     for complex problems and when starting from points very
     far from the final optimum. The package is designed to be
     used for unconstrained local optimization. \[NLP\]
--   `r pkg("ao")` implementes an iterative procedure known as alternating 
+-   `r pkg("ao")` implements an iterative procedure known as alternating 
     optimization, which optimizes a function jointly over all parameters 
     by alternately performing restricted optimization over individual 
     parameter subsets.
