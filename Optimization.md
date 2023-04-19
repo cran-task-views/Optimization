@@ -68,6 +68,9 @@ repository linked above.
     such as ECOS or SCS to obtain the solution. (CVXR is derived from
     the MATLAB toolbox CVX, developed at Stanford University, cf. [CVXR
     home page](https://cvxr.rbind.io) .)
+    
+-   The `r pkg("optimizeR")` package provides a unified framework for 
+    representing the inputs and outputs of different optimizers in R.
 
 ### General Purpose Continuous Solvers
 
