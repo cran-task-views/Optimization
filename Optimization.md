@@ -209,11 +209,14 @@ routines. \[RGA, QN\]
     provides an interface to L1 regression in the R code of function
     `rq()`. \[SPLP, LP, IPM\]
 -   `r pkg("marqLevAlg")` implements a parallelized version of the
-    Marquardt-Levenberg algorithm. It is particularly suited
-    
+    Marquardt-Levenberg algorithm. It is particularly suited 
     for complex problems and when starting from points very
     far from the final optimum. The package is designed to be
     used for unconstrained local optimization. \[NLP\]
+-   `r pkg("ao")` implementes an iterative procedure known as alternating 
+    optimization, which optimizes a function jointly over all parameters 
+    by alternately performing restricted optimization over individual 
+    parameter subsets.
 
 ### Quadratic Optimization
 
