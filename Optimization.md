@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-04-03
+version: 2023-04-19
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -69,8 +69,8 @@ repository linked above.
     the MATLAB toolbox CVX, developed at Stanford University, cf. [CVXR
     home page](https://cvxr.rbind.io) .)
     
--   The `r pkg("optimizeR")` package provides a unified framework for 
-    representing the inputs and outputs of different optimizers in R.
+-   The `r pkg("optimizeR")` package provides functions to simplify
+    creating wrapper functions around general purpose continuous solvers.
 
 ### General Purpose Continuous Solvers
 
