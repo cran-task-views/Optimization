@@ -169,9 +169,6 @@ routines. \[RGA, QN\]
     spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
     argument as well as basic constraints.
--   Package `r pkg("SCOR")` solves optimization problems
-    under the constraint that the combined parameters lie on the surface
-    of a unit hypersphere.
 -   `r pkg("GrassmannOptim")` is a package for Grassmann
     manifold optimization. The implementation uses gradient-based
     algorithms and embeds a stochastic gradient method for global
@@ -246,9 +243,6 @@ routines. \[RGA, QN\]
     projection and quadratic programming, estimation and inference for
     constrained parametric regression, and shape-restricted regression
     problems. \[QP\]
--   `r pkg("LowRankQP")` primal/dual interior point method
-    solving quadratic programming problems (especially for semidefinite
-    quadratic forms). \[IPM, QP\]
 -   The COIN-OR project 'qpOASES' implements a reliable QP solver,
     even when tackling semi-definite or degenerated QP problems; it is
     particularly suited for model predictive control (MPC) applications;
@@ -614,8 +608,7 @@ websites for more information.
     integer solutions of linear Diophantine equations, resp. all
     solutions of knapsack, subset sum, and additive partitioning
     problems (based on a generating functions approach).
--   `r pkg("matchingR")` and
-    `r pkg("matchingMarkets")` implement the Gale-Shapley
+-   `r pkg("matchingR")` implements the Gale-Shapley
     algorithm for the stable marriage and the college admissions
     problem, the stable roommates and the house allocation problem.
     \[COP, MM\]
@@ -741,7 +734,7 @@ code (if available) are given in brackets.
     `r pkg("Rmosek")`, `r pkg("Rsymphony")`,
     `r pkg("highs")`
 -   QP (Quadratic programming, 90C20): `r pkg("kernlab")`,
-    `r pkg("limSolve")`, `r pkg("LowRankQP")`,
+    `r pkg("limSolve")`,
     `r pkg("quadprog")`, `r pkg("Rcplex")`,
     `r pkg("Rmosek")`, `r pkg("highs")`
 -   SDP (Semidefinite programming, 90C22): `r pkg("Rcsdp")`,
@@ -760,7 +753,7 @@ code (if available) are given in brackets.
 -   GRAPH (Programming involving graphs or networks, 90C35):
     `r pkg("igraph")`, `r pkg("sna")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
-    `r pkg("glpkAPI")`, `r pkg("LowRankQP")`,
+    `r pkg("glpkAPI")`,
     `r pkg("quantreg")`, `r pkg("Rcplex")`
 -   RGA (Methods of reduced gradient type, 90C52): stats ( `optim()`),
     `r pkg("gsl")`
