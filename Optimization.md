@@ -3,11 +3,11 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-06-15
+version: 2023-06-18
 source: https://github.com/cran-task-views/Optimization/
 ---
 
-This CRAN Task View contains a list of packages which offer facilities
+This CRAN Task View contains a list of packages that offer facilities
 for solving optimization problems. Although every regression model in
 statistics solves an optimization problem, they are not part of this
 view. If you are looking for regression methods, the following views
@@ -18,7 +18,7 @@ will also contain useful starting points:
 The focus of this task view is on **Optimization
 Infrastructure Packages**, **General Purpose Continuous
 Solvers**, **Mathematical Programming Solvers**, **Specific
-Applications in Optimization**, or **Multi Objective Optimization**.
+Applications in Optimization**, or **Multi-Objective Optimization**.
 
 Packages are categorized according to these sections.
 See also the "Related Links" and "Other Resources" sections at the end.
@@ -62,7 +62,7 @@ repository linked above.
 -   The package `r pkg("CVXR")` provides an object-oriented
     modeling language for Disciplined Convex Programming (DCP). It
     allows the user to formulate convex optimization problems in a
-    natural way following mathematical convention and DCP rules. The
+    natural way following mathematical conventions and DCP rules. The
     system analyzes the problem, verifies its convexity, converts it
     into a canonical form, and hands it off to an appropriate solver
     such as ECOS or SCS to obtain the solution. (CVXR is derived from
@@ -80,7 +80,7 @@ one-dimensional unconstrained function optimization there is
 Function `optim()` provides an implementation of the
 Broyden-Fletcher-Goldfarb-Shanno (BFGS) method, bounded BFGS, conjugate
 gradient (CG), Nelder-Mead, and simulated annealing (SANN) optimization
-methods. It utilizes gradients, if provided, for faster convergence.
+methods. It utilizes gradients if provided, for faster convergence.
 Typically it is used for unconstrained optimization but includes an
 option for box-constrained optimization.
 
@@ -128,7 +128,7 @@ routines. \[RGA, QN\]
 -   `r pkg("stochQN")` provides implementations of
     stochastic, limited-memory quasi-Newton optimizers, similar in
     spirit to the LBFGS. It includes an implementation of online LBFGS,
-    stochastic quasi-Newton and adaptive quasi-Newton.
+    stochastic quasi-Newton, and adaptive quasi-Newton.
 -   `r pkg("nonneg.cg")` realizes a conjugate-gradient based
     method to minimize functions subject to all variables being
     non-negative.
@@ -345,8 +345,8 @@ or getting stuck in local solutions.
     toolbox SDPT3. Includes problems such as the nearest correlation
     matrix, D-optimal experimental design, Distance Weighted
     Discrimination, or the maximum cut problem.
--   `r pkg("cccp")` contains routines for solving cone
-    constrained convex problems by means of interior-point methods. The
+-   `r pkg("cccp")` contains routines for solving cone-constrained
+    convex problems by means of interior-point methods. The
     implemented algorithms are partially ported from CVXOPT, a Python
     module for convex optimization
 -   CSDP is a library of routines that implements a primal-dual barrier
@@ -370,7 +370,7 @@ or getting stuck in local solutions.
     Rcpp) of the same `DEoptim()` function.
 -   `r pkg("DEoptimR")` provides an implementation of the
     jDE variant of the differential evolution stochastic algorithm for
-    nonlinear programming problems (It allows to handle constraints in a
+    nonlinear programming problems (It allows handling constraints in a
     flexible manner.)
 -   The `r pkg("CEoptim")` package implements a
     cross-entropy optimization technique that can be applied to
@@ -382,7 +382,7 @@ or getting stuck in local solutions.
     a large number of optima.
 -   `r pkg("GA")` provides functions for optimization using
     Genetic Algorithms in both, the continuous and discrete case. This
-    package allows to run corresponding optimization tasks in parallel.
+    package allows running corresponding optimization tasks in parallel.
 -   In package `r pkg("gafit")` `gafit()` uses a genetic algorithm approach
     to find the minimum of a one-dimensional function.
 -   Package `r pkg("genalg")` contains `rbga()`, an
@@ -393,7 +393,7 @@ or getting stuck in local solutions.
     minimization/maximization problems by combining evolutionary
     algorithms with a derivative-based (quasi-Newtonian) approach.
 -   Machine coded genetic algorithm (MCGA) provided by package
-    `r pkg("mcga")` is a tool which solves optimization
+    `r pkg("mcga")` is a tool that solves optimization
     problems based on byte representation of variables.
 -   A particle swarm optimizer (PSO) is implemented in package
     `r pkg("pso")`, and also in
@@ -546,11 +546,11 @@ corresponding libraries have to be installed separately.
     offers a mixed integer optimizer to solve difficult mixed integer
     programs including (possibly non-convex) MIQCP. Note that CPLEX is
     **not free** and you have to get a license. Academics will receive a
-    free licence upon request. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
+    free license upon request. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
 -   Package `r pkg("Rmosek")` offers an interface to the
-    commercial optimizer from [MOSEK](https://www.mosek.com/) . It
+    commercial optimizer from [MOSEK](https://www.mosek.com/). It
     provides dual/primal simplex optimizers as well as a barrier
-    optimizer. In addition to solving LP and QP problems this solver can
+    optimizer. In addition to solving LP and QP problems, this solver can
     handle SOCP and quadratically constrained programming (QPQC) tasks.
     Furthermore, it offers a mixed integer optimizer to solve difficult
     mixed integer programs (MILP, MISOCP, etc.). You have to get a
@@ -582,9 +582,9 @@ websites for more information.
     user to solve the linear sum assignment problem (LSAP) using an
     efficient C implementation of the Hungarian algorithm. \[SPLP\]
 -   `r pkg("FLSSS")` provides multi-threaded solvers for
-    fixed-size single and multi dimensional subset sum problems with
+    fixed-size single and multi-dimensional subset sum problems with
     optional constraints on target sum and element range, fixed-size
-    single and multi dimensional knapsack problems, binary knapsack
+    single and multi-dimensional knapsack problems, binary knapsack
     problems and generalized assignment problems via exact algorithms or
     metaheuristics.
 -   Package `r pkg("qap")` solves Quadratic Assignment
@@ -612,7 +612,7 @@ websites for more information.
     algorithm for the stable marriage and the college admissions
     problem, the stable roommates and the house allocation problem.
     \[COP, MM\]
--   Package r pkg("optmatch") provides routines for solving matching problems
+-   Package `r pkg("optmatch")` provides routines for solving matching problems
     by translating them into minimum-cost flow problems and then solving them
     optimally by the RELAX-IV codes of Bertsekas and Tseng (free for research).
 -   Package `r pkg("TSP")` provides basic infrastructure for
@@ -628,14 +628,14 @@ websites for more information.
     problems by modifying existing 'MiniZinc' models, and also by
     creating their own models.
 
-### Multi Objective Optimization
+### Multi-Objective Optimization
 
 -   Function `caRamel` in package `r pkg("caRamel")` is a
     multi-objective optimizer, applying a combination of the
     multi-objective evolutionary annealing-simplex (MEAS) method and the
     non-dominated sorting genetic algorithm (NGSA-II); it was initially
     developed for the calibration of hydrological models.
--   Multi-criteria optimization problems can be solved using package
+-   Multi-criteria optimization problems can be solved using the package
     `r pkg("mco")` which implements genetic algorithms.
     \[MOP\]
 -   `r pkg("GPareto")` provides multi-objective optimization
@@ -643,7 +643,7 @@ websites for more information.
     quantification methods.
 -   The `r pkg("rmoo")` package is a framework for multi-
     and many-objective optimization, allowing to work with
-    representation of real numbers, permutations and binaries, offering
+    representation of real numbers, permutations, and binaries, offering
     a high range of configurations.
 
 ### Specific Applications in Optimization
@@ -662,11 +662,11 @@ websites for more information.
     choose a subset of a fixed size k from the integers 1:n, such that a
     user- supplied objective function is minimized at that subset.
 -   `r pkg("copulaedas")` provides a platform where
-    'estimation of distribution algorithms' (EDA) based on copulas can
+    'estimation of distribution algorithms (EDA) based on copulas can
     be implemented and studied; the package offers various EDAs, and
     newly developed EDAs can be integrated by extending an S4 class.
 -   `r pkg("tabuSearch")` implements a tabu search algorithm
-    for optimizing binary strings, maximizing a user defined target
+    for optimizing binary strings, maximizing a user-defined target
     function, and returns the best (i.e. maximizing) binary
     configuration found.
 -   Besides functionality for solving general isotone regression
@@ -682,17 +682,17 @@ websites for more information.
 -   The Sequential Parameter Optimization Toolbox
     `r pkg("SPOT")` provides a set of tools for model-based
     optimization and tuning of algorithms. It includes surrogate models
-    and design of experiment approaches.
+    and the design of experiment approaches.
 -   The `r pkg("desirability")` package contains S3 classes
     for multivariate optimization using the desirability function
     approach of Harrington (1965).
 -   Package `r pkg("sna")` contains the function `lab.optimize()`
-    which is the front-end to a series of heuristic routines for optimizing
-    some bivariate graph statistic. \[GRAPH\]
+    which is the front end to a series of heuristic routines for optimizing
+    some bivariate graph statistics. \[GRAPH\]
 -   `r pkg("maxLik")` adds a likelihood-specific layer on
     top of a number of maximization routines like
     Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It
-    includes summary and print methods which extract the standard errors
+    includes summary and print methods that extract the standard errors
     based on the Hessian matrix and allows easy swapping of maximization
     algorithms.
 
