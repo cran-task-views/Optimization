@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-06-18
+version: 2023-07-27
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -57,7 +57,7 @@ repository linked above.
     from the underlying solver. The approach allows for easy switching
     between solvers and thus enhances comparability. For more
     information see the [ROI home
-    page](http://roi.r-forge.r-project.org/) .
+    page](http://roi.r-forge.r-project.org/).
 
 -   The package `r pkg("CVXR")` provides an object-oriented
     modeling language for Disciplined Convex Programming (DCP). It
@@ -67,10 +67,7 @@ repository linked above.
     into a canonical form, and hands it off to an appropriate solver
     such as ECOS or SCS to obtain the solution. (CVXR is derived from
     the MATLAB toolbox CVX, developed at Stanford University, cf. [CVXR
-    home page](https://cvxr.rbind.io) .)
-    
--   The `r pkg("optimizeR")` package provides functions to simplify
-    creating wrapper functions around general purpose continuous solvers.
+    home page](https://cvxr.rbind.io).)
 
 ### General Purpose Continuous Solvers
 
@@ -214,6 +211,8 @@ routines. \[RGA, QN\]
     optimization, which optimizes a function jointly over all parameters 
     by alternately performing restricted optimization over individual 
     parameter subsets.
+-   The `r pkg("optimizeR")` package provides functions to simplify
+    creating wrapper functions around general-purpose continuous solvers.
 
 ### Quadratic Optimization
 
