@@ -539,9 +539,9 @@ corresponding libraries have to be installed separately.
 
 -   Package `r pkg("Rcplex")` provides an interface to the
     IBM [CPLEX
-    Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/)
-    . CPLEX provides dual/primal simplex optimizers as well as a barrier
-    optimizer for solving large scale linear and quadratic programs. It
+    Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/).
+    CPLEX provides dual/primal simplex optimizers as well as a barrier
+    optimizer for solving large-scale linear and quadratic programs. It
     offers a mixed integer optimizer to solve difficult mixed integer
     programs including (possibly non-convex) MIQCP. Note that CPLEX is
     **not free** and you have to get a license. Academics will receive a
@@ -555,22 +555,14 @@ corresponding libraries have to be installed separately.
     mixed integer programs (MILP, MISOCP, etc.). You have to get a
     license, but Academic licenses are free of charge. \[LP, IP, BP, QP,
     MILP, MIQP, IPM\]
--   The `r pkg("localsolver")` package provides an interface
-    to the hybrid mathematical programming software
-    [LocalSolver](http://www.localsolver.com/) from Innovation 24,
-    combining exact and heuristic techniques. See their website for more
-    details. (Academic licenses are available on request.) \[LP, MIP,
-    QP, NLP, HEUR\]
--   'Gurobi Optimization' ships an R package with its software that
-    allows to call its solvers from R. Gurobi provides powerful solvers
-    for LP, MIP, QP, MIQP, SOCP, and MISOCP models. See their website
-    for more details. (Academic licenses are available on request.)
-    \[LP, QP, MILP, MIQP\]
+-   [Gurobi Optimization](https://www.gurobi.com/) ships an R package with its software
+    that allows for calling its solvers from R. Gurobi provides powerful solvers
+    for LP, MIP, QP, MIQP, SOCP, and MISOCP models. See their website for more details.
+     (Academic licenses are available on request.) \[LP, QP, MILP, MIQP\]
 
-Some more commercial companies, e.g. 'Artelys Knitro' or 'FICO Xpress
-Optimization', have R interfaces that are installed while the software
-gets installed. Trial licenses are available, see the corresponding
-websites for more information.
+Some more commercial companies, e.g. 'LocalSolver', 'Artelys Knitro', or 'FICO Xpress
+Optimization', have R interfaces that are installed while the software gets installed.
+Trial licenses are available, see the corresponding websites for more information.
 
 ### Combinatorial Optimization
 
