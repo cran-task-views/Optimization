@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-07-27
+version: 2023-08-06
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -574,12 +574,14 @@ websites for more information.
 
 ### Combinatorial Optimization
 
--   Package `r pkg("adagio")` provides R functions for
-    single and multiple knapsack problems, and solves subset sum and
-    assignment tasks.
+-   Package `r pkg("adagio")` provides R functions for single and multiple
+    knapsack and bin packing problems, solves subset sum, maximal sum subarray,
+    empty rectangle and set cover problems, and finds Hamiltonian paths in graphs.
 -   In package `r pkg("clue")` `solve_LSAP()` enables the
     user to solve the linear sum assignment problem (LSAP) using an
-    efficient C implementation of the Hungarian algorithm. \[SPLP\]
+    efficient C implementation of the Hungarian algorithm.
+    And function `LAPJV()` from package `r pkg("TreeDist")` implements the Jonker-Volgenant
+    algorithm to solve the Linear Sum Assignment Problem (LSAP) even faster.\[SPLP\]
 -   `r pkg("FLSSS")` provides multi-threaded solvers for
     fixed-size single and multi-dimensional subset sum problems with
     optional constraints on target sum and element range, fixed-size
