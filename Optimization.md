@@ -457,6 +457,9 @@ or getting stuck in local solutions.
     functions.
 -   `r pkg("RCEIM")` implements a stochastic heuristic
     method for performing multi-dimensional function optimization.
+-   Package `r pkg("graDiEnt")` implements the Stochastic Quasi-Gradient Differential Evolution
+    (SQG-DE) optimization algorithm; being derivative-free it combines the robustness of the
+    population-based "Differential Evolution" with the efficiency of gradient-based optimization.
 
 ### [Mathematical Programming Solvers](#mathprog)
 
@@ -539,8 +542,7 @@ of this task view.
 This section surveys interfaces to commercial solvers. Typically, the
 corresponding libraries have to be installed separately.
 
--   Package `r pkg("Rcplex")` provides an interface to the
-    IBM [CPLEX
+-   Package `r pkg("Rcplex")` provides an interface to the IBM [CPLEX
     Optimizer](https://www-01.ibm.com/software/commerce/optimization/cplex-optimizer/).
     CPLEX provides dual/primal simplex optimizers as well as a barrier
     optimizer for solving large-scale linear and quadratic programs. It
@@ -703,7 +705,7 @@ code (if available) are given in brackets.
     `r pkg("Rglpk")`, `r pkg("Rmosek")`,
     `r pkg("Rsymphony")`, `r pkg("highs")`
 -   GO (Global Optimization): `r pkg("DEoptim")`,
-    `r pkg("DEoptimR")`, `r pkg("GenSA")`,
+    `r pkg("DEoptimR")`, `r pkg("graDiEnt")`, `r pkg("GenSA")`,
     `r pkg("GA")`, `r pkg("pso")`,
     `r pkg("rgenoud")`, `r pkg("cmaes")`,
     `r pkg("nloptr")`, `r pkg("NMOF")`,
@@ -756,7 +758,6 @@ code (if available) are given in brackets.
 -   DF (Derivative-free methods, 90C56): `r pkg("dfoptim")`,
     `r pkg("minqa")`, `r pkg("nloptr")`, `r pkg("optimsimplex")`,
     `r pkg("neldermead")`
-
 
 
 ### Links
