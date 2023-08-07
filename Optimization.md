@@ -348,6 +348,10 @@ or getting stuck in local solutions.
     semidefinite programs, (SDPs), exponential cone programs (ECPs), and
     power cone programs (PCPs), or problems with any combination of
     those cones.
+-   Package `r pkg("clarabel")` provides an interior point numerical solver
+    for convex optimization problems using a novel homogeneous embedding that solves
+    linear programs (LPs), quadratic programs (QPs), second-order cone programs (SOCPs),
+    semidefinite programs (SDPs), and problems with exponential and power cone constraints.
 -   `r pkg("sdpt3r")` solves general semidefinite Linear
     Programming problems, using an R implementation of the MATLAB
     toolbox SDPT3. Includes problems such as the nearest correlation
