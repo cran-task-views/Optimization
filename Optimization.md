@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-08-06
+version: 2023-08-07
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -15,13 +15,22 @@ will also contain useful starting points:
 `r view("MachineLearning")`, 
 `r view("Econometrics")`, 
 `r view("Robust")`
-The focus of this task view is on **Optimization
-Infrastructure Packages**, **General Purpose Continuous
-Solvers**, **Mathematical Programming Solvers**, **Specific
-Applications in Optimization**, or **Multi-Objective Optimization**.
-
-Packages are categorized according to these sections.
+Packages are categorized according to the following sections.
 See also the "Related Links" and "Other Resources" sections at the end.
+
+**Contents**
+
+* [Optimization Infrastructure Packages](#infrastr)
+* [General Purpose Continuous Solvers](#general)
+* [Quadratic Optimization](#quadratic)
+* [Test and Benchmarking Collections](#benchmark)
+* [Least-Squares Problems](#leastsquares)
+* [Semidefinite and Convex Solvers](#convex)
+* [Global and Stochastic Optimization](#global)
+* [Mathematical Programming Solvers](#mathprog)
+* [Combinatorial Optimization](#discrete)
+* [Multi Objective Optimization](#multiobj)
+* [Specific Applications in Optimization](#specific)
 
 Many packages provide functionality for more than one of the subjects
 listed at the end of this task view. E.g., mixed integer linear
@@ -37,7 +46,7 @@ the maintainer via e-mail or submit an issue or pull request in the GitHub
 repository linked above.
 
 
-### Optimization Infrastructure Packages
+### [Optimization Infrastructure Packages](#infrastr)
 
 -   The `r pkg("optimx")` package provides a replacement and
     extension of the `optim()` function in Base R with a call to several
@@ -69,7 +78,7 @@ repository linked above.
     the MATLAB toolbox CVX, developed at Stanford University, cf. [CVXR
     home page](https://cvxr.rbind.io).)
 
-### General Purpose Continuous Solvers
+### [General Purpose Continuous Solvers](#general)
 
 Package stats offers several general purpose optimization routines. For
 one-dimensional unconstrained function optimization there is
@@ -214,7 +223,7 @@ routines. \[RGA, QN\]
 -   The `r pkg("optimizeR")` package provides functions to simplify
     creating wrapper functions around general-purpose continuous solvers.
 
-### Quadratic Optimization
+### [Quadratic Optimization](#quadratic)
 
 -   In package `r pkg("quadprog", priority = "core")`
     `solve.QP()` solves quadratic programming problems with linear
@@ -254,7 +263,7 @@ routines. \[RGA, QN\]
     optimization functions, subject to equality and/or inequality
     constraints. \[LP, QP\]
 
-### Optimization Test Functions
+### [Test and Benchmarking Collections](#benchmark)
 
 -   Objective functions for benchmarking the performance of global
     optimization algorithms can be found in
@@ -276,7 +285,7 @@ routines. \[RGA, QN\]
     implements 35 of the test functions by More, Garbow, and Hillstom,
     useful for testing unconstrained optimization methods.
 
-### Least-Squares Problems
+### [Least-Squares Problems](#leastsquares)
 
 Function `solve.qr()` (resp. `qr.solve()`) handles over- and
 under-determined systems of linear equations, returning least-squares
@@ -327,7 +336,7 @@ or getting stuck in local solutions.
     inequality constraints), i.e. QR-based, by using `r pkg("nnls")`.
     Non-linear iterations are globalized by the backtracking method.
 
-### Semidefinite and Convex Solvers
+### [Semidefinite and Convex Solvers](#convex)
 
 -   Package `r pkg("ECOSolveR")` provides an interface to
     the Embedded COnic Solver (ECOS), a well-known, efficient, and
@@ -354,14 +363,8 @@ or getting stuck in local solutions.
 -   The DSDP library implements an interior-point method for
     semidefinite programming with primal and dual solutions; it is
     interfaced in package `r pkg("Rdsdp")`. \[SDP\]
--   Package `r pkg("Rmosek")` provides an interface to the
-    (commercial) MOSEK optimization library for large-scale LP, QP, and
-    MIP problems, with emphasis on (nonlinear) conic, semidefinite, and
-    convex tasks; academic licenses are available. (An article on Rmosek
-    appeared in the JSS special issue on Optimization with R, see
-    below.) \[SDP, CP\]
 
-### Global and Stochastic Optimization
+### [Global and Stochastic Optimization](#global)
 
 -   Package `r pkg("DEoptim", priority = "core")` provides a
     global optimizer based on the Differential Evolution algorithm.
@@ -401,8 +404,7 @@ or getting stuck in local solutions.
     available from [rforge.net/ppso](https://www.rforge.net/ppso/) .
 -   Package `r pkg("hydroPSO")` implements the Standard
     Particle Swarm Optimization (SPSO) algorithm; it is parallel-capable
-    and includes several fine-tuning options and post-processing
-    functions.
+    and includes several fine-tuning options and post-processing functions.
 -   `r github("floybix/hydromad")` (on Github) contains the
     `SCEoptim` function for Shuffled Compex Evolution (SCE)
     optimization, an evolutionary algorithm, combined with a simplex
@@ -456,7 +458,7 @@ or getting stuck in local solutions.
 -   `r pkg("RCEIM")` implements a stochastic heuristic
     method for performing multi-dimensional function optimization.
 
-### Mathematical Programming Solvers
+### [Mathematical Programming Solvers](#mathprog)
 
 This section provides an overview of open source as well as commercial
 optimizers. Which type of mathematical programming problem can be solved
@@ -546,15 +548,12 @@ corresponding libraries have to be installed separately.
     programs including (possibly non-convex) MIQCP. Note that CPLEX is
     **not free** and you have to get a license. Academics will receive a
     free license upon request. \[LP, IP, BP, QP, MILP, MIQP, IPM\]
--   Package `r pkg("Rmosek")` offers an interface to the
-    commercial optimizer from [MOSEK](https://www.mosek.com/). It
-    provides dual/primal simplex optimizers as well as a barrier
-    optimizer. In addition to solving LP and QP problems, this solver can
-    handle SOCP and quadratically constrained programming (QPQC) tasks.
-    Furthermore, it offers a mixed integer optimizer to solve difficult
-    mixed integer programs (MILP, MISOCP, etc.). You have to get a
-    license, but Academic licenses are free of charge. \[LP, IP, BP, QP,
-    MILP, MIQP, IPM\]
+-   Package `r pkg("Rmosek")` provides an interface to the (commercial) MOSEK optimization library
+    for large-scale LP, QP, and MIP problems, with emphasis on (nonlinear) conic, semidefinite,
+    and convex tasks. The solver can handle SOCP and quadratically constrained programming (QPQC)
+    tasks and offers to solve difficult mixed integer programs.
+    (Academic licenses are available free of charge. An article on Rmosek appeared in the
+    JSS special issue on Optimization with R, see below.) [LP, IP, BP, QP, MILP, MIQP, IPM]
 -   [Gurobi Optimization](https://www.gurobi.com/) ships an R package with its software
     that allows for calling its solvers from R. Gurobi provides powerful solvers
     for LP, MIP, QP, MIQP, SOCP, and MISOCP models. See their website for more details.
@@ -564,7 +563,7 @@ Some more commercial companies, e.g. 'LocalSolver', 'Artelys Knitro', or 'FICO X
 Optimization', have R interfaces that are installed while the software gets installed.
 Trial licenses are available, see the corresponding websites for more information.
 
-### Combinatorial Optimization
+### [Combinatorial Optimization](#discrete)
 
 -   Package `r pkg("adagio")` provides R functions for single and multiple
     knapsack and bin packing problems, solves subset sum, maximal sum subarray,
@@ -621,7 +620,7 @@ Trial licenses are available, see the corresponding websites for more informatio
     problems by modifying existing 'MiniZinc' models, and also by
     creating their own models.
 
-### Multi-Objective Optimization
+### [Multi Objective Optimization](#multiobj)
 
 -   Function `caRamel` in package `r pkg("caRamel")` is a
     multi-objective optimizer, applying a combination of the
@@ -639,7 +638,7 @@ Trial licenses are available, see the corresponding websites for more informatio
     representation of real numbers, permutations, and binaries, offering
     a high range of configurations.
 
-### Specific Applications in Optimization
+### [Specific Applications in Optimization](#specific)
 
 -   The data cloning algorithm is a global optimization approach and a
     variant of simulated annealing which has been implemented in package
