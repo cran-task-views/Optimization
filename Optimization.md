@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-08-07
+version: 2023-08-08
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -606,7 +606,8 @@ Trial licenses are available, see the corresponding websites for more informatio
     integer solutions of linear Diophantine equations, resp. all
     solutions of knapsack, subset sum, and additive partitioning
     problems (based on a generating functions approach).
--   `r pkg("matchingR")` implements the Gale-Shapley
+-   `r pkg("matchingR")` and
+    `r pkg("matchingMarkets")` implement the Gale-Shapley
     algorithm for the stable marriage and the college admissions
     problem, the stable roommates and the house allocation problem.
     \[COP, MM\]
