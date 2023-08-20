@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-08-17
+version: 2023-08-19
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -236,6 +236,9 @@ routines. \[RGA, QN\]
     the University of Oxford Control Group; it solves sparse convex
     quadratic programming problems with optional equality and inequality
     constraints efficiently. \[QP\]
+-   Package `r pkg("piqp")` implements an interface to the Proximal Interior Point
+     Quadratic Programming solver, cf. [PIQP](https://predict-epfl.github.io/piqp/);
+    it combines an infeasible interior point method with the proximal method of multipliers. \[QP\]
 -   `r pkg("qpmadr")` interfaces the 'qpmad' software and
     solves quadratic programming (QP) problems with linear inequality,
     equality and bound constraints, using the method by Goldfarb and
@@ -256,6 +259,8 @@ routines. \[RGA, QN\]
     particularly suited for model predictive control (MPC) applications;
     the ROI plugin `r pkg("ROI.plugin.qpoases")` makes it
     accessible for R users. \[QP\]
+-   `r pkg("LowRankQP")` solves low-rank (and semi-definite) Quadratic Programming problems
+    with linear constraints by implementing a primal-dual interior point method. \[QP\]
 -   `r pkg("mixsqp")` implements the "mix-SQP" algorithm,
     based on sequential quadratic programming (SQP), for maximum
     likelihood estimations in finite mixture models.
