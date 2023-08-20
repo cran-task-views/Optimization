@@ -261,9 +261,6 @@ routines. \[RGA, QN\]
     accessible for R users. \[QP\]
 -   `r pkg("LowRankQP")` solves low-rank (and semi-definite) Quadratic Programming problems
     with linear constraints by implementing a primal-dual interior point method. \[QP\]
--   `r pkg("mixsqp")` implements the "mix-SQP" algorithm,
-    based on sequential quadratic programming (SQP), for maximum
-    likelihood estimations in finite mixture models.
 -   `r pkg("limSolve")` offers to solve linear or quadratic
     optimization functions, subject to equality and/or inequality
     constraints. \[LP, QP\]
@@ -652,11 +649,18 @@ Trial licenses are available, see the corresponding websites for more informatio
 
 ### Specific Applications in Optimization
 
+-   `r pkg("maxLik")` adds a likelihood-specific layer on top of a number of maximization routines
+    like Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It includes summary and
+    print methods that extract the standard errors based on the Hessian matrix and allows for
+    easy swapping of maximization algorithms.
 -   The data cloning algorithm is a global optimization approach and a
     variant of simulated annealing which has been implemented in package
-    `r pkg("dclone")`. The package provides low level
-    functions for implementing maximum likelihood estimating procedures
-    for complex models.
+    `r pkg("dclone")`. The package provides low-level functions for 
+    implementing maximum likelihood estimating procedures for complex models.
+-   `r pkg("mixsqp")` implements the "mix-SQP" algorithm, based on sequential quadratic
+    programming (SQP), for maximum likelihood estimations in finite mixture models.
+    Packages `r pkg("nspmix")` and `r pkg("REBayes")` solve for nonparametric maximum
+    likelihood estimators of mixture models.
 -   The `r pkg("irace")` package implements automatic
     configuration procedures for optimizing the parameters of other
     optimization algorithms, that is (offline) tuning their parameters
@@ -693,12 +697,6 @@ Trial licenses are available, see the corresponding websites for more informatio
 -   Package `r pkg("sna")` contains the function `lab.optimize()`
     which is the front end to a series of heuristic routines for optimizing
     some bivariate graph statistics. \[GRAPH\]
--   `r pkg("maxLik")` adds a likelihood-specific layer on
-    top of a number of maximization routines like
-    Brendt-Hall-Hall-Hausman (BHHH) and Newton-Raphson among others. It
-    includes summary and print methods that extract the standard errors
-    based on the Hessian matrix and allows easy swapping of maximization
-    algorithms.
 
 ### Classification According to Subject
 
