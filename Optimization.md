@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-08-19
+version: 2023-09-12
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -118,12 +118,6 @@ routines. \[RGA, QN\]
     optimization, combining a trust region with line search approaches.
     The interface of `ucminf()` is designed for easy interchange with
     `optim()`.\[QN\]
--   The following packages implement optimization routines in pure R,
-    for nonlinear functions with bounds constraints:
-    `r pkg("Rcgmin")`: gradient function minimization
-    similar to GC; `r pkg("Rvmmin")`: variable metric
-    function minimization; `r pkg("Rtnmin")`: truncated
-    Newton function minimization.
 -   `r pkg("mize")` implements optimization algorithms in
     pure R, including conjugate gradient (CG),
     Broyden-Fletcher-Goldfarb-Shanno (BFGS) and limited memory BFGS
