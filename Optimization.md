@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-09-12
+version: 2023-09-19
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -169,10 +169,6 @@ routines. \[RGA, QN\]
     spectral projected gradient method for large scale optimization with
     simple constraints. It takes a nonlinear objective function as an
     argument as well as basic constraints.
--   `r pkg("GrassmannOptim")` is a package for Grassmann
-    manifold optimization. The implementation uses gradient-based
-    algorithms and embeds a stochastic gradient method for global
-    search.
 -   `r pkg("ManifoldOptim")` is an R interface to the
     'ROPTLIB' optimization library. It optimizes real-valued functions
     over manifolds such as Stiefel, Grassmann, and Symmetric Positive
@@ -448,10 +444,6 @@ or getting stuck in local solutions.
     latter two methods also work for discrete optimization problems, as
     does the implementation of a genetic algorithm that is included in
     the package.
--   `r pkg("SACOBRA")` is a package for numeric constrained
-    optimization of expensive black-box functions under severely limited
-    budgets; it implements an extension of the COBRA algorithm with
-    initial design generation and self-adjusting random restarts.
 -   `r pkg("OOR")` implements optimistic optimization
     methods for global optimization of deterministic or stochastic
     functions.
