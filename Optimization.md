@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-09-19
+version: 2023-09-28
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -763,6 +763,7 @@ code (if available) are given in brackets.
 -   Textbook: [Modern Optimization With R (P. Cortez)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
 -   Textbook: [Numerical Optimization (Nocedal, Wright)](https://link.springer.com/book/10.1007/978-0-387-40065-5)
 -   Cheatsheet: [Base R Optim Cheatsheet](https://github.com/hwborchers/CheatSheets/blob/main/Base%20R%20Optim%20Cheatsheet.pdf)
+-   Cheatsheet: [Selected Optimization Solvers](https://hwborchers.lima-city.de/Optimist/selectedSolvers/)
 -   Tutorial: [CVXR Tutorial](https://github.com/bnaras/cvxr_tutorial) and [Examples](https://cvxr.rbind.io/examples/)
 -   Manual: [NLopt Manual (S. Johnson)](https://nlopt.readthedocs.io/en/latest/NLopt_manual/)
 -   [COIN-OR Project](http://www.coin-or.org/)
