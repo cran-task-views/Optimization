@@ -443,7 +443,8 @@ or getting stuck in local solutions.
     and threshold accepting (a variant of simulated annealing). The
     latter two methods also work for discrete optimization problems, as
     does the implementation of a genetic algorithm that is included in
-    the package.
+    the package. The `r pkg("neighbours")` package provides tools
+    for constructing neighbourhood functions for local-search methods. 
 -   `r pkg("OOR")` implements optimistic optimization
     methods for global optimization of deterministic or stochastic
     functions.
