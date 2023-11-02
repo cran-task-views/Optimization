@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-09-28
+version: 2023-11-02
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -210,8 +210,6 @@ routines. \[RGA, QN\]
     optimization, which optimizes a function jointly over all parameters 
     by alternately performing restricted optimization over individual 
     parameter subsets.
--   The `r pkg("optimizeR")` package provides functions to simplify
-    creating wrapper functions around general-purpose continuous solvers.
 
 ### Quadratic Optimization
 
