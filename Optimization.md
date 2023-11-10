@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-09-28
+version: 2023-11-10
 source: https://github.com/cran-task-views/Optimization/
 ---
 
