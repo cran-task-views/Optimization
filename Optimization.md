@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2023-11-02
+version: 2023-11-10
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -210,6 +210,8 @@ routines. \[RGA, QN\]
     optimization, which optimizes a function jointly over all parameters 
     by alternately performing restricted optimization over individual 
     parameter subsets.
+-   The `r pkg("optimizeR")` package provides functions to simplify
+    creating wrapper functions around general-purpose continuous solvers.
 
 ### Quadratic Optimization
 
@@ -441,7 +443,9 @@ or getting stuck in local solutions.
     and threshold accepting (a variant of simulated annealing). The
     latter two methods also work for discrete optimization problems, as
     does the implementation of a genetic algorithm that is included in
-    the package.
+    the package. The `r pkg("neighbours")` package provides tools
+    for constructing neighbourhood functions for local-search methods, which
+    e.g., can be used in the pkg("NMOF")` package.
 -   `r pkg("OOR")` implements optimistic optimization
     methods for global optimization of deterministic or stochastic
     functions.
@@ -761,7 +765,7 @@ code (if available) are given in brackets.
 -   Textbook: [Modern Optimization With R (P. Cortez)](https://link.springer.com/book/10.1007/978-3-030-72819-9)
 -   Textbook: [Numerical Optimization (Nocedal, Wright)](https://link.springer.com/book/10.1007/978-0-387-40065-5)
 -   Cheatsheet: [Base R Optim Cheatsheet](https://github.com/hwborchers/CheatSheets/blob/main/Base%20R%20Optim%20Cheatsheet.pdf)
--   Cheatsheet: [Recommended Optimization Solvers](https://hwborchers.lima-city.de/Optimist/selectedSolvers/)
+-   Cheatsheet: [Selected Optimization Solvers](https://hwborchers.lima-city.de/Optimist/selectedSolvers/)
 -   Tutorial: [CVXR Tutorial](https://github.com/bnaras/cvxr_tutorial) and [Examples](https://cvxr.rbind.io/examples/)
 -   Manual: [NLopt Manual (S. Johnson)](https://nlopt.readthedocs.io/en/latest/NLopt_manual/)
 -   [COIN-OR Project](http://www.coin-or.org/)
