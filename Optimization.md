@@ -398,9 +398,6 @@ or getting stuck in local solutions.
     `r pkg("psoptim")`. Another (parallelized)
     implementation of the PSO algorithm can be found in package `ppso`
     available from [rforge.net/ppso](https://www.rforge.net/ppso/) .
--   Package `r pkg("hydroPSO")` implements the Standard
-    Particle Swarm Optimization (SPSO) algorithm; it is parallel-capable
-    and includes several fine-tuning options and post-processing functions.
 -   `r github("floybix/hydromad")` (on Github) contains the
     `SCEoptim` function for Shuffled Compex Evolution (SCE)
     optimization, an evolutionary algorithm, combined with a simplex
