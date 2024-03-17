@@ -173,10 +173,10 @@ routines. \[RGA, QN\]
     'ROPTLIB' optimization library. It optimizes real-valued functions
     over manifolds such as Stiefel, Grassmann, and Symmetric Positive
     Definite matrices.
--   Package `r pkg("gsl")` provides BFGS, conjugate
-    gradient, steepest descent, and Nelder-Mead algorithms. It uses a
-    "line search" approach via the function `multimin()`. It is based
-    on the GNU Scientific Library (GSL). \[RGA, QN\]
+-   The `r pkg("calibrar")` package  allows for general optimization
+    and parameter estimation of complex and stochastic models;
+    it combines various optimization solvers in a single interface,
+    all with the same syntax as optim() in Base R.
 -   An R port of the Scilab neldermead module is packaged in
     `r pkg("neldermead")` offering several direct search algorithms based
     on the simplex approach.
