@@ -672,10 +672,6 @@ Trial licenses are available, see the corresponding websites for more informatio
     `r pkg("rBayesianOptimization")` is an implementation of
     Bayesian global optimization with Gaussian Processes, for parameter
     tuning and optimization of hyperparameters.
--   The Sequential Parameter Optimization Toolbox
-    `r pkg("SPOT")` provides a set of tools for model-based
-    optimization and tuning of algorithms. It includes surrogate models
-    and the design of experiment approaches.
 -   The `r pkg("desirability")` package contains S3 classes
     for multivariate optimization using the desirability function
     approach of Harrington (1965).
