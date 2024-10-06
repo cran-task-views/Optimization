@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2024-07-05
+version: 2024-10-06
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -55,7 +55,8 @@ repository linked above.
     or many parameters. Function `optimr()` in this package extends the
     `optim()` function with the same syntax but more 'method' choices.
     Function `opm()` applies several solvers to a selected optimization
-    task and returns a dataframe of results for easy comparison.
+    task and returns a dataframe of results for easy comparison. For more
+    information see its [README](https://github.com/nashjc/optimx/blob/main/README.md).
 
 -   The R Optimization Infrastructure (`r pkg("ROI")`)
     package provides a framework for handling optimization problems in
