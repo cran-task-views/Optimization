@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2024-10-06
+version: 2025-02-05
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -345,11 +345,6 @@ or getting stuck in local solutions.
     for convex optimization problems using a novel homogeneous embedding that solves
     linear programs (LPs), quadratic programs (QPs), second-order cone programs (SOCPs),
     semidefinite programs (SDPs), and problems with exponential and power cone constraints.
--   `r pkg("sdpt3r")` solves general semidefinite Linear
-    Programming problems, using an R implementation of the MATLAB
-    toolbox SDPT3. Includes problems such as the nearest correlation
-    matrix, D-optimal experimental design, Distance Weighted
-    Discrimination, or the maximum cut problem.
 -   `r pkg("cccp")` contains routines for solving cone-constrained
     convex problems by means of interior-point methods. The
     implemented algorithms are partially ported from CVXOPT, a Python
