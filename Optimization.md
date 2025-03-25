@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2025-02-05
+version: 2025-03-25
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -644,10 +644,6 @@ Trial licenses are available, see the corresponding websites for more informatio
 -   Package `r pkg("kofnGA")` uses a genetic algorithm to
     choose a subset of a fixed size k from the integers 1:n, such that a
     user- supplied objective function is minimized at that subset.
--   `r pkg("copulaedas")` provides a platform where
-    'estimation of distribution algorithms (EDA) based on copulas can
-    be implemented and studied; the package offers various EDAs, and
-    newly developed EDAs can be integrated by extending an S4 class.
 -   `r pkg("tabuSearch")` implements a tabu search algorithm
     for optimizing binary strings, maximizing a user-defined target
     function, and returns the best (i.e. maximizing) binary
