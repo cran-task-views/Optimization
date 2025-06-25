@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2025-03-25
+version: 2025-06-25
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -562,6 +562,12 @@ Trial licenses are available, see the corresponding websites for more informatio
     efficient C implementation of the Hungarian algorithm.
     And function `LAPJV()` from package `r pkg("TreeDist")` implements the Jonker-Volgenant
     algorithm to solve the Linear Sum Assignment Problem (LSAP) even faster.\[SPLP\]
+-   `r pkg("FLSSS")` provides multi-threaded solvers for
+    fixed-size single and multi-dimensional subset sum problems with
+    optional constraints on target sum and element range, fixed-size
+    single and multi-dimensional knapsack problems, binary knapsack
+    problems and generalized assignment problems via exact algorithms or
+    metaheuristics.
 -   Package `r pkg("qap")` solves Quadratic Assignment
     Problems (QAP) applying a simulated annealing heuristics (other
     approaches will follow).
