@@ -328,6 +328,13 @@ or getting stuck in local solutions.
     Linearized problems are solved as LSI (linear least squares with
     inequality constraints), i.e. QR-based, by using `r pkg("nnls")`.
     Non-linear iterations are globalized by the backtracking method.
+-   Package `r pkg("CGNM")` implements the Cluster Gauss-Newton Method
+    for solving nonlinear least-squares problems. CGNM is designed to
+    identify multiple sets of parameters that fit given data equally well,
+    making it particularly suited for problems where alternative solutions
+    are of interest or when parameter identifiability is a focus.
+    It supplies functions to efficiently search for parameter sets and
+    provides diagnostics for the quality and diversity of discovered solutions.
 
 ### Semidefinite and Convex Solvers
 
@@ -621,6 +628,10 @@ Trial licenses are available, see the corresponding websites for more informatio
     and many-objective optimization, allowing to work with
     representation of real numbers, permutations, and binaries, offering
     a high range of configurations.
+-  `r pkg("moocore")` provides fast implementations of mathematical
+   operations and performance metrics for multi-objective optimization,
+   including filtering and ranking of dominated vectors according
+   to Pareto optimality, hypervolume metric.
 
 ### Specific Applications in Optimization
 
@@ -715,7 +726,7 @@ code (if available) are given in brackets.
 -   MOP (Multi-objective and goal programming, 90C29):
     `r pkg("caRamel")`, `r pkg("GPareto")`,
     `r pkg("mco")`, `r pkg("emoa")`,
-    `r pkg("rmoo")`, `r pkg("MaOEA")`
+    `r pkg("rmoo")`, `r pkg("MaOEA")`, `r pkg("moocore")`
 -   NLP (Nonlinear programming, 90C30): `r pkg("nloptr")`,
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
     Rdonlp2 (in `r rforge("rmetrics")` on R-Forge)
