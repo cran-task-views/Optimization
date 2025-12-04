@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2025-06-25
+version: 2025-12-04
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -603,12 +603,6 @@ Trial licenses are available, see the corresponding websites for more informatio
     heuristics. In addition, it provides an interface to the [Concorde
     TSP Solver](http://www.tsp.gatech.edu/concorde/index.html) , which
     has to be downloaded separately. \[SPLP\]
--   `r pkg("rminizinc")` provides an interface to the
-    open-source constraint modeling language and system (to be
-    downloaded separately) [MiniZinc](https://www.minizinc.org/) . R
-    users can apply the package to solve combinatorial optimization
-    problems by modifying existing 'MiniZinc' models, and also by
-    creating their own models.
 
 ### Multi Objective Optimization
 
