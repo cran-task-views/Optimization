@@ -328,6 +328,13 @@ or getting stuck in local solutions.
     Linearized problems are solved as LSI (linear least squares with
     inequality constraints), i.e. QR-based, by using `r pkg("nnls")`.
     Non-linear iterations are globalized by the backtracking method.
+-   Package `r pkg("CGNM")` implements the Cluster Gauss-Newton Method
+    for solving nonlinear least-squares problems. CGNM is designed to
+    identify multiple sets of parameters that fit given data equally well,
+    making it particularly suited for problems where alternative solutions
+    are of interest or when parameter identifiability is a focus.
+    It supplies functions to efficiently search for parameter sets and
+    provides diagnostics for the quality and diversity of discovered solutions.
 
 ### Semidefinite and Convex Solvers
 
