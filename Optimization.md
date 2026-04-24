@@ -198,6 +198,10 @@ routines. \[RGA, QN\]
 -   `r pkg("trustOptim")` implements "trust region" for
     unconstrained nonlinear optimization. The algorithm is optimized for
     objective functions with sparse Hessians.
+-   Package `r pkg("optimflex")` provides a derivative-based optimization
+    framework (including BFGS and trust-region methods such as Double Dogleg)
+    that lets users combine up to eight distinct convergence criteria via an
+    "AND" rule. \[QN\]
 -   Package `r pkg("quantreg")` contains variations of
     simplex and of interior point routines ( `nlrq()`, `crq()`). It
     provides an interface to L1 regression in the R code of function
@@ -728,7 +732,8 @@ code (if available) are given in brackets.
 -   QN (Methods of quasi-Newton type, 90C53): stats ( `optim()`),
     `r pkg("gsl")`, `r pkg("lbfgs")`,
     `r pkg("lbfgsb3c")`, `r pkg("nloptr")`,
-    `r pkg("optimParallel")`, `r pkg("ucminf")`, `r pkg("n1qn1")`
+    `r pkg("optimParallel")`, `r pkg("ucminf")`, `r pkg("n1qn1")`,
+    `r pkg("optimflex")`
 -   DF (Derivative-free methods, 90C56): `r pkg("dfoptim")`,
     `r pkg("minqa")`, `r pkg("nloptr")`, `r pkg("optimsimplex")`,
     `r pkg("neldermead")`
