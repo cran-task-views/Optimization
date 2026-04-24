@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2025-12-04
+version: 2026-04-24
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -230,10 +230,6 @@ routines. \[RGA, QN\]
 -   Package `r pkg("piqp")` implements an interface to the Proximal Interior Point
      Quadratic Programming solver, cf. [PIQP](https://predict-epfl.github.io/piqp/);
     it combines an infeasible interior point method with the proximal method of multipliers. \[QP\]
--   `r pkg("qpmadr")` interfaces the 'qpmad' software and
-    solves quadratic programming (QP) problems with linear inequality,
-    equality and bound constraints, using the method by Goldfarb and
-    Idnani.\[QP\]
 -   `r pkg("kernlab")` contains the function `ipop` for
     solving quadratic programming problems using interior point methods.
     (The matrix can be positive semidefinite.) \[IPM, QP\]
@@ -384,8 +380,6 @@ or getting stuck in local solutions.
 -   `r pkg("GA")` provides functions for optimization using
     Genetic Algorithms in both, the continuous and discrete case. This
     package allows running corresponding optimization tasks in parallel.
--   In package `r pkg("gafit")` `gafit()` uses a genetic algorithm approach
-    to find the minimum of a one-dimensional function.
 -   Package `r pkg("genalg")` contains `rbga()`, an
     implementation of a genetic algorithm for multi-dimensional function
     optimization.
@@ -423,10 +417,8 @@ or getting stuck in local solutions.
 -   CMA-ES by N. Hansen, global optimization procedure using a
     covariance matrix adapting evolutionary strategy, is implemented in
     several packages: In packages `r pkg("cmaes")` and
-    `r pkg("cmaesr")`, in `r pkg("parma")` as
-    `cmaes`, in `r pkg("adagio")` as `pureCMAES`, and in
-    `r pkg("rCMA")` as `cmaOptimDP`, interfacing Hansen's
-    own Java implementation.
+    `r pkg("cmaesr")`, in `r pkg("parma")` as `cmaes`,
+    and in `r pkg("adagio")` as `pureCMAES`.
 -   Package `r pkg("Rmalschains")` implements an algorithm
     family for continuous optimization called memetic algorithms with
     local search chains (MA-LS-Chains).
@@ -582,10 +574,6 @@ Trial licenses are available, see the corresponding websites for more informatio
     analysis, uses the very fast igraph C library. It can be used to
     calculate shortest paths, maximal network flows, minimum spanning
     trees, etc. \[GRAPH\]
--   `r pkg("mknapsack")` solves multiple knapsack problems,
-    based on LP solvers such as 'lpSolve' or 'CBC'; will assign
-    items to knapsacks in a way that the value of the top knapsacks is
-    as large as possible.
 -   Package 'knapsack' (see R-Forge project
     `r rforge("optimist")`) provides routines from the book
     `Knapsack Problems' by Martello and Toth. There are functions for
