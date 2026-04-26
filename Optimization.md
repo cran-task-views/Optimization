@@ -687,7 +687,7 @@ code (if available) are given in brackets.
     `r pkg("GA")`, `r pkg("pso")`,
     `r pkg("rgenoud")`, `r pkg("cmaes")`,
     `r pkg("nloptr")`, `r pkg("NMOF")`,
-    `r pkg("OOR")`, `r pkg("gafit")`
+    `r pkg("OOR")`
 -   SPLP (Special problems of linear programming like transportation,
     multi-index, etc., 90C08): `r pkg("clue")`,
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
