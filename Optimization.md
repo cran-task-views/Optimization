@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2026-04-24
+version: 2026-07-21
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -265,11 +265,6 @@ routines. \[RGA, QN\]
     single- and multi-objective test functions that are frequently used
     for benchmarking optimization algorithms; offers a set of convenient
     functions to generate, plot, and work with objective functions.
--   `r pkg("flacco")` contains tools and features used for
-    an Exploratory Landscape Analysis (ELA) of continuous optimization
-    problems, capable of quantifying rather complex properties, such as
-    the global structure, separability, etc., of the optimization
-    problems.
 -   Packages 'cec2013' and 'cec2005benchmark' (both archived)
     contain many test functions for global optimization from the 2005
     and 2013 special sessions on real-parameter optimization at the IEEE
