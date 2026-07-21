@@ -515,6 +515,11 @@ of this task view.
     mixed integer linear programming solver. Furthermore, it
     can be used to solve quadratic optimization problems (without
     mixed integer constraints). \[MILP, QP\]
+-   Package `r pkg("scip")` provides an R interface to SCIP (Solving Constraint Integer Programs),
+    developed at the Zuse Institute Berlin (ZIB), see [SCIPopt](https://scipopt.org/),
+    a framework for mixed-integer programming (MIP), mixed-integer programming (MINLP),
+    and constraint integer programming. Supports linear, quadratic, SOS, indicator,
+    and knapsack constraints with continuous, binary, and integer variables.
 
 #### Interfaces to Commercial Optimizers
 
