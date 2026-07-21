@@ -314,10 +314,6 @@ or getting stuck in local solutions.
 -   Package `r pkg("bvls")` interfaces the Stark-Parker
     implementation of an algorithm for least-squares with upper and
     lower bounded variables.
--   `r pkg("colf")` performs least squares constrained
-    optimization on a linear objective function. It contains a number of
-    algorithms to choose from and offers a formula syntax similar to
-    `lm()`.
 -   `r pkg("nlsic")` solves non-linear least squares problem (possibly
     rank deficient) with linear equality/inequality constraints.
     Linearized problems are solved as LSI (linear least squares with
@@ -492,12 +488,10 @@ of this task view.
     `r rforge("lpsolve")` on R-Forge).
     `r pkg("lpSolveAPI")` supports reading linear programs
     from files in lp and MPS format. \[BP, IP, LP, MILP, SPLP\]
--   Packages `r pkg("glpkAPI")` as well as package
-    `r pkg("Rglpk")` provide an interface to the [GNU Linear
-    Programming Kit](https://www.gnu.org/software/glpk/) (GLPK). Whereas
-    the former provides high level access to low level routines the
-    latter offers a high level routine `Rglpk_solve_LP()` to solve MILPs
-    using GLPK. Both packages offer the possibility to use models
+-   Package `r pkg("Rglpk")` provides an interface to the [GNU Linear
+    Programming Kit](https://www.gnu.org/software/glpk/) (GLPK) and
+    offers a high level routine `Rglpk_solve_LP()` to solve MILPs
+    using GLPK. It supports the possibility to use models
     formulated in the MPS format. \[BP, IP, IPM, LP, MILP\]
 -   `r pkg("Rsymphony")` has the routine
     `Rsymphony_solve_LP()` that interfaces the SYMPHONY solver for
@@ -671,7 +665,7 @@ The full name of the subject as well as the corresponding [MSC
 code (if available) are given in brackets.
 
 -   LP (Linear programming, 90C05): `r pkg("boot")`,
-    `r pkg("glpkAPI")`, `r pkg("limSolve")`,
+    `r pkg("limSolve")`,
     `r pkg("linprog")`, `r pkg("lpSolve")`,
     `r pkg("lpSolveAPI")`, `r pkg("quantreg")`,
     `r pkg("rcdd")`, `r pkg("Rcplex")`,
@@ -687,15 +681,15 @@ code (if available) are given in brackets.
     multi-index, etc., 90C08): `r pkg("clue")`,
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
     `r pkg("quantreg")`, `r pkg("TSP")`
--   BP (Boolean programming, 90C09): `r pkg("glpkAPI")`,
+-   BP (Boolean programming, 90C09): 
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
     `r pkg("Rcplex")`, `r pkg("Rglpk")`
--   IP (Integer programming, 90C10): `r pkg("glpkAPI")`,
+-   IP (Integer programming, 90C10):
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
     `r pkg("Rcplex")`, `r pkg("Rglpk")`,
     `r pkg("Rmosek")`, `r pkg("Rsymphony")`
 -   MIP (Mixed integer programming and its variants MILP for LP and MIQP
-    for QP, 90C11): `r pkg("glpkAPI")`,
+    for QP, 90C11): 
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
     `r pkg("Rcplex")`, `r pkg("Rglpk")`,
     `r pkg("Rmosek")`, `r pkg("Rsymphony")`,
@@ -720,7 +714,6 @@ code (if available) are given in brackets.
 -   GRAPH (Programming involving graphs or networks, 90C35):
     `r pkg("igraph")`, `r pkg("sna")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
-    `r pkg("glpkAPI")`,
     `r pkg("quantreg")`, `r pkg("Rcplex")`
 -   RGA (Methods of reduced gradient type, 90C52): stats ( `optim()`),
     `r pkg("gsl")`
@@ -732,7 +725,6 @@ code (if available) are given in brackets.
 -   DF (Derivative-free methods, 90C56): `r pkg("dfoptim")`,
     `r pkg("minqa")`, `r pkg("nloptr")`, `r pkg("optimsimplex")`,
     `r pkg("neldermead")`
-
 
 ### Links
 
