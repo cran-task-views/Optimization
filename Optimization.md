@@ -554,6 +554,10 @@ Trial licenses are available, see the corresponding websites for more informatio
 -   Package `r pkg("adagio")` provides R functions for single and multiple
     knapsack and bin packing problems, solves subset sum, maximal sum subarray,
     empty rectangle and set cover problems, and finds Hamiltonian paths in graphs.
+-   Package `r pkg("Coreset")` implements efficient solvers of the max-min dispersion,
+    max-sum dispersion (maximum diversity), max-mean dispersion, _k_-centre (min-max covering)
+    and maximum-entropy (maxdet) selection problems, selecting representative subsamples
+    under each objective.
 -   In package `r pkg("clue")` `solve_LSAP()` enables the
     user to solve the linear sum assignment problem (LSAP) using an
     efficient C implementation of the Hungarian algorithm.
