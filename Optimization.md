@@ -715,7 +715,7 @@ code (if available) are given in brackets.
 -   CP (Convex programming, 90C25): `r pkg("cccp")`
 -   COP (Combinatorial optimization, 90C27):
     `r pkg("adagio")`, `r pkg("CEoptim")`,
-    `r pkg("TSP")`, `r pkg("matchingR")`
+    `r pkg("TSP")`, `r pkg("matchingR")`, `r pkg("Coreset")`
 -   MOP (Multi-objective and goal programming, 90C29):
     `r pkg("caRamel")`, `r pkg("GPareto")`,
     `r pkg("mco")`, `r pkg("emoa")`,
