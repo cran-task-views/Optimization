@@ -149,6 +149,12 @@ routines. \[RGA, QN\]
     the Augmented Lagrange Multiplier method for solving nonlinear
     optimization problems with equality and inequality constraints
     (based on code by Y. Ye).
+-   Package `r pkg("Uno")` integrates the C++ solver 'Uno' for smooth
+    nonlinearly constrained optimization. It unifies Lagrange-Newton
+    methods, including sequential quadratic programming and interior-point
+    methods, by decomposing them into interacting building blocks.
+    Uno is highly competitive against other state-of-the-art
+    solvers. \[NLP, IPM\]
 -   `r pkg("NlcOptim")` solves nonlinear optimization
     problems with linear and nonlinear equality and inequality
     constraints, implementing a Sequential Quadratic Programming (SQP)
@@ -723,7 +729,8 @@ code (if available) are given in brackets.
 -   NLP (Nonlinear programming, 90C30): `r pkg("nloptr")`,
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
     Rdonlp2 (in `r rforge("rmetrics")` on R-Forge),
-    `r pkg("trust")`, `r pkg("RcppTrust")`, `r pkg("trustOptim")`
+    `r pkg("trust")`, `r pkg("RcppTrust")`, `r pkg("trustOptim")`,
+    `r pkg("Uno")`
 -   GRAPH (Programming involving graphs or networks, 90C35):
     `r pkg("igraph")`, `r pkg("sna")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
