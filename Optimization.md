@@ -3,7 +3,7 @@ name: Optimization
 topic: Optimization and Mathematical Programming
 maintainer: Florian Schwendinger, Hans W. Borchers
 email: R-optimization@mailbox.org
-version: 2026-07-21
+version: 2026-09-23
 source: https://github.com/cran-task-views/Optimization/
 ---
 
@@ -195,9 +195,9 @@ routines. \[RGA, QN\]
 -   In package `r pkg("trust")`, a routine with the same
     name offers local optimization based on the "trust region"
     approach.
--   In package `r pkg("RcppTrust")`, the trust region optimizer above was
-    ported to C++/Rcpp for speed and an ability to integrate into threaded OpenMP
-    optimizations.
+-   `r pkg("RcppTrust")` ports the trust region optimizer from `r pkg("trust")`
+    to C++ using `r pkg("Rcpp"), increasing speed and enabling integration
+    into multi-threaded OpenMP applications.
 -   `r pkg("trustOptim")` implements "trust region" for
     unconstrained nonlinear optimization. The algorithm is optimized for
     objective functions with sparse Hessians.
@@ -718,7 +718,8 @@ code (if available) are given in brackets.
     `r pkg("rmoo")`, `r pkg("MaOEA")`, `r pkg("moocore")`
 -   NLP (Nonlinear programming, 90C30): `r pkg("nloptr")`,
     `r pkg("alabama")`, `r pkg("Rsolnp")`,
-    Rdonlp2 (in `r rforge("rmetrics")` on R-Forge)
+    Rdonlp2 (in `r rforge("rmetrics")` on R-Forge),
+    `r pkg("trust")`, `r pkg("RcppTrust")`, `r pkg("trustOptim")`
 -   GRAPH (Programming involving graphs or networks, 90C35):
     `r pkg("igraph")`, `r pkg("sna")`
 -   IPM (Interior-point methods, 90C51): `r pkg("kernlab")`,
