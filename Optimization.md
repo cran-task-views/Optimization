@@ -114,9 +114,8 @@ routines. \[RGA, QN\]
     libraries for numerical computing and their integration with
     'Rcpp'. It provides a wrapper for the L-BFGS algorithm, based on
     the LBFGS++ library (based on code of N. Okazaki).
--   Package `r pkg("ucminf", priority = "core")` implements
-    an algorithm of quasi-Newton type for nonlinear unconstrained
-    optimization, combining a trust region with line search approaches.
+-   Package `r pkg("ucminf", priority = "core")` and `r pkg("ucminfcpp")`
+    implement an algorithm of quasi-Newton type for nonlinear unconstrained optimization, combining a trust region with line search approaches.
     The interface of `ucminf()` is designed for easy interchange with
     `optim()`.\[QN\]
 -   `r pkg("mize")` implements optimization algorithms in
@@ -682,7 +681,7 @@ code (if available) are given in brackets.
     `r pkg("lpSolveAPI")`, `r pkg("quantreg")`,
     `r pkg("rcdd")`, `r pkg("Rcplex")`,
     `r pkg("Rglpk")`, `r pkg("Rmosek")`,
-    `r pkg("Rsymphony")`, `r pkg("highs")`
+    `r pkg("Rsymphony")`, `r pkg("highs")`, `r pkg("scip")`
 -   GO (Global Optimization): `r pkg("DEoptim")`,
     `r pkg("DEoptimR")`, `r pkg("graDiEnt")`, `r pkg("GenSA")`,
     `r pkg("GA")`, `r pkg("pso")`,
@@ -699,13 +698,14 @@ code (if available) are given in brackets.
 -   IP (Integer programming, 90C10):
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
     `r pkg("Rcplex")`, `r pkg("Rglpk")`,
-    `r pkg("Rmosek")`, `r pkg("Rsymphony")`
+    `r pkg("Rmosek")`, `r pkg("Rsymphony")`,
+    `r pkg("highs")`, `r pkg("scip")`
 -   MIP (Mixed integer programming and its variants MILP for LP and MIQP
     for QP, 90C11): 
     `r pkg("lpSolve")`, `r pkg("lpSolveAPI")`,
     `r pkg("Rcplex")`, `r pkg("Rglpk")`,
     `r pkg("Rmosek")`, `r pkg("Rsymphony")`,
-    `r pkg("highs")`
+    `r pkg("highs")`, `r pkg("scip")`
 -   QP (Quadratic programming, 90C20): `r pkg("kernlab")`,
     `r pkg("limSolve")`,
     `r pkg("quadprog")`, `r pkg("Rcplex")`,
