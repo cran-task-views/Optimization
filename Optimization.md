@@ -195,6 +195,9 @@ routines. \[RGA, QN\]
 -   In package `r pkg("trust")`, a routine with the same
     name offers local optimization based on the "trust region"
     approach.
+-   In package `r pkg("RcppTrust")`, the trust region optimizer above was
+    ported to C++/Rcpp for speed and an ability to integrate into threaded OpenMP
+    optimizations.
 -   `r pkg("trustOptim")` implements "trust region" for
     unconstrained nonlinear optimization. The algorithm is optimized for
     objective functions with sparse Hessians.
