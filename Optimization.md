@@ -196,7 +196,7 @@ routines. \[RGA, QN\]
     name offers local optimization based on the "trust region"
     approach.
 -   `r pkg("RcppTrust")` ports the trust region optimizer from `r pkg("trust")`
-    to C++ using `r pkg("Rcpp"), increasing speed and enabling integration
+    to C++ using 'Rcpp', increasing speed and enabling integration
     into multi-threaded OpenMP applications.
 -   `r pkg("trustOptim")` implements "trust region" for
     unconstrained nonlinear optimization. The algorithm is optimized for
